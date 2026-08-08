@@ -1,561 +1,272 @@
 @extends('layouts.app')
 
-@section('title', 'IANUBIH')
+@section('title', __('home.meta.title'))
+@section('description', __('home.meta.description'))
 
 @section('content')
-
-
-<!-- =========================
-    INTRO SECTION   
-============================== -->
-<section id="intro" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-sm-12">
-				<img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="intro-logo wow fadeInDown" data-wow-delay="0.4s" alt="IANUBIH logo">
-				<h3 class="wow bounceIn" data-wow-delay="0.9s">July 22 - 26 in San Francisco, CA</h3>
-				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Web Design Conference</h1>
-				<a href="#overview" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">LEARN MORE</a>
-				<a href="#register" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="2.3s">REGISTER NOW</a>
-			</div>
-
-
-		</div>
-	</div>
+<section id="intro" class="ianubih-hero parallax-section" aria-labelledby="hero-title">
+    <div class="hero-shade"></div>
+    <div class="container hero-container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content">
+                    <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="hero-logo wow fadeInDown" alt="IANUBIH logo">
+                    <p class="hero-eyebrow wow fadeInUp" data-wow-delay="0.2s">{{ __('home.hero.eyebrow') }}</p>
+                    <h1 id="hero-title" class="wow fadeInUp" data-wow-delay="0.35s">
+                        <span>{{ __('home.hero.title_first') }}</span>
+                        <span>{{ __('home.hero.title_second') }}</span>
+                    </h1>
+                    <p class="hero-lead wow fadeInUp" data-wow-delay="0.5s">{{ __('home.hero.text') }}</p>
+                    <div class="hero-actions wow fadeInUp" data-wow-delay="0.65s">
+                        <a href="#about" class="btn btn-ianubih-primary smoothScroll">{{ __('home.hero.primary') }}</a>
+                        <a href="#projects" class="btn btn-ianubih-outline smoothScroll">{{ __('home.hero.secondary') }}</a>
+                    </div>
+                    <a href="#people" class="hero-quick-link smoothScroll wow fadeInUp" data-wow-delay="0.8s">
+                        {{ __('home.hero.expert') }} <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    OVERVIEW SECTION   
-============================== -->
-<section id="overview" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.6s">
-				<h3>New Event is a fully responsive one-page template for events, conferences or workshops.</h3>
-				<p>This is a Bootstrap v3.3.6 layout that is responsive and mobile friendly. You may download and modify this template for your website. Please tell your friends about templatemo.</p>
-				<p>Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-			</div>
-					
-			<div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.9s">
-<img src="{{ asset('assets/new-event/images/overview-img.jpg') }}" class="img-responsive" alt="Overview">
-			</div>
-
-		</div>
-	</div>
+<section id="about" class="ianubih-section statement-section" aria-labelledby="statement-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 wow fadeInUp">
+                <span class="section-eyebrow">{{ __('home.statement.eyebrow') }}</span>
+                <h2 id="statement-title">{{ __('home.statement.title') }}</h2>
+                <div class="gold-rule"></div>
+            </div>
+            <div class="col-md-6 col-md-offset-1 statement-copy wow fadeInUp" data-wow-delay="0.15s">
+                <p class="lead-copy">{{ __('home.statement.text_first') }}</p>
+                <p>{{ __('home.statement.text_second') }}</p>
+                <a href="#areas" class="text-link smoothScroll">{{ __('home.statement.link') }} <span aria-hidden="true">→</span></a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section id="areas" class="ianubih-section pillars-section" aria-labelledby="pillars-title">
+    <div class="container">
+        <div class="section-heading section-heading-centered wow fadeInUp">
+            <span class="section-eyebrow">{{ __('home.pillars.eyebrow') }}</span>
+            <h2 id="pillars-title">{{ __('home.pillars.title') }}</h2>
+            <p>{{ __('home.pillars.intro') }}</p>
+        </div>
 
-<!-- =========================
-    DETAIL SECTION   
-============================== -->
-<section id="detail" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInLeft col-md-4 col-sm-4" data-wow-delay="0.3s">
-				<i class="fa fa-group"></i>
-				<h3>650 Participants</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
-			</div>
-
-			<div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
-				<i class="fa fa-clock-o"></i>
-				<h3>24 Programs</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
-			</div>
-
-			<div class="wow fadeInRight col-md-4 col-sm-4" data-wow-delay="0.9s">
-				<i class="fa fa-microphone"></i>
-				<h3>11 Speakers</h3>
-				<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
-			</div>
-
-		</div>
-	</div>
+        @php($pillarTargets = ['#disciplines', '#network', '#people', '#projects'])
+        <div class="row pillar-grid">
+            @foreach(__('home.pillars.items') as $pillar)
+                <div class="col-md-3 col-sm-6">
+                    <article class="pillar-card wow fadeInUp" data-wow-delay="{{ $loop->index * 0.1 }}s">
+                        <div class="pillar-icon"><i class="fa {{ $pillar['icon'] }}" aria-hidden="true"></i></div>
+                        <h3>{{ $pillar['title'] }}</h3>
+                        <p>{{ $pillar['text'] }}</p>
+                        <a href="{{ $pillarTargets[$loop->index] }}" class="text-link smoothScroll">{{ $pillar['link'] }} <span aria-hidden="true">→</span></a>
+                    </article>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    VIDEO SECTION   
-============================== -->
-<section id="video" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.3s">
-				<h2>Watch Video</h2>
-				<h3>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
-			</div>
-			<div class="wow fadeInUp col-md-6 col-sm-10" data-wow-delay="1.6s">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XDPwXQjAlB0" allowfullscreen></iframe>
-				</div>
-			</div>
-
-		</div>
-	</div>
+<section id="projects" class="ianubih-section initiative-section" aria-labelledby="initiative-title">
+    <div class="container-fluid">
+        <div class="row initiative-row">
+            <div class="col-md-6 initiative-image-wrap wow fadeInLeft">
+                <img src="{{ asset('assets/new-event/images/b-web.jpg') }}" alt="{{ __('home.initiative.image_alt') }}" class="initiative-image">
+            </div>
+            <div class="col-md-6 initiative-content wow fadeInRight">
+                <span class="section-eyebrow section-eyebrow-light">{{ __('home.initiative.eyebrow') }}</span>
+                <h2 id="initiative-title">{{ __('home.initiative.title') }}</h2>
+                <p>{{ __('home.initiative.text') }}</p>
+                <div class="section-actions">
+                    <a href="#news" class="btn btn-ianubih-gold smoothScroll">{{ __('home.initiative.primary') }}</a>
+                    <a href="#cooperation" class="btn btn-ianubih-light-outline smoothScroll">{{ __('home.initiative.secondary') }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    SPEAKERS SECTION   
-============================== -->
-<section id="speakers" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-12 col-sm-12 wow bounceIn">
-				<div class="section-title">
-					<h2>Creative Speakers</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-				</div>
-			</div>
-
-			<!-- Testimonial Owl Carousel section
-			================================================== -->
-			<div id="owl-speakers" class="owl-carousel">
-
-				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
-					<div class="speakers-wrapper">
-						<img src="{{ asset('assets/new-event/images/speakers-img1.jpg') }}" class="img-responsive" alt="speakers">
-							<div class="speakers-thumb">
-								<h3>Jenny Green</h3>
-								<h6>UI Designer</h6>
-							</div>
-					</div>
-				</div>
-
-				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
-					<div class="speakers-wrapper">
-						<img src="{{ asset('assets/new-event/images/speakers-img2.jpg') }}" class="img-responsive" alt="speakers">
-							<div class="speakers-thumb">
-								<h3>David Yoon</h3>
-								<h6>Creative Director</h6>
-							</div>
-					</div>
-				</div>
-
-				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.9s">
-					<div class="speakers-wrapper">
-						<img src="{{ asset('assets/new-event/images/speakers-img3.jpg') }}" class="img-responsive" alt="speakers">
-							<div class="speakers-thumb">
-								<h3>Je Mary Lee</h3>
-								<h6>Web Specialist</h6>
-							</div>
-					</div>
-				</div>
-
-				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
-					<div class="speakers-wrapper">
-						<img src="{{ asset('assets/new-event/images/speakers-img4.jpg') }}" class="img-responsive" alt="speakers">
-							<div class="speakers-thumb">
-								<h3>Johnathan Doe</h3>
-								<h6>Frontend Dev</h6>
-							</div>
-					</div>
-				</div>
-
-				<div class="item wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.6s">
-					<div class="speakers-wrapper">
-						<img src="{{ asset('assets/new-event/images/speakers-img5.jpg') }}" class="img-responsive" alt="speakers">
-							<div class="speakers-thumb">
-								<h3>Elite Hamilton</h3>
-								<h6>Marketing Guru</h6>
-							</div>
-					</div>
-				</div>
-				
-			</div>
-
-		</div>
-	</div>
+<section id="disciplines" class="ianubih-section disciplines-section" aria-labelledby="disciplines-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 wow fadeInUp">
+                <span class="section-eyebrow">{{ __('home.disciplines.eyebrow') }}</span>
+                <h2 id="disciplines-title">{{ __('home.disciplines.title') }}</h2>
+                <p>{{ __('home.disciplines.text') }}</p>
+                <a href="#people" class="btn btn-ianubih-primary smoothScroll">{{ __('home.disciplines.cta') }}</a>
+            </div>
+            <div class="col-md-6 col-md-offset-1">
+                <div class="discipline-list wow fadeInUp" data-wow-delay="0.15s">
+                    @foreach(__('home.disciplines.items') as $discipline)
+                        <div class="discipline-item">
+                            <span class="discipline-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                            <span>{{ $discipline }}</span>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section id="publications" class="ianubih-section publications-section" aria-labelledby="publications-title">
+    <div class="container">
+        <div class="section-heading wow fadeInUp">
+            <span class="section-eyebrow">{{ __('home.publications.eyebrow') }}</span>
+            <h2 id="publications-title">{{ __('home.publications.title') }}</h2>
+            <p>{{ __('home.publications.text') }}</p>
+        </div>
 
-<!-- =========================
-    PROGRAM SECTION   
-============================== -->
-<section id="program" class="parallax-section">
-	<div class="container">
-		<div class="row">
+        <div class="row publication-grid">
+            @foreach(__('home.publications.items') as $publication)
+                <div class="col-md-4 col-sm-6">
+                    <article class="publication-card wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
+                        <div class="publication-icon"><i class="fa {{ $publication['icon'] }}" aria-hidden="true"></i></div>
+                        <span class="content-tag">{{ $publication['type'] }}</span>
+                        <h3>{{ $publication['title'] }}</h3>
+                        <p>{{ $publication['text'] }}</p>
+                    </article>
+                </div>
+            @endforeach
+        </div>
 
-			<div class="wow fadeInUp col-md-12 col-sm-12" data-wow-delay="0.6s">
-				<div class="section-title">
-					<h2>Our Programs</h2>
-					<p>Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa. Sed tincidunt metus sed eleifend suscipit.</p>
-				</div>
-			</div>
-
-			<div class="wow fadeInUp col-md-10 col-sm-10" data-wow-delay="0.9s">
-				<!-- Nav tabs -->
-				<ul class="nav nav-tabs" role="tablist">
-					<li class="active"><a href="#fday" aria-controls="fday" role="tab" data-toggle="tab">FIRST DAY</a></li>
-					<li><a href="#sday" aria-controls="sday" role="tab" data-toggle="tab">SECOND DAY</a></li>
-					<li><a href="#tday" aria-controls="tday" role="tab" data-toggle="tab">THIRD DAY</a></li>
-				</ul>
-				<!-- tab panes -->
-				<div class="tab-content">
-
-					<div role="tabpanel" class="tab-pane active" id="fday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img1.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 09.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 240</span>
-							</h6>
-							<h3>Introduction to Design</h3>
-							<h4>By Jenny Green</h4>
-							<p>Maecenas accumsan metus turpis, eu faucibus ligula interdum in. Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img2.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 10.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 360</span>
-							</h6>
-							<h3>Front-End Development</h3>
-							<h4>By Johnathan Mark</h4>
-							<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img3.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 450</span>
-							</h6>
-							<h3>Social Media Marketing</h3>
-							<h4>By Johnathan Doe</h4>
-							<p>Nam pulvinar, elit vitae rhoncus pretium, massa urna bibendum ex, aliquam efficitur lorem odio vitae erat. Integer rutrum viverra magna, nec ultrices risus rutrum nec.</p>
-						</div>
-					</div>
-
-					<div role="tabpanel" class="tab-pane" id="sday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img4.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 11.00 AM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 240</span>
-							</h6>
-							<h3>Backend Development</h3>
-							<h4>By Matt Lee</h4>
-							<p>Integer rutrum viverra magna, nec ultrices risus rutrum nec. Pellentesque interdum vel nisi nec tincidunt. Quisque facilisis scelerisque venenatis. Nam vulputate ultricies luctus.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img5.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 01.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 450</span>
-							</h6>
-							<h3>Web Application Lite</h3>
-							<h4>By David Orlando</h4>
-							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img6.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 650</span>
-							</h6>
-							<h3>Professional UX Design</h3>
-							<h4>By James Lee Mark</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-						</div>
-					</div>
-
-					<div role="tabpanel" class="tab-pane" id="tday">
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img7.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 03.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 750</span>
-							</h6>
-							<h3>Online Shopping Business</h3>
-							<h4>By Michael Walker</h4>
-							<p>Aliquam faucibus lobortis dolor, id pellentesque eros pretium in. Aenean in erat ut quam aliquet commodo. Vivamus aliquam pulvinar ipsum ut sollicitudin. Suspendisse quis sollicitudin mauris.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img8.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 05.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 850</span>
-							</h6>
-							<h3>Introduction to Mobile App</h3>
-							<h4>By Cherry Stella</h4>
-							<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-						</div>
-
-						<!-- program divider -->
-						<div class="program-divider col-md-12 col-sm-12"></div>
-
-						<!-- program speaker here -->
-						<div class="col-md-2 col-sm-2">
-							<img src="{{ asset('assets/new-event/images/program-img9.jpg') }}" class="img-responsive" alt="program">
-						</div>
-						<div class="col-md-10 col-sm-10">
-							<h6>
-								<span><i class="fa fa-clock-o"></i> 07.00 PM</span> 
-								<span><i class="fa fa-map-marker"></i> Room 750</span>
-							</h6>
-							<h3>Bootstrap UI Design</h3>
-							<h4>By John David</h4>
-							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-						</div>
-					</div>
-
-				</div>
-
-		</div>
-	</div>
+        <div class="section-actions section-actions-dark wow fadeInUp">
+            <a href="#publications" class="btn btn-ianubih-primary smoothScroll">{{ __('home.publications.all') }}</a>
+            <a href="#contact" class="btn btn-ianubih-secondary smoothScroll">{{ __('home.publications.journal') }}</a>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-   REGISTER SECTION   
-============================== -->
-<section id="register" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInUp col-md-7 col-sm-7" data-wow-delay="0.6s">
-				<h2>Register Here</h2>
-				<h3>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit.</h3>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet consectetuer diam nonummy.</p>
-			</div>
-
-			<div class="wow fadeInUp col-md-5 col-sm-5" data-wow-delay="1s">
-				<form action="#" method="post">
-					<input name="firstname" type="text" class="form-control" id="firstname" placeholder="First Name">
-					<input name="lastname" type="text" class="form-control" id="lastname" placeholder="Last Name">
-					<input name="phone" type="telephone" class="form-control" id="phone" placeholder="Phone Number">
-					<input name="email" type="email" class="form-control" id="email" placeholder="Email Address">
-					<div class="col-md-offset-6 col-md-6 col-sm-offset-1 col-sm-10">
-						<input name="submit" type="submit" class="form-control" id="submit" value="REGISTER">
-					</div>
-				</form>
-			</div>
-
-			<div class="col-md-1"></div>
-
-		</div>
-	</div>
+<section id="events" class="ianubih-section events-section" aria-labelledby="events-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 wow fadeInUp">
+                <span class="section-eyebrow">{{ __('home.events.eyebrow') }}</span>
+                <h2 id="events-title">{{ __('home.events.title') }}</h2>
+                <p>{{ __('home.events.text') }}</p>
+                <a href="#events" class="text-link smoothScroll">{{ __('home.events.all') }} <span aria-hidden="true">→</span></a>
+            </div>
+            <div class="col-md-6 col-md-offset-1 wow fadeInUp" data-wow-delay="0.15s">
+                <article class="event-card">
+                    <div class="event-date">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <span>{{ __('home.events.status') }}</span>
+                    </div>
+                    <div class="event-details">
+                        <span class="content-tag">{{ __('home.events.organizer') }}</span>
+                        <h3>{{ __('home.events.calendar_title') }}</h3>
+                        <p>{{ __('home.events.calendar_text') }}</p>
+                        <div class="event-meta">
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i> {{ __('home.events.location') }}</span>
+                            <span><i class="fa fa-building-o" aria-hidden="true"></i> {{ __('home.events.organizer') }}</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    FAQ SECTION   
-============================== -->
-<section id="faq" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<!-- Section title
-			================================================== -->
-			<div class="wow bounceIn col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 text-center">
-				<div class="section-title">
-					<h2>Do you have Questions?</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-				</div>
-			</div>
-
-			<div class="wow fadeInUp col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10" data-wow-delay="0.9s">
-				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-  					<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingOne">
-      						<h4 class="panel-title">
-        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-          							 What is Responsive Design?
-        						</a>
-      						</h4>
-    					</div>
-   						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      						<div class="panel-body">
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-								<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-      						</div>
-   						 </div>
- 					</div>
-
-    				<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingTwo">
-      						<h4 class="panel-title">
-        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          							What are latest UX Developments?
-        						</a>
-      						</h4>
-    					</div>
-   						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      						<div class="panel-body">
-                            	<p>Nunc eu nibh vel augue mollis tincidunt id efficitur tortor. Sed pulvinar est sit amet tellus iaculis hendrerit. Mauris justo erat, rhoncus in arcu at, scelerisque tempor erat.</p>
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-      						</div>
-   						 </div>
- 					</div>
-
- 					<div class="panel panel-default">
-   						<div class="panel-heading" role="tab" id="headingThree">
-      						<h4 class="panel-title">
-        						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          							What things about Social Media will be discussed?
-        						</a>
-      						</h4>
-    					</div>
-   						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      						<div class="panel-body">
-                            	<p>Aenean vulputate finibus justo et feugiat. Ut turpis lacus, dapibus quis justo id, porttitor tempor justo. Quisque ut libero sapien. Integer tellus nisl, efficitur sed dolor at, vehicula finibus massa.</p>
-        						<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet, wisi risus purus augue vulputate voluptate neque, curabitur dolor libero sodales vitae elit massa. Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-      						</div>
-   						 </div>
- 					 </div>
-
- 				 </div>
-			</div>
-
-		</div>
-	</div>
+<section id="people" class="ianubih-section people-section" aria-labelledby="people-title">
+    <div class="people-pattern" aria-hidden="true"></div>
+    <div class="container people-content">
+        <div class="row">
+            <div class="col-md-7 wow fadeInUp">
+                <span class="section-eyebrow section-eyebrow-light">{{ __('home.people.eyebrow') }}</span>
+                <h2 id="people-title">{{ __('home.people.title') }}</h2>
+                <p class="people-lead">{{ __('home.people.text') }}</p>
+                <p>{{ __('home.people.search_text') }}</p>
+            </div>
+            <div class="col-md-5 wow fadeInUp" data-wow-delay="0.15s">
+                <form class="expert-search" method="GET" action="{{ route('home', ['locale' => app()->getLocale()]) }}" role="search" aria-label="{{ __('home.people.aria') }}">
+                    <label class="sr-only" for="expert-query">{{ __('home.people.placeholder') }}</label>
+                    <div class="expert-input-wrap">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input id="expert-query" type="search" name="q" value="{{ request('q') }}" placeholder="{{ __('home.people.placeholder') }}">
+                    </div>
+                    <button type="submit" class="btn btn-ianubih-gold">{{ __('home.people.button') }}</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    VENUE SECTION   
-============================== -->
-<section id="venue" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow fadeInLeft col-md-offset-1 col-md-5 col-sm-8" data-wow-delay="0.9s">
-				<h2>Venue</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
-				<h4>New Event</h4>
-  				<h4>120 Market Street, Suite 110</h4>
-  				<h4>San Francisco, CA 10110</h4>
-				<h4>Tel: 010-020-0120</h4>		
-			</div>
-
-		</div>
-	</div>
+<section id="network" class="ianubih-section network-section" aria-labelledby="network-title">
+    <div class="container">
+        <div class="row network-row">
+            <div class="col-md-6 wow fadeInLeft">
+                <div class="network-visual" role="img" aria-label="{{ __('home.network.visual_label') }}">
+                    <div class="network-globe"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                    <span class="network-node node-one"></span>
+                    <span class="network-node node-two"></span>
+                    <span class="network-node node-three"></span>
+                    <span class="network-node node-four"></span>
+                    <span class="network-node node-five"></span>
+                    <span class="network-line line-one"></span>
+                    <span class="network-line line-two"></span>
+                    <span class="network-line line-three"></span>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-offset-1 wow fadeInRight">
+                <span class="section-eyebrow">{{ __('home.network.eyebrow') }}</span>
+                <h2 id="network-title">{{ __('home.network.title') }}</h2>
+                <p>{{ __('home.network.text') }}</p>
+                <a href="#contact" class="btn btn-ianubih-primary smoothScroll">{{ __('home.network.cta') }}</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-<!-- =========================
-    SPONSORS SECTION   
-============================== -->
-<section id="sponsors" class="parallax-section">
-	<div class="container">
-		<div class="row">
-
-			<div class="wow bounceIn col-md-12 col-sm-12">
-				<div class="section-title">
-					<h2>Our Sponsors</h2>
-					<p>Lorem ipsum dolor sit amet, maecenas eget vestibulum justo imperdiet.</p>
-				</div>
-			</div>
-
-			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.3s">
-				<img src="{{ asset('assets/new-event/images/sponsor-img1.jpg') }}" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.6s">
-				<img src="{{ asset('assets/new-event/images/sponsor-img2.jpg') }}" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="0.9s">
-				<img src="{{ asset('assets/new-event/images/sponsor-img3.jpg') }}" class="img-responsive" alt="sponsors">	
-			</div>
-
-			<div class="wow fadeInUp col-md-3 col-sm-6 col-xs-6" data-wow-delay="1s">
-				<img src="{{ asset('assets/new-event/images/sponsor-img4.jpg') }}" class="img-responsive" alt="sponsors">	
-			</div>
-
-		</div>
-	</div>
+<section id="cooperation" class="ianubih-section cooperation-section" aria-labelledby="cooperation-title">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 wow fadeInUp">
+                <span class="section-eyebrow section-eyebrow-light">{{ __('home.cooperation.eyebrow') }}</span>
+                <h2 id="cooperation-title">{{ __('home.cooperation.title') }}</h2>
+                <p>{{ __('home.cooperation.text_first') }}</p>
+                <p>{{ __('home.cooperation.text_second') }}</p>
+            </div>
+            <div class="col-md-3 cooperation-actions wow fadeInUp" data-wow-delay="0.15s">
+                <a href="mailto:info@ianubih.ba" class="btn btn-ianubih-gold">{{ __('home.cooperation.primary') }}</a>
+                <a href="#contact" class="btn btn-ianubih-light-outline smoothScroll">{{ __('home.cooperation.secondary') }}</a>
+            </div>
+        </div>
+    </div>
 </section>
 
+<section id="news" class="ianubih-section news-section" aria-labelledby="news-title">
+    <div class="container">
+        <div class="section-heading section-heading-centered wow fadeInUp">
+            <span class="section-eyebrow">{{ __('home.news.eyebrow') }}</span>
+            <h2 id="news-title">{{ __('home.news.title') }}</h2>
+            <p>{{ __('home.news.intro') }}</p>
+        </div>
 
-<!-- =========================
-    CONTACT SECTION   
-============================== -->
-<section id="contact" class="parallax-section">
-	<div class="container">
-		<div class="row">
+        <div class="row news-grid">
+            @foreach(__('home.news.items') as $item)
+                <div class="col-md-4">
+                    <article class="news-card wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
+                        <div class="news-image-wrap">
+                            <img src="{{ asset('assets/new-event/images/' . $item['image']) }}" alt="">
+                        </div>
+                        <div class="news-body">
+                            <span class="content-tag">{{ $item['category'] }}</span>
+                            <h3>{{ $item['title'] }}</h3>
+                            <p>{{ $item['text'] }}</p>
+                            <a href="#contact" class="text-link smoothScroll">{{ __('home.news.read_more') }} <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            @endforeach
+        </div>
 
-			<div class="wow fadeInUp col-md-offset-1 col-md-5 col-sm-6" data-wow-delay="0.6s">
-				<div class="contact_des">
-					<h3>New Event</h3>
-					<p>Proin sodales convallis urna eu condimentum. Morbi tincidunt augue eros, vitae pretium mi condimentum eget. Suspendisse eu turpis sed elit pretium congue.</p>
-					<p>Mauris at tincidunt felis, vitae aliquam magna. Sed aliquam fringilla vestibulum. Praesent ullamcorper mauris fermentum turpis scelerisque rutrum eget eget turpis.</p>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat. Lorem ipsum dolor.</p>
-					<a href="#" class="btn btn-danger">DOWNLOAD NOW</a>
-				</div>
-			</div>
-
-			<div class="wow fadeInUp col-md-5 col-sm-6" data-wow-delay="0.9s">
-				<div class="contact_detail">
-					<div class="section-title">
-						<h2>Keep in touch</h2>
-					</div>
-					<form action="#" method="post">
-						<input name="name" type="text" class="form-control" id="name" placeholder="Name">
-					  	<input name="email" type="email" class="form-control" id="email" placeholder="Email">
-					  	<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
-						<div class="col-md-6 col-sm-10">
-							<input name="submit" type="submit" class="form-control" id="submit" value="SEND">
-						</div>
-					</form>
-				</div>
-			</div>
-
-		</div>
-	</div>
+        <div class="section-actions section-actions-centered wow fadeInUp">
+            <a href="#news" class="btn btn-ianubih-primary smoothScroll">{{ __('home.news.all') }}</a>
+        </div>
+    </div>
 </section>
-
-
 @endsection

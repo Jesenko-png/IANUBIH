@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="@yield('description', 'Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini')">
+    <meta name="description" content="@yield('description', __('home.meta.description'))">
 
     <title>@yield('title', 'IANUBIH')</title>
+
+    <link rel="alternate" hreflang="bs" href="{{ route('home', ['locale' => 'bs']) }}">
+    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/animate.css') }}">
@@ -14,11 +20,11 @@
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/style.css') }}">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/new-event/css/ianubih.css') }}">
 
     @stack('styles')
 </head>
-<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+<body id="back-top" data-spy="scroll" data-offset="140" data-target=".navbar-collapse">
 
     <div class="preloader">
         <div class="sk-rotating-plane"></div>
@@ -32,7 +38,7 @@
 
     @include('partials.footer')
 
-    <a href="#back-top" class="go-top" aria-label="Back to top">
+    <a href="#back-top" class="go-top" aria-label="{{ __('home.footer.back_to_top') }}">
         <i class="fa fa-angle-up"></i>
     </a>
 
@@ -40,9 +46,9 @@
     <script src="{{ asset('assets/new-event/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/jquery.parallax.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('assets/new-event/js/smoothscroll.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/new-event/js/ianubih.js') }}"></script>
 
     @stack('scripts')
 </body>

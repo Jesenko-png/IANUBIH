@@ -5,7 +5,10 @@ return [
     'about' => 'O Akademiji',
     'people' => 'Ljudi',
     'areas' => 'Područja',
+    'projects' => 'Projekti',
+    'publications' => 'Publikacije',
+    'news' => 'Aktuelnosti',
     'cooperation' => 'Saradnja',
-    'partners' => 'Partneri',
-    'contact' => 'Kontakt',
+    'contact' => 'Kontaktirajte nas',
+    'search' => 'Pretraga',
 ];

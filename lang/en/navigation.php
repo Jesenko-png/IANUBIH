@@ -5,7 +5,10 @@ return [
     'about' => 'About',
     'people' => 'People',
     'areas' => 'Fields',
+    'projects' => 'Projects',
+    'publications' => 'Publications',
+    'news' => 'News',
     'cooperation' => 'Cooperation',
-    'partners' => 'Partners',
-    'contact' => 'Contact',
+    'contact' => 'Contact us',
+    'search' => 'Search',
 ];
