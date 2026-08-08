@@ -8,7 +8,8 @@
             </button>
 
             <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="navbar-brand">
-                IANUBIH
+                <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="navbar-brand-logo" alt="IANUBIH logo">
+                <span>IANUBIH</span>
             </a>
         </div>
 

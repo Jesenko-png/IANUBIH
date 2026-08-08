@@ -13,6 +13,7 @@
 		<div class="row">
 
 			<div class="col-md-12 col-sm-12">
+				<img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="intro-logo wow fadeInDown" data-wow-delay="0.4s" alt="IANUBIH logo">
 				<h3 class="wow bounceIn" data-wow-delay="0.9s">July 22 - 26 in San Francisco, CA</h3>
 				<h1 class="wow fadeInUp" data-wow-delay="1.6s">Web Design Conference</h1>
 				<a href="#overview" class="btn btn-lg btn-default smoothScroll wow fadeInUp hidden-xs" data-wow-delay="2.3s">LEARN MORE</a>

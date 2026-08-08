@@ -7,22 +7,27 @@ http://www.templatemo.com/tm-486-new-event
 */
 
 body {
-		background: #ffffff;
-    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
-		font-weight: 400;
+    font-weight: 400;
 }
-
 
 /*---------------------------------------
     Typorgraphy              
 -----------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-  font-weight: 600;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
 }
 
-h3,h5 {
-  font-weight: 500;
+h3,
+h5 {
+    font-weight: 500;
 }
 
 h1 {
@@ -31,12 +36,12 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
-  text-transform: uppercase;
+    font-size: 30px;
+    text-transform: uppercase;
 }
 
 h3 {
-  line-height: 36px;
+    line-height: 36px;
 }
 
 h5 {
@@ -51,41 +56,44 @@ p {
 }
 
 a {
-  text-decoration: none !important;
-  outline: none;
+    text-decoration: none !important;
+    outline: none;
 }
-
 
 /*---------------------------------------
     General               
 -----------------------------------------*/
 .section-title {
-  margin-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 #overview,
 #register {
-  padding-top: 14rem;
-  padding-bottom: 14rem;
+    padding-top: 14rem;
+    padding-bottom: 14rem;
 }
 
-#detail, #video,
-#speakers, 
+#detail,
+#video,
+#speakers,
 #program,
-#sponsors, 
-#contact, footer {
+#sponsors,
+#contact,
+footer {
     padding-top: 10rem;
     padding-bottom: 10rem;
 }
 
 #detail,
-#speakers, #sponsors,
+#speakers,
+#sponsors,
 footer {
-  text-align: center;
+    text-align: center;
 }
 
 #overview h3,
-#detail h3, #video h3,
+#detail h3,
+#video h3,
 #register h3,
 #venue h3,
 #contact h3 {
@@ -115,17 +123,17 @@ footer {
 }
 
 #contact .btn {
-  border-radius: 100px;
+    border-radius: 100px;
 }
 
 #intro .btn-danger:hover {
-  background: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 #contact .btn-danger:hover {
-  background: #222;
+    background: #222;
 }
 
 #intro .btn-default:hover {
@@ -135,59 +143,66 @@ footer {
 }
 
 .parallax-section {
-  background-attachment: fixed !important;
-  background-size: cover !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
-
-
 
 /*---------------------------------------
     Preloader section              
 -----------------------------------------*/
 .preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  background: none repeat scroll 0 0 #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
 }
 
 .sk-rotating-plane {
-  width: 50px;
-  height: 50px;
-  background-color: #222;
-  -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
-          animation: sk-rotatePlane 1.2s infinite ease-in-out; }
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
+    animation: sk-rotatePlane 1.2s infinite ease-in-out;
+}
 
 @-webkit-keyframes sk-rotatePlane {
-  0% {
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-  50% {
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-  100% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg)
+            rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
 
 @keyframes sk-rotatePlane {
-  0% {
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-  50% {
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-            transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg); }
-  100% {
-    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-            transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg); } }
-
-
+    0% {
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateX(-180deg)
+            rotateY(-179.9deg);
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+}
 
 /*---------------------------------------
     Navigation Links section              
@@ -202,6 +217,19 @@ footer {
     font-weight: 600;
     font-size: 3rem;
     line-height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.custom-navbar .navbar-brand-logo {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .custom-navbar .nav li a {
@@ -221,7 +249,7 @@ footer {
 
 .custom-navbar .navbar-nav > li > a:hover,
 .custom-navbar .navbar-nav > li > a:focus {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .custom-navbar .nav li.active > a {
@@ -243,57 +271,60 @@ footer {
     border-color: transparent;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .custom-navbar {
         padding: 20px 0;
         border-bottom: 0;
-        background: 0 0; 
+        background: 0 0;
     }
     .custom-navbar.top-nav-collapse {
         background: #101010;
         padding: 0;
     }
-
 }
-
-
 
 /*---------------------------------------
     Intro section              
 -----------------------------------------*/
 #intro {
-    background: url('../images/intro-bg.jpg') 50% 0 repeat-y fixed;
+    background: url("../images/f.jpg") 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     color: #ffffff;
     display: -webkit-box;
     display: -webkit-flex;
-     display: -ms-flexbox;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-     -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     height: 100vh;
     text-align: center;
 }
 
 #intro h3 {
-  letter-spacing: 2px;
+    letter-spacing: 2px;
 }
 
-
+#intro .intro-logo {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    margin: 0 auto 24px;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
 
 /*---------------------------------------
    Overview  section              
 -----------------------------------------*/
 #overview img {
-  position: relative;
-  padding-bottom: 32px;
+    position: relative;
+    padding-bottom: 32px;
 }
-
-
 
 /*---------------------------------------
     Detail section              
@@ -304,20 +335,16 @@ footer {
 }
 
 #detail .fa {
-  color: #f2545f;
-  font-size: 48px;
+    color: #f2545f;
+    font-size: 48px;
 }
-
-
 
 /*---------------------------------------
     Video section              
 -----------------------------------------*/
 #video iframe {
-  border: none;
+    border: none;
 }
-
-
 
 /*---------------------------------------
    Speakers section              
@@ -332,14 +359,14 @@ footer {
 }
 
 #speakers h6 {
-  color: #666;
-  margin-top: 4px;
+    color: #666;
+    margin-top: 4px;
 }
 
 #speakers img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 #speakers .col-md-3 {
@@ -355,8 +382,6 @@ footer {
     padding-bottom: 22px;
 }
 
-
-
 /*---------------------------------------
    Program section              
 -----------------------------------------*/
@@ -366,7 +391,7 @@ footer {
 }
 
 #program h3 {
-  margin-top: 16px;
+    margin-top: 16px;
 }
 
 #program .program-divider {
@@ -380,47 +405,45 @@ footer {
 }
 
 #program img {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 .nav-tabs {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 .nav-tabs > li {
-  float: left;
-  margin-bottom: -1px;
+    float: left;
+    margin-bottom: -1px;
 }
 .nav-tabs > li > a {
-  color: #000000;
-  font-weight: 600;
-  margin-right: 2px;
-  line-height: 1.42857143;
-  border: none;
-  border-radius: 0px;
+    color: #000000;
+    font-weight: 600;
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: none;
+    border-radius: 0px;
 }
 .nav-tabs > li > a:hover {
-  background-color: transparent;
+    background-color: transparent;
 }
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #f2545f;
-  cursor: default;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-bottom-color: #999;
+    color: #f2545f;
+    cursor: default;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: #999;
 }
 .tab-content {
-  padding-top: 20px;
+    padding-top: 20px;
 }
-
-
 
 /*---------------------------------------
     Regsiter section              
 -----------------------------------------*/
 #register {
-    background: url('../images/register-bg.jpg') 50% 0 repeat-y fixed;
+    background: url("../images/register-bg.jpg") 50% 0 repeat-y fixed;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -428,105 +451,101 @@ footer {
 }
 
 #register .form-control {
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 0px;
-  color: #ffffff;
-  margin-bottom: 16px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    color: #ffffff;
+    margin-bottom: 16px;
 }
 
 #register input {
-  height: 45px;
+    height: 45px;
 }
 
 #register input[type="submit"] {
-  background: #f2545f;
-  border-radius: 100px;
-  border: none;
-  color: #ffffff;
-  letter-spacing: 2px;
-  height: 50px;
-  margin-top: 12px;
-  transition: all 0.4s ease-in-out;
+    background: #f2545f;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 12px;
+    transition: all 0.4s ease-in-out;
 }
 
 #register input[type="submit"]:hover {
-  background: #ffffff;
-  color: #222;
+    background: #ffffff;
+    color: #222;
 }
-
-
 
 /*---------------------------------------
    Faq section              
 -----------------------------------------*/
 #faq {
-  background: #f9f9f9;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+    background: #f9f9f9;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
 }
 
 #faq .panel-group {
-  margin-top: 32px;
+    margin-top: 32px;
 }
 
 #faq .panel-group .panel {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 #faq .panel-default {
-  border: none;
+    border: none;
 }
 
-#faq .panel-default>.panel-heading {
-  background: #f0f0f0;
-  color: #505050;
+#faq .panel-default > .panel-heading {
+    background: #f0f0f0;
+    color: #505050;
 }
 
 #faq .panel-heading {
-  border: none;
-  padding-top: 8px;
-  padding-bottom: 6px;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 6px;
 }
 
-#faq .panel-default>.panel-heading+.panel-collapse>.panel-body {
-  border-top: none;
-  padding-top: 22px;
-  padding-left: 32px;
-  padding-bottom: 22px;
+#faq .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top: none;
+    padding-top: 22px;
+    padding-left: 32px;
+    padding-bottom: 22px;
 }
 
 #faq .panel-heading .panel-title a[data-toggle="collapse"] {
-  font-size: 18px;
-  font-weight: 500;
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px;
 }
 
 #faq .panel-heading .panel-title a[data-toggle="collapse"]::after {
-  content: "-";
-  display: block;
-  position: absolute;
-  line-height: 1;
-  right: 1em;
-  top: 50%;
-  transform: translateY(-50%);
+    content: "-";
+    display: block;
+    position: absolute;
+    line-height: 1;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #faq .panel-heading .panel-title a[data-toggle="collapse"].collapsed::after {
-  content: "+";
+    content: "+";
 }
-
-
 
 /*---------------------------------------
    Venue section              
 -----------------------------------------*/
 #venue {
-    background: url('../images/venue-bg.jpg') 50% 0 repeat-y fixed;
+    background: url("../images/venue-bg.jpg") 50% 0 repeat-y fixed;
     background-size: cover;
     background-position: center center;
     padding-top: 7rem;
@@ -534,106 +553,97 @@ footer {
 }
 
 #venue p {
-  padding-top: 12px;
-  padding-bottom: 18px;
+    padding-top: 12px;
+    padding-bottom: 18px;
 }
-
-
 
 /*---------------------------------------
    Sponsors section              
 -----------------------------------------*/
 #sponsors img {
-  margin-top: 18px;
+    margin-top: 18px;
 }
-
-
 
 /*---------------------------------------
    Contact section              
 -----------------------------------------*/
 #contact {
-    background: url('../images/contact-bg.jpg') 50% 0 repeat-y fixed;
+    background: url("../images/contact-bg.jpg") 50% 0 repeat-y fixed;
     background-size: cover;
     background-position: center center;
 }
 
 #contact .contact_des {
-  padding-top: 3rem;
-  padding-right: 2rem;
+    padding-top: 3rem;
+    padding-right: 2rem;
 }
 
 #contact .contact_detail {
-  background: #ffffff;
-  padding: 5rem 5rem 12rem 5rem;
+    background: #ffffff;
+    padding: 5rem 5rem 12rem 5rem;
 }
 
 #contact .form-control {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #f0f0f0;
-  border-radius: 0px;
-  box-shadow: none;
-  margin-bottom: 16px;
-  transition: all 0.4s ease-in-out;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-bottom: 16px;
+    transition: all 0.4s ease-in-out;
 }
 
 #contact .form-control:focus {
-  border-bottom-color: #999;
+    border-bottom-color: #999;
 }
 
 #contact input {
-  height: 45px;
+    height: 45px;
 }
 
 #contact input[type="submit"] {
-  background: #222;
-  border-radius: 100px;
-  border: none;
-  color: #ffffff;
-  letter-spacing: 2px;
-  height: 50px;
-  margin-top: 12px;
-  transition: all 0.4s ease-in-out;
+    background: #222;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 12px;
+    transition: all 0.4s ease-in-out;
 }
 
 #contact input[type="submit"]:hover {
-  background: #f2545f;
+    background: #f2545f;
 }
-
-
 
 /*---------------------------------------
    Footer section              
 -----------------------------------------*/
 footer {
-  background-attachment: fixed;
+    background-attachment: fixed;
 }
-
-
 
 /* Back top */
 .go-top {
-  background-color: #222;
-  bottom: 2em;
-  right: 2em;
-  color: #ffffff;
-  font-size: 32px;
-  display: none;
-  position: fixed;
-  text-decoration: none;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  text-align: center;
-  transition: all 0.4s ease-in-out;
+    background-color: #222;
+    bottom: 2em;
+    right: 2em;
+    color: #ffffff;
+    font-size: 32px;
+    display: none;
+    position: fixed;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
 }
 
 .go-top:hover {
     background: #f2545f;
     color: #ffffff;
 }
-
 
 /*---------------------------------------
    Social icon             
@@ -667,72 +677,67 @@ footer {
     color: #ffffff;
 }
 
-
-
 /*---------------------------------------
    Responsive styles            
 -----------------------------------------*/
 @media (max-width: 980px) {
+    p {
+        font-size: 13px;
+    }
 
-  p {font-size: 13px;}
+    .custom-navbar .navbar-brand {
+        font-size: 2rem;
+    }
 
-  .custom-navbar .navbar-brand {
-    font-size: 2rem;
-  }
+    .custom-navbar .nav li a {
+        font-size: 11px;
+        line-height: 20px;
+    }
 
-  .custom-navbar .nav li a {
-    font-size: 11px;
-	line-height: 20px;
-  }
+    #intro {
+        height: 65vh;
+    }
 
-  #intro { height: 65vh; }
+    #video iframe {
+        margin-top: 42px;
+    }
 
-  #video iframe {
-    margin-top: 42px;
-  }
-
-  #contact .contact_detail {
-  background: #ffffff;
-  padding: 10rem 3rem 10rem 5rem;
-}
-
+    #contact .contact_detail {
+        background: #ffffff;
+        padding: 10rem 3rem 10rem 5rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .custom-navbar .navbar-brand {
+        line-height: 20px;
+    }
 
-  .custom-navbar .navbar-brand {
-    line-height: 20px;
-  }
+    #overview img,
+    #detail .col-md-4,
+    #register form {
+        padding-top: 32px;
+    }
 
-  #overview img,
-  #detail .col-md-4,
-  #register form {
-    padding-top: 32px;
-  }
+    .nav-tabs > li > a {
+        font-size: 13px;
+    }
 
-  .nav-tabs > li > a {
-    font-size: 13px;
-  }
+    #program img {
+        padding-bottom: 32px;
+    }
 
-  #program img {
-    padding-bottom: 32px;
-  }
+    #sponsors img {
+        padding-top: 22px;
+    }
 
-  #sponsors img {
-    padding-top: 22px;
-  }
-
-  #contact .contact_detail {
-    margin-top: 82px;
-  }
-
+    #contact .contact_detail {
+        margin-top: 82px;
+    }
 }
 
 @media (max-width: 760px) {
-
-  #intro {
-    height: 100vh;
-  }
-
+    #intro {
+        height: 100vh;
+    }
 }
-
