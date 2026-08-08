@@ -18,10 +18,10 @@
                     </h1>
                     <p class="hero-lead wow fadeInUp" data-wow-delay="0.5s">{{ __('home.hero.text') }}</p>
                     <div class="hero-actions wow fadeInUp" data-wow-delay="0.65s">
-                        <a href="#about" class="btn btn-ianubih-primary smoothScroll">{{ __('home.hero.primary') }}</a>
-                        <a href="#projects" class="btn btn-ianubih-outline smoothScroll">{{ __('home.hero.secondary') }}</a>
+                        <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.hero.primary') }}</a>
+                        <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-outline">{{ __('home.hero.secondary') }}</a>
                     </div>
-                    <a href="#people" class="hero-quick-link smoothScroll wow fadeInUp" data-wow-delay="0.8s">
+                    <a href="{{ route('people', ['locale' => app()->getLocale()]) }}" class="hero-quick-link wow fadeInUp" data-wow-delay="0.8s">
                         {{ __('home.hero.expert') }} <span aria-hidden="true">→</span>
                     </a>
                 </div>
@@ -41,7 +41,7 @@
             <div class="col-md-6 col-md-offset-1 statement-copy wow fadeInUp" data-wow-delay="0.15s">
                 <p class="lead-copy">{{ __('home.statement.text_first') }}</p>
                 <p>{{ __('home.statement.text_second') }}</p>
-                <a href="#areas" class="text-link smoothScroll">{{ __('home.statement.link') }} <span aria-hidden="true">→</span></a>
+                <a href="{{ route('about', ['locale' => app()->getLocale()]) }}#mission" class="text-link">{{ __('home.statement.link') }} <span aria-hidden="true">→</span></a>
             </div>
         </div>
     </div>
@@ -55,7 +55,12 @@
             <p>{{ __('home.pillars.intro') }}</p>
         </div>
 
-        @php($pillarTargets = ['#disciplines', '#network', '#people', '#projects'])
+        @php($pillarTargets = [
+            route('fields', ['locale' => app()->getLocale()]),
+            route('cooperation', ['locale' => app()->getLocale()]),
+            route('people', ['locale' => app()->getLocale()]),
+            route('projects', ['locale' => app()->getLocale()]),
+        ])
         <div class="row pillar-grid">
             @foreach(__('home.pillars.items') as $pillar)
                 <div class="col-md-3 col-sm-6">
@@ -63,7 +68,7 @@
                         <div class="pillar-icon"><i class="fa {{ $pillar['icon'] }}" aria-hidden="true"></i></div>
                         <h3>{{ $pillar['title'] }}</h3>
                         <p>{{ $pillar['text'] }}</p>
-                        <a href="{{ $pillarTargets[$loop->index] }}" class="text-link smoothScroll">{{ $pillar['link'] }} <span aria-hidden="true">→</span></a>
+                        <a href="{{ $pillarTargets[$loop->index] }}" class="text-link">{{ $pillar['link'] }} <span aria-hidden="true">→</span></a>
                     </article>
                 </div>
             @endforeach
@@ -82,8 +87,8 @@
                 <h2 id="initiative-title">{{ __('home.initiative.title') }}</h2>
                 <p>{{ __('home.initiative.text') }}</p>
                 <div class="section-actions">
-                    <a href="#news" class="btn btn-ianubih-gold smoothScroll">{{ __('home.initiative.primary') }}</a>
-                    <a href="#cooperation" class="btn btn-ianubih-light-outline smoothScroll">{{ __('home.initiative.secondary') }}</a>
+                    <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('home.initiative.primary') }}</a>
+                    <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('home.initiative.secondary') }}</a>
                 </div>
             </div>
         </div>
@@ -97,7 +102,7 @@
                 <span class="section-eyebrow">{{ __('home.disciplines.eyebrow') }}</span>
                 <h2 id="disciplines-title">{{ __('home.disciplines.title') }}</h2>
                 <p>{{ __('home.disciplines.text') }}</p>
-                <a href="#people" class="btn btn-ianubih-primary smoothScroll">{{ __('home.disciplines.cta') }}</a>
+                <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.disciplines.cta') }}</a>
             </div>
             <div class="col-md-6 col-md-offset-1">
                 <div class="discipline-list wow fadeInUp" data-wow-delay="0.15s">
@@ -135,8 +140,8 @@
         </div>
 
         <div class="section-actions section-actions-dark wow fadeInUp">
-            <a href="#publications" class="btn btn-ianubih-primary smoothScroll">{{ __('home.publications.all') }}</a>
-            <a href="#contact" class="btn btn-ianubih-secondary smoothScroll">{{ __('home.publications.journal') }}</a>
+            <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.publications.all') }}</a>
+            <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}#sar" class="btn btn-ianubih-secondary">{{ __('home.publications.journal') }}</a>
         </div>
     </div>
 </section>
@@ -148,7 +153,7 @@
                 <span class="section-eyebrow">{{ __('home.events.eyebrow') }}</span>
                 <h2 id="events-title">{{ __('home.events.title') }}</h2>
                 <p>{{ __('home.events.text') }}</p>
-                <a href="#events" class="text-link smoothScroll">{{ __('home.events.all') }} <span aria-hidden="true">→</span></a>
+                <a href="{{ route('events', ['locale' => app()->getLocale()]) }}" class="text-link">{{ __('home.events.all') }} <span aria-hidden="true">→</span></a>
             </div>
             <div class="col-md-6 col-md-offset-1 wow fadeInUp" data-wow-delay="0.15s">
                 <article class="event-card">
@@ -182,7 +187,7 @@
                 <p>{{ __('home.people.search_text') }}</p>
             </div>
             <div class="col-md-5 wow fadeInUp" data-wow-delay="0.15s">
-                <form class="expert-search" method="GET" action="{{ route('home', ['locale' => app()->getLocale()]) }}" role="search" aria-label="{{ __('home.people.aria') }}">
+                <form class="expert-search" method="GET" action="{{ route('people', ['locale' => app()->getLocale()]) }}" role="search" aria-label="{{ __('home.people.aria') }}">
                     <label class="sr-only" for="expert-query">{{ __('home.people.placeholder') }}</label>
                     <div class="expert-input-wrap">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -215,7 +220,7 @@
                 <span class="section-eyebrow">{{ __('home.network.eyebrow') }}</span>
                 <h2 id="network-title">{{ __('home.network.title') }}</h2>
                 <p>{{ __('home.network.text') }}</p>
-                <a href="#contact" class="btn btn-ianubih-primary smoothScroll">{{ __('home.network.cta') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.network.cta') }}</a>
             </div>
         </div>
     </div>
@@ -232,7 +237,7 @@
             </div>
             <div class="col-md-3 cooperation-actions wow fadeInUp" data-wow-delay="0.15s">
                 <a href="mailto:info@ianubih.ba" class="btn btn-ianubih-gold">{{ __('home.cooperation.primary') }}</a>
-                <a href="#contact" class="btn btn-ianubih-light-outline smoothScroll">{{ __('home.cooperation.secondary') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('home.cooperation.secondary') }}</a>
             </div>
         </div>
     </div>
@@ -257,7 +262,7 @@
                             <span class="content-tag">{{ $item['category'] }}</span>
                             <h3>{{ $item['title'] }}</h3>
                             <p>{{ $item['text'] }}</p>
-                            <a href="#contact" class="text-link smoothScroll">{{ __('home.news.read_more') }} <span aria-hidden="true">→</span></a>
+                            <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="text-link">{{ __('home.news.read_more') }} <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                 </div>
@@ -265,7 +270,7 @@
         </div>
 
         <div class="section-actions section-actions-centered wow fadeInUp">
-            <a href="#news" class="btn btn-ianubih-primary smoothScroll">{{ __('home.news.all') }}</a>
+            <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.news.all') }}</a>
         </div>
     </div>
 </section>

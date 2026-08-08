@@ -1,3 +1,8 @@
+@php
+    $seoRouteName = request()->route()?->getName() ?? 'home';
+    $seoRouteParameters = request()->route()?->parameters() ?? [];
+@endphp
+
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
@@ -8,8 +13,9 @@
 
     <title>@yield('title', 'IANUBIH')</title>
 
-    <link rel="alternate" hreflang="bs" href="{{ route('home', ['locale' => 'bs']) }}">
-    <link rel="alternate" hreflang="en" href="{{ route('home', ['locale' => 'en']) }}">
+    <link rel="canonical" href="{{ route($seoRouteName, $seoRouteParameters) }}">
+    <link rel="alternate" hreflang="bs" href="{{ route($seoRouteName, array_merge($seoRouteParameters, ['locale' => 'bs'])) }}">
+    <link rel="alternate" hreflang="en" href="{{ route($seoRouteName, array_merge($seoRouteParameters, ['locale' => 'en'])) }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">

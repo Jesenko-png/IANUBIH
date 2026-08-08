@@ -37,10 +37,10 @@
             <div class="col-md-3 col-sm-3">
                 <h3>{{ __('home.footer.quick_links') }}</h3>
                 <ul class="footer-links">
-                    <li><a href="#about" class="smoothScroll">{{ __('navigation.about') }}</a></li>
-                    <li><a href="#areas" class="smoothScroll">{{ __('navigation.areas') }}</a></li>
-                    <li><a href="#publications" class="smoothScroll">{{ __('navigation.publications') }}</a></li>
-                    <li><a href="#cooperation" class="smoothScroll">{{ __('navigation.cooperation') }}</a></li>
+                    <li><a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('navigation.about') }}</a></li>
+                    <li><a href="{{ route('fields', ['locale' => app()->getLocale()]) }}">{{ __('navigation.areas') }}</a></li>
+                    <li><a href="{{ route('publications', ['locale' => app()->getLocale()]) }}">{{ __('navigation.publications') }}</a></li>
+                    <li><a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}">{{ __('navigation.cooperation') }}</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-3">

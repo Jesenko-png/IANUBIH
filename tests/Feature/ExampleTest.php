@@ -32,4 +32,41 @@ class ExampleTest extends TestCase
             ->assertDontSee('assets/new-event/js/smoothscroll.js')
             ->assertDontSeeText('Web Design Conference');
     }
+
+    public function test_the_about_page_is_fully_localized(): void
+    {
+        $this->get('/bs/about')
+            ->assertOk()
+            ->assertSeeText('Akademija koja povezuje znanje, iskustvo i odgovornost')
+            ->assertSeeText('Naša misija')
+            ->assertSeeText('Česta pitanja')
+            ->assertSee(route('about', ['locale' => 'en']));
+
+        $this->get('/en/about')
+            ->assertOk()
+            ->assertSeeText('An academy connecting knowledge, experience and responsibility')
+            ->assertSeeText('Our mission')
+            ->assertSeeText('Frequently asked questions')
+            ->assertSee(route('about', ['locale' => 'bs']));
+    }
+
+    public function test_all_prepared_site_routes_are_available_in_both_languages(): void
+    {
+        $paths = [
+            'people',
+            'fields',
+            'projects',
+            'publications',
+            'events',
+            'news',
+            'cooperation',
+            'contact',
+        ];
+
+        foreach (['bs', 'en'] as $locale) {
+            foreach ($paths as $path) {
+                $this->get("/{$locale}/{$path}")->assertOk();
+            }
+        }
+    }
 }

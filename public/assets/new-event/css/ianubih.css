@@ -1187,6 +1187,405 @@ input:focus {
     color: var(--white);
 }
 
+/* Inner pages */
+.inner-hero {
+    align-items: flex-end;
+    background-image: url("../images/f-web.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--white);
+    display: flex;
+    min-height: 620px;
+    padding: 220px 0 105px;
+    position: relative;
+}
+
+.inner-hero-shade {
+    background: linear-gradient(110deg, rgba(8, 25, 43, 0.97) 0%, rgba(18, 36, 58, 0.9) 58%, rgba(29, 92, 131, 0.65) 100%);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.inner-hero-shade::after {
+    background-image: radial-gradient(circle at center, rgba(201, 164, 76, 0.45) 0 2px, transparent 3px);
+    background-size: 68px 68px;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.13;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.inner-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.inner-hero h1 {
+    color: var(--white);
+    font-size: 60px;
+    line-height: 1.08;
+    margin-bottom: 26px;
+    max-width: 920px;
+}
+
+.inner-hero p {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 18px;
+    max-width: 800px;
+}
+
+.breadcrumbs {
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    font-size: 11px;
+    font-weight: 600;
+    gap: 10px;
+    letter-spacing: 0.08em;
+    margin-top: 32px;
+    text-transform: uppercase;
+}
+
+.breadcrumbs a {
+    color: var(--knowledge-gold);
+}
+
+.about-identity {
+    background: var(--white);
+}
+
+.about-identity .lead-copy {
+    color: var(--text-main);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.institutional-quote {
+    border-left: 3px solid var(--knowledge-gold);
+    color: var(--midnight-navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 25px;
+    font-style: normal;
+    line-height: 1.45;
+    margin: 32px 0 0;
+    padding: 8px 0 8px 25px;
+}
+
+.mission-section {
+    background: var(--warm-ivory);
+}
+
+.mission-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mission-grid > div {
+    display: flex;
+}
+
+.mission-card {
+    background: var(--midnight-navy);
+    min-height: 390px;
+    padding: 55px;
+    width: 100%;
+}
+
+.mission-card-blue {
+    background: var(--bosnian-blue);
+}
+
+.mission-number {
+    color: var(--knowledge-gold);
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 48px;
+}
+
+.mission-card h3 {
+    color: var(--white);
+    font-size: 34px;
+}
+
+.mission-card p {
+    color: rgba(255, 255, 255, 0.73);
+}
+
+.values-section {
+    background: var(--white);
+}
+
+.values-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.values-grid > div {
+    display: flex;
+}
+
+.value-card {
+    border: 1px solid var(--border);
+    margin-bottom: 30px;
+    min-height: 270px;
+    padding: 38px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    width: 100%;
+}
+
+.value-card:hover {
+    border-color: rgba(201, 164, 76, 0.65);
+    box-shadow: var(--shadow);
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    color: var(--knowledge-gold);
+    font-size: 28px;
+    margin-bottom: 28px;
+}
+
+.value-card h3 {
+    font-size: 25px;
+}
+
+.president-section {
+    background: var(--midnight-navy);
+    color: var(--white);
+    overflow: hidden;
+}
+
+.president-section::after {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0 2px, transparent 3px);
+    background-size: 62px 62px;
+    bottom: -80px;
+    content: "";
+    opacity: 0.12;
+    position: absolute;
+    right: -80px;
+    top: -80px;
+    transform: rotate(12deg);
+    width: 45%;
+}
+
+.president-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.president-section h2,
+.president-section p {
+    color: var(--white);
+}
+
+.president-section p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.president-mark {
+    color: var(--knowledge-gold);
+    font-family: Georgia, serif;
+    font-size: 220px;
+    height: 170px;
+    line-height: 1;
+}
+
+.verification-badge {
+    border: 1px solid rgba(201, 164, 76, 0.75);
+    color: var(--knowledge-gold);
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+.governance-section {
+    background: var(--warm-ivory);
+}
+
+.governance-card {
+    background: var(--white);
+    border-bottom: 3px solid var(--knowledge-gold);
+    margin-bottom: 30px;
+    min-height: 320px;
+    padding: 42px;
+}
+
+.governance-card > span {
+    color: var(--knowledge-gold);
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 35px;
+}
+
+.governance-card h3 {
+    font-size: 28px;
+}
+
+.documents-section {
+    background: var(--neutral);
+}
+
+.document-list {
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 12px 34px;
+}
+
+.document-item {
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 36px 1fr auto;
+    min-height: 92px;
+}
+
+.document-item:last-child {
+    border-bottom: 0;
+}
+
+.document-item i {
+    color: var(--bosnian-blue);
+    font-size: 23px;
+    text-align: center;
+}
+
+.document-item > span {
+    color: var(--midnight-navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 19px;
+}
+
+.document-item small {
+    color: var(--knowledge-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.faq-section {
+    background: var(--white);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--border);
+}
+
+.faq-item summary {
+    align-items: center;
+    color: var(--midnight-navy);
+    cursor: pointer;
+    display: flex;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 22px;
+    justify-content: space-between;
+    list-style: none;
+    min-height: 82px;
+    padding: 18px 0;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary span {
+    color: var(--knowledge-gold);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary span {
+    transform: rotate(45deg);
+}
+
+.faq-item p {
+    max-width: 720px;
+    padding: 0 45px 28px 0;
+}
+
+.about-cta {
+    background: var(--bosnian-blue);
+}
+
+.about-cta h2,
+.about-cta p {
+    color: var(--white);
+}
+
+.about-cta p {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.about-cta-actions {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 25px;
+}
+
+.placeholder-hero {
+    min-height: 540px;
+}
+
+.placeholder-section {
+    background: var(--warm-ivory);
+}
+
+.placeholder-card {
+    background: var(--white);
+    border-top: 3px solid var(--knowledge-gold);
+    box-shadow: var(--shadow);
+    margin: 0 auto;
+    max-width: 760px;
+    padding: 60px;
+    text-align: center;
+}
+
+.placeholder-card > i {
+    color: var(--bosnian-blue);
+    display: block;
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.placeholder-card .section-eyebrow {
+    display: block;
+}
+
+.placeholder-card .section-eyebrow::before {
+    display: none;
+}
+
+.placeholder-card p {
+    font-size: 18px;
+    margin: 0 auto 30px;
+    max-width: 620px;
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
     .custom-navbar .navbar-brand {
         font-size: 22px;
@@ -1259,6 +1658,35 @@ input:focus {
 
     .footer-main > div {
         margin-bottom: 35px;
+    }
+
+    .inner-hero {
+        min-height: 560px;
+        padding-top: 190px;
+    }
+
+    .inner-hero h1 {
+        font-size: 50px;
+    }
+
+    .about-identity .col-md-6,
+    .documents-section .col-md-6,
+    .faq-list {
+        margin-top: 42px;
+    }
+
+    .mission-card {
+        min-height: 430px;
+        padding: 45px;
+    }
+
+    .president-section .col-md-6 {
+        margin-top: 25px;
+    }
+
+    .about-cta-actions {
+        flex-direction: row;
+        padding-top: 20px;
     }
 }
 
@@ -1444,6 +1872,67 @@ input:focus {
 
     .contact-item {
         flex-basis: 100%;
+    }
+
+    .inner-hero,
+    .placeholder-hero {
+        min-height: 0;
+        padding: 145px 0 75px;
+    }
+
+    .inner-hero h1 {
+        font-size: 40px;
+    }
+
+    .inner-hero p {
+        font-size: 16px;
+    }
+
+    .mission-grid,
+    .values-grid {
+        display: block;
+    }
+
+    .mission-card,
+    .value-card,
+    .governance-card {
+        min-height: 0;
+    }
+
+    .mission-card {
+        padding: 36px 30px;
+    }
+
+    .mission-number {
+        margin-bottom: 28px;
+    }
+
+    .president-mark {
+        font-size: 150px;
+        height: 120px;
+    }
+
+    .document-list {
+        padding: 8px 20px;
+    }
+
+    .document-item {
+        gap: 12px;
+        grid-template-columns: 28px 1fr;
+        padding: 16px 0;
+    }
+
+    .document-item small {
+        grid-column: 2;
+    }
+
+    .about-cta-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .placeholder-card {
+        padding: 45px 25px;
     }
 
     .footer-bottom {
