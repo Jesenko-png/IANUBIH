@@ -238,60 +238,21 @@ input:focus {
     transition: all 0.3s ease;
 }
 
-.institution-bar {
-    background: #0c1c2e;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 11px;
-    letter-spacing: 0.035em;
-    max-height: 36px;
-    overflow: hidden;
-    transition: max-height 0.3s ease, border-color 0.3s ease;
-}
-
-.top-nav-collapse .institution-bar {
-    border-color: transparent;
-    max-height: 0;
-}
-
-.institution-bar-inner {
-    align-items: center;
-    display: flex;
-    height: 36px;
-    justify-content: space-between;
-}
-
-.institution-tools {
-    align-items: center;
-    display: flex;
-    gap: 14px;
-}
-
-.institution-tools a {
-    color: rgba(255, 255, 255, 0.74);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.institution-tools a:hover,
-.institution-tools a.active {
-    color: var(--knowledge-gold);
-}
-
-.institution-tools i {
-    margin-right: 5px;
-}
-
-.institution-divider {
-    background: rgba(255, 255, 255, 0.2);
-    height: 14px;
-    width: 1px;
-}
-
 .navbar-main {
     min-height: 72px;
+}
+
+.navbar-institution-name {
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.66);
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    line-height: 1.45;
+    margin-right: 14px;
+    max-width: 245px;
+    padding-right: 14px;
 }
 
 .custom-navbar .navbar-brand {
@@ -351,6 +312,82 @@ input:focus {
 .custom-navbar .nav li .nav-contact-link:focus {
     background: var(--knowledge-gold);
     color: var(--midnight-navy);
+}
+
+.custom-navbar .nav li.navbar-utility > a {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.custom-navbar .nav li.navbar-search {
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+    margin-left: 9px;
+    padding-left: 6px;
+}
+
+.custom-navbar .nav li.navbar-search i {
+    margin-right: 4px;
+}
+
+.custom-navbar .nav li.navbar-language > a.active,
+.custom-navbar .nav li.navbar-utility > a:hover,
+.custom-navbar .nav li.navbar-utility > a:focus {
+    color: var(--knowledge-gold);
+}
+
+@media (min-width: 1200px) {
+    .navbar-main {
+        max-width: 1500px;
+        width: calc(100% - 30px);
+    }
+
+    .custom-navbar .navbar-header {
+        align-items: center;
+        display: flex;
+    }
+
+    .navbar-institution-name {
+        font-size: 9px;
+        margin-right: 10px;
+        max-width: 210px;
+        padding-right: 10px;
+    }
+
+    .custom-navbar .navbar-brand {
+        font-size: 25px;
+        gap: 8px;
+    }
+
+    .custom-navbar .navbar-brand-logo {
+        height: 44px;
+        width: 44px;
+    }
+
+    .custom-navbar .nav li a {
+        font-size: 10.5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .custom-navbar .nav li .nav-contact-link {
+        margin-left: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .custom-navbar .nav li.navbar-utility > a {
+        font-size: 9.5px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .custom-navbar .nav li.navbar-search {
+        margin-left: 5px;
+        padding-left: 4px;
+    }
 }
 
 /* Hero */
