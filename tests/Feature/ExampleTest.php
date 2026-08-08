@@ -69,4 +69,49 @@ class ExampleTest extends TestCase
             }
         }
     }
+
+    public function test_the_fields_page_contains_all_nine_areas_in_both_languages(): void
+    {
+        $bosnianAreas = [
+            'Društvene nauke',
+            'Medicinske nauke',
+            'Humanističke nauke i kultura',
+            'Tehničke i prirodno-matematičke nauke',
+            'Umjetnost',
+            'Religija i međukulturni dijalog',
+            'Mladi naučnici',
+            'Naučna dijaspora',
+            'Održivi razvoj',
+        ];
+
+        $englishAreas = [
+            'Social sciences',
+            'Medical sciences',
+            'Humanities and culture',
+            'Technical, natural and mathematical sciences',
+            'Arts',
+            'Religion and intercultural dialogue',
+            'Young scientists',
+            'Scientific diaspora',
+            'Sustainable development',
+        ];
+
+        $bosnianResponse = $this->get('/bs/fields')
+            ->assertOk()
+            ->assertSeeText('Znanje bez granica među disciplinama')
+            ->assertSee(route('fields', ['locale' => 'en']));
+
+        foreach ($bosnianAreas as $area) {
+            $bosnianResponse->assertSeeText($area);
+        }
+
+        $englishResponse = $this->get('/en/fields')
+            ->assertOk()
+            ->assertSeeText('Knowledge without boundaries between disciplines')
+            ->assertSee(route('fields', ['locale' => 'bs']));
+
+        foreach ($englishAreas as $area) {
+            $englishResponse->assertSeeText($area);
+        }
+    }
 }
