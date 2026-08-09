@@ -2,7 +2,7 @@
 
 return [
     'status' => 'Page in preparation',
-    'notice' => 'The route and basic structure are ready. We will develop the content in the next step and connect it to the database where required.',
+    'notice' => '',
     'back_home' => 'Back to home',
     'items' => [
         'people' => [

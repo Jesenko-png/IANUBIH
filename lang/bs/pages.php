@@ -2,7 +2,7 @@
 
 return [
     'status' => 'Stranica u pripremi',
-    'notice' => 'Ruta i osnovna struktura su spremne. Sadržaj ćemo razvijati u narednom koraku i povezati s bazom podataka gdje je potrebno.',
+    'notice' => ' ',
     'back_home' => 'Nazad na početnu',
     'items' => [
         'people' => [
@@ -43,7 +43,7 @@ return [
         'contact' => [
             'eyebrow' => 'Kontakt',
             'title' => 'Kontaktirajte Akademiju',
-            'intro' => 'Kontakt podaci su dostupni u dnu stranice. U narednom koraku dodat ćemo siguran obrazac za upite i prijedloge saradnje.',
+            'intro' => 'Kontakt podaci su dostupni u dnu stranice.',
         ],
     ],
 ];

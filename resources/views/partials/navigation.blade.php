@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="navbar-utility navbar-language hidden-xs hidden-sm">
-                    <a href="{{ route($currentRouteName, array_merge($currentRouteParameters, ['locale' => 'bs'])) }}" @class(['active' => app()->getLocale() === 'bs']) lang="bs">BHS</a>
+                    <a href="{{ route($currentRouteName, array_merge($currentRouteParameters, ['locale' => 'bs'])) }}" @class(['active' => app()->getLocale() === 'bs']) lang="bs">BOS</a>
                 </li>
                 <li class="navbar-utility navbar-language hidden-xs hidden-sm">
                     <a href="{{ route($currentRouteName, array_merge($currentRouteParameters, ['locale' => 'en'])) }}" @class(['active' => app()->getLocale() === 'en']) lang="en">ENG</a>

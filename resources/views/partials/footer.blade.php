@@ -59,7 +59,7 @@
 
         <div class="footer-bottom">
             <span>&copy; {{ date('Y') }} IANUBIH. {{ __('home.footer.rights') }}</span>
-            <span>Design: <a rel="nofollow" href="https://templatemo.com/tm-486-new-event" target="_blank">TemplateMo</a></span>
+            <span>Design: <a rel="nofollow" href="https://jesenko.free.nf/" target="_blank">Jesenko Idrizovic</a></span>
         </div>
     </div>
 </footer>

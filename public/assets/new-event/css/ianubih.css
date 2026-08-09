@@ -690,7 +690,28 @@ input:focus {
 
 /* Publications */
 .publications-section {
-    background: var(--white);
+    background: linear-gradient(172deg, var(--white) 0 43%, var(--warm-ivory) 43% 100%);
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.publications-section::before {
+    background: linear-gradient(90deg, transparent 0, var(--knowledge-gold) 12%, var(--knowledge-gold) 88%, transparent 100%);
+    content: "";
+    height: 3px;
+    left: -8%;
+    opacity: 0.85;
+    position: absolute;
+    top: 43%;
+    transform: rotate(-3deg);
+    transform-origin: center;
+    width: 116%;
+    z-index: 0;
+}
+
+.publications-section > .container {
+    position: relative;
+    z-index: 1;
 }
 
 .publication-grid {
@@ -703,17 +724,33 @@ input:focus {
 }
 
 .publication-card {
-    background: var(--warm-ivory);
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(18, 36, 58, 0.1);
     border-bottom: 3px solid transparent;
+    box-shadow: 0 16px 42px rgba(18, 36, 58, 0.09);
     margin-bottom: 30px;
     min-height: 330px;
+    overflow: hidden;
     padding: 38px;
-    transition: border-color 0.25s ease, transform 0.25s ease;
+    position: relative;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
     width: 100%;
+}
+
+.publication-card::before {
+    background: var(--knowledge-gold);
+    content: "";
+    height: 4px;
+    position: absolute;
+    right: -22px;
+    top: 18px;
+    transform: rotate(-45deg);
+    width: 90px;
 }
 
 .publication-card:hover {
     border-color: var(--knowledge-gold);
+    box-shadow: 0 22px 55px rgba(18, 36, 58, 0.14);
     transform: translateY(-5px);
 }
 
