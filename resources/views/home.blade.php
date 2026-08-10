@@ -161,7 +161,7 @@
 
         <div class="section-actions section-actions-dark wow fadeInUp">
             <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.publications.all') }}</a>
-            <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}#sar" class="btn btn-ianubih-secondary">{{ __('home.publications.journal') }}</a>
+            <a href="https://www.sarjournal.com/" class="btn btn-ianubih-secondary" target="_blank" rel="noopener noreferrer">{{ __('home.publications.journal') }}</a>
         </div>
     </div>
 </section>
