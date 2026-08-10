@@ -22,3 +22,15 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Original discipline photos (optimized copies are in /images/disciplines)
+/local-original-images-backup/
+/public/assets/new-event/images/social.jpg
+/public/assets/new-event/images/medicinske.jpg
+/public/assets/new-event/images/humanisticke.jpg
+/public/assets/new-event/images/Tehničke i prirodno-matematičke nauke.jpg
+/public/assets/new-event/images/umjetnost.jpg
+/public/assets/new-event/images/Religija i međukulturni dijalog.jpg
+/public/assets/new-event/images/Mladi naučnici.jpg
+/public/assets/new-event/images/naucna dijaspora.jpg
+/public/assets/new-event/images/Održivi razvoj.jpg
