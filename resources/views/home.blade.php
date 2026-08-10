@@ -76,6 +76,27 @@
     </div>
 </section>
 
+@php($sliderImages = ['slider 1.jpg', 'slider 2.jpg', 'slider 3.jpg', 'slider 4.jpg', 'slider 5.jpg'])
+<section class="expertise-marquee-section" aria-hidden="true">
+    <div class="expertise-marquee">
+        <div class="expertise-marquee-track">
+            @for($group = 0; $group < 2; $group++)
+                <div class="expertise-marquee-group">
+                    @for($repeat = 0; $repeat < 3; $repeat++)
+                        <div class="expertise-marquee-set">
+                            @foreach($sliderImages as $sliderImage)
+                                <span class="expertise-marquee-item">
+                                    <img src="{{ asset('assets/new-event/images/' . $sliderImage) }}" alt="" loading="lazy">
+                                </span>
+                            @endforeach
+                        </div>
+                    @endfor
+                </div>
+            @endfor
+        </div>
+    </div>
+</section>
+
 <section id="projects" class="ianubih-section initiative-section" aria-labelledby="initiative-title">
     <div class="container-fluid">
         <div class="row initiative-row">

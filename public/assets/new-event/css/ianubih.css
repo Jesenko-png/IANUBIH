@@ -593,6 +593,79 @@ input:focus {
     flex: 1;
 }
 
+/* Moving expertise ribbon */
+.expertise-marquee-section {
+    background: #0d1e30;
+    border-bottom: 1px solid rgba(201, 164, 76, 0.42);
+    border-top: 1px solid rgba(201, 164, 76, 0.42);
+    overflow: hidden;
+    padding: 24px 0;
+}
+
+.expertise-marquee {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    overflow: hidden;
+    width: 100%;
+}
+
+.expertise-marquee-track {
+    animation: expertise-marquee-scroll 48s linear infinite;
+    display: flex;
+    width: max-content;
+    will-change: transform;
+}
+
+.expertise-marquee:hover .expertise-marquee-track {
+    animation-play-state: paused;
+}
+
+.expertise-marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    min-width: max-content;
+}
+
+.expertise-marquee-set {
+    display: flex;
+    flex-shrink: 0;
+    gap: 16px;
+    min-width: max-content;
+    padding-right: 16px;
+}
+
+.expertise-marquee-item {
+    align-items: center;
+    background: #0d1e30;
+    border: 0;
+    box-shadow: none;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 104px;
+    justify-content: center;
+    padding: 0;
+    width: 190px;
+}
+
+.expertise-marquee-item img {
+    border-radius: 4px;
+    display: block;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: auto;
+}
+
+@keyframes expertise-marquee-scroll {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
 /* Initiative */
 .initiative-section {
     background: var(--midnight-navy);
@@ -2130,6 +2203,21 @@ input:focus {
         padding: 70px 0;
     }
 
+    .expertise-marquee-section {
+        padding: 18px 0;
+    }
+
+    .expertise-marquee-set {
+        gap: 12px;
+        padding-right: 12px;
+    }
+
+    .expertise-marquee-item {
+        height: 88px;
+        padding: 0;
+        width: 154px;
+    }
+
     .custom-navbar,
     .custom-navbar.top-nav-collapse {
         min-height: 68px;
@@ -2452,5 +2540,20 @@ input:focus {
     *::after {
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+
+    .expertise-marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+        overflow-x: auto;
+    }
+
+    .expertise-marquee-track {
+        animation: none;
+    }
+
+    .expertise-marquee-group:not(:first-child),
+    .expertise-marquee-group:first-child .expertise-marquee-set:not(:first-child) {
+        display: none;
     }
 }
