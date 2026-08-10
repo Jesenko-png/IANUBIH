@@ -97,23 +97,37 @@
 
 <section id="disciplines" class="ianubih-section disciplines-section" aria-labelledby="disciplines-title">
     <div class="container">
-        <div class="row">
-            <div class="col-md-5 wow fadeInUp">
+        <div class="row disciplines-heading-row">
+            <div class="col-md-8 wow fadeInUp">
                 <span class="section-eyebrow">{{ __('home.disciplines.eyebrow') }}</span>
                 <h2 id="disciplines-title">{{ __('home.disciplines.title') }}</h2>
                 <p>{{ __('home.disciplines.text') }}</p>
+            </div>
+            <div class="col-md-3 col-md-offset-1 disciplines-heading-action wow fadeInUp" data-wow-delay="0.1s">
                 <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.disciplines.cta') }}</a>
             </div>
-            <div class="col-md-6 col-md-offset-1">
-                <div class="discipline-list wow fadeInUp" data-wow-delay="0.15s">
-                    @foreach(__('home.disciplines.items') as $discipline)
-                        <div class="discipline-item">
-                            <span class="discipline-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-                            <span>{{ $discipline }}</span>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
+        </div>
+
+        @php($disciplineIcons = ['fa-users', 'fa-heartbeat', 'fa-book', 'fa-cogs', 'fa-paint-brush', 'fa-comments-o', 'fa-graduation-cap', 'fa-globe', 'fa-leaf'])
+
+        <div class="discipline-map" role="list">
+            @foreach(__('home.disciplines.items') as $discipline)
+                <article
+                    class="discipline-tile wow fadeInUp"
+                    data-number="{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}"
+                    data-wow-delay="{{ ($loop->index % 3) * 0.08 }}s"
+                    role="listitem"
+                >
+                    <div class="discipline-tile-meta">
+                        <span class="discipline-number" aria-hidden="true">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span class="discipline-icon" aria-hidden="true">
+                            <i class="fa {{ $disciplineIcons[$loop->index] }}"></i>
+                        </span>
+                    </div>
+                    <h3>{{ $discipline }}</h3>
+                    <span class="discipline-tile-line" aria-hidden="true"></span>
+                </article>
+            @endforeach
         </div>
     </div>
 </section>
