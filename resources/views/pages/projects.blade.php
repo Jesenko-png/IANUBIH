@@ -69,32 +69,33 @@
             <p>{{ __('projects.register.intro') }}</p>
         </div>
 
-        <div class="row project-register-row">
-            <div class="col-md-5 wow fadeInLeft">
-                <article class="project-register-empty">
-                    <div class="project-register-icon"><i class="fa fa-folder-open-o" aria-hidden="true"></i></div>
-                    <span class="verification-badge">{{ __('projects.register.status') }}</span>
-                    <h3>{{ __('projects.register.empty_title') }}</h3>
-                    <p>{{ __('projects.register.empty_text') }}</p>
-                    <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('projects.register.button') }}</a>
-                </article>
-            </div>
-            <div class="col-md-7 wow fadeInRight" data-wow-delay="0.12s">
-                <div class="project-data-panel">
-                    <h3>{{ __('projects.register.data_title') }}</h3>
-                    <div class="project-data-list">
-                        @foreach(__('projects.register.data_items') as $item)
-                            <div class="project-data-item">
-                                <i class="fa {{ $item['icon'] }}" aria-hidden="true"></i>
-                                <div>
-                                    <h4>{{ $item['title'] }}</h4>
-                                    <p>{{ $item['text'] }}</p>
-                                </div>
+        <div class="project-register-grid">
+            @foreach(__('projects.register.items') as $item)
+                <article class="project-record project-record-{{ $item['status_class'] }} wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
+                    <div class="project-record-topline">
+                        <span class="project-status project-status-{{ $item['status_class'] }}">{{ $item['status'] }}</span>
+                        <span class="project-kind">{{ $item['kind'] }}</span>
+                    </div>
+                    <span class="project-programme">{{ $item['programme'] }}</span>
+                    <h3>{{ $item['title'] }}</h3>
+                    <p class="project-record-summary">{{ $item['text'] }}</p>
+
+                    <dl class="project-record-meta">
+                        @foreach($item['meta'] as $meta)
+                            <div>
+                                <dt>{{ $meta['label'] }}</dt>
+                                <dd>{{ $meta['value'] }}</dd>
                             </div>
                         @endforeach
-                    </div>
-                </div>
-            </div>
+                    </dl>
+                </article>
+            @endforeach
+        </div>
+
+        <div class="project-register-source wow fadeInUp">
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <p>{{ __('projects.register.source_note') }}</p>
+            <a href="https://www.facebook.com/IANUBIH" target="_blank" rel="noopener noreferrer">{{ __('projects.register.source_link') }}</a>
         </div>
     </div>
 </section>

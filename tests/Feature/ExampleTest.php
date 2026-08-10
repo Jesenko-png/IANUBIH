@@ -121,14 +121,22 @@ class ExampleTest extends TestCase
             ->assertOk()
             ->assertSeeText('Ideje koje povezuju znanje i djelovanje')
             ->assertSeeText('Četiri načina zajedničkog rada')
-            ->assertSeeText('Sadržaj u pripremi')
+            ->assertSeeText('NANO-THINK')
+            ->assertSeeText('Aktivni projekat')
+            ->assertSeeText('Budućnost Bosanske Posavine')
+            ->assertSeeText('Završena inicijativa')
+            ->assertDontSeeText('Sadržaj u pripremi')
             ->assertDontSeeText('Stranica u pripremi');
 
         $this->get('/en/projects')
             ->assertOk()
             ->assertSeeText('Ideas connecting knowledge and action')
             ->assertSeeText('Four ways of working together')
-            ->assertSeeText('Content in preparation')
+            ->assertSeeText('NANO-THINK')
+            ->assertSeeText('Active project')
+            ->assertSeeText('The future of Bosnian Posavina')
+            ->assertSeeText('Completed initiative')
+            ->assertDontSeeText('Content in preparation')
             ->assertDontSeeText('Page in preparation');
     }
 }
