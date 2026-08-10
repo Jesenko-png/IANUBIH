@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/new-event/css/ianubih.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/new-event/css/ianubih.css') }}?v={{ filemtime(public_path('assets/new-event/css/ianubih.css')) }}">
 
     @stack('styles')
 </head>
