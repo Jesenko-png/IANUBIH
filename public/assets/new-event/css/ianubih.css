@@ -683,7 +683,7 @@ input:focus {
 }
 
 .discipline-tile {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--midnight-navy);
     border: 1px solid rgba(18, 36, 58, 0.11);
     box-shadow: 0 12px 32px rgba(18, 36, 58, 0.07);
     isolation: isolate;
@@ -696,7 +696,7 @@ input:focus {
 
 .discipline-tile::before {
     bottom: -24px;
-    color: rgba(18, 36, 58, 0.045);
+    color: rgba(255, 255, 255, 0.055);
     content: attr(data-number);
     font-family: "Source Serif 4", Georgia, serif;
     font-size: 112px;
@@ -705,7 +705,27 @@ input:focus {
     position: absolute;
     right: 18px;
     transition: color 0.28s ease, transform 0.28s ease;
-    z-index: -1;
+    z-index: 2;
+}
+
+.discipline-tile::after {
+    background: linear-gradient(135deg, rgba(18, 36, 58, 0.96), rgba(18, 36, 58, 0.74));
+    content: "";
+    inset: 0;
+    position: absolute;
+    transition: opacity 0.32s ease;
+    z-index: 1;
+}
+
+.discipline-tile-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+    z-index: 0;
 }
 
 .discipline-tile-meta {
@@ -713,10 +733,12 @@ input:focus {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    position: relative;
+    z-index: 3;
 }
 
 .discipline-number {
-    color: var(--bosnian-blue);
+    color: var(--knowledge-gold);
     font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-weight: 700;
@@ -725,9 +747,9 @@ input:focus {
 
 .discipline-icon {
     align-items: center;
-    background: rgba(29, 92, 131, 0.09);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    color: var(--bosnian-blue);
+    color: var(--knowledge-gold);
     display: flex;
     font-size: 19px;
     height: 48px;
@@ -737,11 +759,14 @@ input:focus {
 }
 
 .discipline-tile h3 {
+    color: var(--white);
     font-size: 24px;
     line-height: 1.28;
     margin-bottom: 32px;
     max-width: 285px;
+    position: relative;
     transition: color 0.28s ease;
+    z-index: 3;
 }
 
 .discipline-tile-line {
@@ -752,18 +777,26 @@ input:focus {
     position: absolute;
     transition: width 0.28s ease;
     width: 42px;
+    z-index: 3;
 }
 
 .discipline-tile:hover {
-    background: var(--midnight-navy);
     box-shadow: 0 22px 46px rgba(18, 36, 58, 0.2);
     transform: translateY(-6px);
     z-index: 2;
 }
 
+.discipline-tile:hover::after {
+    opacity: 0.76;
+}
+
 .discipline-tile:hover::before {
-    color: rgba(255, 255, 255, 0.055);
+    color: rgba(255, 255, 255, 0.085);
     transform: translateY(-5px);
+}
+
+.discipline-tile:hover .discipline-tile-image {
+    transform: scale(1.09);
 }
 
 .discipline-tile:hover h3 {

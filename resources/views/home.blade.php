@@ -109,6 +109,7 @@
         </div>
 
         @php($disciplineIcons = ['fa-users', 'fa-heartbeat', 'fa-book', 'fa-cogs', 'fa-paint-brush', 'fa-comments-o', 'fa-graduation-cap', 'fa-globe', 'fa-leaf'])
+        @php($disciplineImages = ['social-sciences.jpg', 'medical-sciences.jpg', 'humanities-culture.jpg', 'technical-sciences.jpg', 'arts.jpg', 'intercultural-dialogue.jpg', 'young-scientists.jpg', 'scientific-diaspora.jpg', 'sustainable-development.jpg'])
 
         <div class="discipline-map" role="list">
             @foreach(__('home.disciplines.items') as $discipline)
@@ -118,6 +119,11 @@
                     data-wow-delay="{{ ($loop->index % 3) * 0.08 }}s"
                     role="listitem"
                 >
+                    <span
+                        class="discipline-tile-image"
+                        style="background-image: url('{{ asset('assets/new-event/images/disciplines/' . $disciplineImages[$loop->index]) }}')"
+                        aria-hidden="true"
+                    ></span>
                     <div class="discipline-tile-meta">
                         <span class="discipline-number" aria-hidden="true">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
                         <span class="discipline-icon" aria-hidden="true">
