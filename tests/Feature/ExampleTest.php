@@ -139,4 +139,29 @@ class ExampleTest extends TestCase
             ->assertDontSeeText('Content in preparation')
             ->assertDontSeeText('Page in preparation');
     }
+
+    public function test_the_publications_page_is_complete_and_localized(): void
+    {
+        $this->get('/bs/publications')
+            ->assertOk()
+            ->assertSeeText('Znanje koje ostaje dostupno')
+            ->assertSeeText('Science, Art and Religion')
+            ->assertSeeText('ISSN 3048-4804')
+            ->assertSeeText('Drugi Academic B&H Neurology Forum')
+            ->assertSee('https://www.sarjournal.org/')
+            ->assertDontSee('https://www.sarjournal.com/')
+            ->assertDontSeeText('Sadržaj u pripremi')
+            ->assertDontSeeText('Stranica u pripremi');
+
+        $this->get('/en/publications')
+            ->assertOk()
+            ->assertSeeText('Knowledge made to remain accessible')
+            ->assertSeeText('Science, Art and Religion')
+            ->assertSeeText('ISSN 3048-4804')
+            ->assertSeeText('Second Academic B&H Neurology Forum')
+            ->assertSee('https://www.sarjournal.org/')
+            ->assertDontSee('https://www.sarjournal.com/')
+            ->assertDontSeeText('Content in preparation')
+            ->assertDontSeeText('Page in preparation');
+    }
 }

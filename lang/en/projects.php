@@ -64,8 +64,6 @@ return [
                 ],
             ],
         ],
-        'source_note' => 'The information was verified against IANUBIH’s public posts. Statuses will be expanded following new institutional confirmations.',
-        'source_link' => 'View the original posts',
     ],
     'process' => [
         'eyebrow' => 'Developing an initiative',

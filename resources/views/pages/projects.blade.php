@@ -91,12 +91,6 @@
                 </article>
             @endforeach
         </div>
-
-        <div class="project-register-source wow fadeInUp">
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
-            <p>{{ __('projects.register.source_note') }}</p>
-            <a href="https://www.facebook.com/IANUBIH" target="_blank" rel="noopener noreferrer">{{ __('projects.register.source_link') }}</a>
-        </div>
     </div>
 </section>
 

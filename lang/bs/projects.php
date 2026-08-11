@@ -80,8 +80,6 @@ return [
                 ],
             ],
         ],
-        'source_note' => 'Podaci su provjereni prema javnim objavama IANUBIH. Statusi će se dopunjavati nakon novih institucionalnih potvrda.',
-        'source_link' => 'Pogledajte izvorne objave',
     ],
     'process' => [
         'eyebrow' => 'Razvoj inicijative',
