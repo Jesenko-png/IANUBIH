@@ -81,7 +81,7 @@
 
                 <div class="journal-actions">
                     <a href="https://www.sarjournal.org/" class="btn btn-ianubih-gold" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.primary') }}</a>
-                    <a href="https://ianubih.ba/category/aktivnosti-2022/" class="btn btn-ianubih-light-outline" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.secondary') }}</a>
+                    <a href="https://www.sarjournal.org/lov/SAR" class="btn btn-ianubih-light-outline" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.secondary') }}</a>
                 </div>
             </div>
         </div>
@@ -138,9 +138,15 @@
                                 <span>{{ $item['type'] }}</span>
                                 <h3>{{ $item['title'] }}</h3>
                                 <p>{{ $item['text'] }}</p>
-                                <a href="{{ $item['url'] }}" target="_blank" rel="noopener noreferrer">
-                                    {{ $item['link'] }} <i class="fa fa-external-link" aria-hidden="true"></i>
-                                </a>
+                                @if(!empty($item['url']))
+                                    <a href="{{ $item['url'] }}" target="_blank" rel="noopener noreferrer">
+                                        {{ $item['link'] }} <i class="fa fa-external-link" aria-hidden="true"></i>
+                                    </a>
+                                @else
+                                    <span class="library-item-unavailable">
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i> {{ $item['availability'] }}
+                                    </span>
+                                @endif
                             </div>
                         </article>
                     @endforeach

@@ -2844,6 +2844,20 @@ input:focus {
     text-transform: uppercase;
 }
 
+.library-item-unavailable {
+    color: var(--text-muted);
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 600;
+    gap: 7px;
+    letter-spacing: 0.04em;
+}
+
+.library-item-unavailable i {
+    color: var(--knowledge-gold);
+    margin-top: 3px;
+}
+
 .publication-formats {
     background: var(--neutral);
 }
