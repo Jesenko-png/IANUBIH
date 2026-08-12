@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/news', 'pages.placeholder', ['page' => 'news'])->name('news');
+Route::get('/news', [NewsController::class, 'index'])->name('news');
+Route::get('/news/{newsPost:slug}', [NewsController::class, 'show'])->name('news.show');

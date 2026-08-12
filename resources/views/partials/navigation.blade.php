@@ -43,6 +43,26 @@
                 <li class="navbar-utility navbar-language hidden-xs hidden-sm">
                     <a href="{{ route($currentRouteName, array_merge($currentRouteParameters, ['locale' => 'en'])) }}" @class(['active' => app()->getLocale() === 'en']) lang="en">ENG</a>
                 </li>
+                <li class="navbar-login">
+                    @auth
+                        @if (auth()->user()->canManageNews())
+                            <a href="{{ route('admin.news.index') }}" class="nav-login-link" aria-label="{{ __('navigation.administration') }}">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <span class="nav-login-label">{{ __('navigation.administration') }}</span>
+                            </a>
+                        @else
+                            <a href="{{ route('account.show') }}" class="nav-login-link" aria-label="{{ __('navigation.account') }}">
+                                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                <span class="nav-login-label">{{ __('navigation.account') }}</span>
+                            </a>
+                        @endif
+                    @else
+                        <a href="{{ route('login') }}" class="nav-login-link" aria-label="{{ __('navigation.login') }}">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                            <span class="nav-login-label">{{ __('navigation.login') }}</span>
+                        </a>
+                    @endauth
+                </li>
                 <li class="visible-xs visible-sm mobile-language">
                     <a href="{{ route($currentRouteName, array_merge($currentRouteParameters, ['locale' => app()->getLocale() === 'bs' ? 'en' : 'bs'])) }}">
                         {{ app()->getLocale() === 'bs' ? 'ENG' : 'BHS' }}

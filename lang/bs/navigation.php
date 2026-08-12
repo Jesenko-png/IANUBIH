@@ -11,4 +11,7 @@ return [
     'cooperation' => 'Saradnja',
     'contact' => 'Kontaktirajte nas',
     'search' => 'Pretraga',
+    'login' => 'Prijava',
+    'account' => 'Moj nalog',
+    'administration' => 'Administracija',
 ];

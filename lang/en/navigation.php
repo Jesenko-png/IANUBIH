@@ -11,4 +11,7 @@ return [
     'cooperation' => 'Cooperation',
     'contact' => 'Contact us',
     'search' => 'Search',
+    'login' => 'Login',
+    'account' => 'My account',
+    'administration' => 'Administration',
 ];

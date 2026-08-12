@@ -292,23 +292,31 @@
             <p>{{ __('home.news.intro') }}</p>
         </div>
 
+        @if ($latestNews->isNotEmpty())
         <div class="row news-grid">
-            @foreach(__('home.news.items') as $item)
+            @foreach($latestNews as $post)
                 <div class="col-md-4">
                     <article class="news-card wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
                         <div class="news-image-wrap">
-                            <img src="{{ asset('assets/new-event/images/' . $item['image']) }}" alt="">
+                            <img src="{{ Storage::url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
                         </div>
                         <div class="news-body">
-                            <span class="content-tag">{{ $item['category'] }}</span>
-                            <h3>{{ $item['title'] }}</h3>
-                            <p>{{ $item['text'] }}</p>
-                            <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="text-link">{{ __('home.news.read_more') }} <span aria-hidden="true">→</span></a>
+                            <span class="content-tag">{{ $post->localized('category') }}</span>
+                            <h3>{{ $post->localized('title') }}</h3>
+                            <p>{{ $post->localized('excerpt') }}</p>
+                            <a href="{{ route('news.show', ['locale' => app()->getLocale(), 'newsPost' => $post]) }}" class="text-link">{{ __('home.news.read_more') }} <span aria-hidden="true">→</span></a>
                         </div>
                     </article>
                 </div>
             @endforeach
         </div>
+        @else
+            <div class="news-empty-state wow fadeInUp">
+                <span aria-hidden="true">01</span>
+                <h3>{{ __('news.empty.title') }}</h3>
+                <p>{{ __('news.empty.text') }}</p>
+            </div>
+        @endif
 
         <div class="section-actions section-actions-centered wow fadeInUp">
             <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.news.all') }}</a>
