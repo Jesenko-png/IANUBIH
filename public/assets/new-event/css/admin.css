@@ -699,6 +699,34 @@ a {
     width: 100%;
 }
 
+.login-language-switcher {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-bottom: 18px;
+}
+
+.login-language-switcher a {
+    border-bottom: 2px solid transparent;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 2px;
+    text-decoration: none;
+}
+
+.login-language-switcher a:hover,
+.login-language-switcher a.active {
+    border-color: var(--gold);
+    color: var(--navy);
+}
+
+.login-language-switcher a:focus-visible {
+    outline: 3px solid rgba(201, 164, 76, 0.4);
+    outline-offset: 3px;
+}
+
 .login-brand {
     color: var(--navy);
     font-family: "Source Serif 4", Georgia, serif;

@@ -57,7 +57,7 @@
                             </a>
                         @endif
                     @else
-                        <a href="{{ route('login') }}" class="nav-login-link" aria-label="{{ __('navigation.login') }}">
+                        <a href="{{ route('login', ['locale' => app()->getLocale()]) }}" class="nav-login-link" aria-label="{{ __('navigation.login') }}">
                             <i class="fa fa-user-o" aria-hidden="true"></i>
                             <span class="nav-login-label">{{ __('navigation.login') }}</span>
                         </a>

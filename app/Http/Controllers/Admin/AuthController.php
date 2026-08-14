@@ -14,13 +14,17 @@ use Illuminate\View\View;
 
 class AuthController extends Controller
 {
-    public function create(): View
+    public function create(Request $request): View
     {
+        $this->setLocale($request);
+
         return view('admin.auth.login');
     }
 
     public function store(Request $request): RedirectResponse
     {
+        $this->setLocale($request);
+
         $credentials = $request->validateWithBag('login', [
             'email' => ['required', 'email'],
             'password' => ['required', 'string'],
@@ -28,7 +32,7 @@ class AuthController extends Controller
 
         if (! Auth::attempt($credentials, $request->boolean('remember'))) {
             $exception = ValidationException::withMessages([
-                'email' => 'Uneseni podaci nisu ispravni.',
+                'email' => __('auth.failed'),
             ]);
             $exception->errorBag = 'login';
 
@@ -46,6 +50,8 @@ class AuthController extends Controller
 
     public function register(Request $request): RedirectResponse
     {
+        $this->setLocale($request);
+
         $data = $request->validateWithBag('register', [
             'name' => ['required', 'string', 'max:255'],
             'register_email' => ['required', 'email', 'max:255', 'unique:users,email'],
@@ -55,9 +61,9 @@ class AuthController extends Controller
                 Password::min(10)->letters()->numbers(),
             ],
         ], [], [
-            'name' => 'ime i prezime',
-            'register_email' => 'email',
-            'register_password' => 'lozinka',
+            'name' => __('auth.full_name'),
+            'register_email' => __('auth.email'),
+            'register_password' => __('auth.password'),
         ]);
 
         $user = DB::transaction(function () use ($data): User {
@@ -77,12 +83,12 @@ class AuthController extends Controller
         if ($user->isSuperAdmin()) {
             return redirect()
                 ->route('admin.news.index')
-                ->with('status', 'Kreiran je prvi nalog s ovlaštenjima glavnog administratora.');
+                ->with('status', __('auth.first_account_created'));
         }
 
         return redirect()
             ->route('account.show')
-            ->with('status', 'Nalog je kreiran. Glavni administrator mora odobriti pravo objavljivanja.');
+            ->with('status', __('auth.account_created_pending'));
     }
 
     public function destroy(Request $request): RedirectResponse
@@ -92,5 +98,12 @@ class AuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('login');
+    }
+
+    private function setLocale(Request $request): void
+    {
+        $locale = $request->string('locale')->toString();
+
+        app()->setLocale(in_array($locale, ['bs', 'en'], true) ? $locale : 'bs');
     }
 }
