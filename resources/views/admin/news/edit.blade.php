@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Uredi vijest')
+@section('title', __('admin.news.edit_title'))
 
 @section('content')
 <div class="admin-page-heading admin-page-heading-compact">
     <div>
-        <a href="{{ route('admin.news.index') }}" class="admin-back-link">← Nazad na aktuelnosti</a>
-        <h1>Uredi vijest</h1>
-        <p>URL vijesti ostaje stabilan nakon izmjene naslova.</p>
+        <a href="{{ route('admin.news.index') }}" class="admin-back-link">← {{ __('admin.news.back') }}</a>
+        <h1>{{ __('admin.news.edit_title') }}</h1>
+        <p>{{ __('admin.news.edit_intro') }}</p>
     </div>
 </div>
 

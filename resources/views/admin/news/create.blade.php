@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
-@section('title', 'Nova vijest')
+@section('title', __('admin.news.create_title'))
 
 @section('content')
 <div class="admin-page-heading admin-page-heading-compact">
     <div>
-        <a href="{{ route('admin.news.index') }}" class="admin-back-link">← Nazad na aktuelnosti</a>
-        <h1>Nova vijest</h1>
-        <p>Unesite obje jezičke verzije prije čuvanja.</p>
+        <a href="{{ route('admin.news.index') }}" class="admin-back-link">← {{ __('admin.news.back') }}</a>
+        <h1>{{ __('admin.news.create_title') }}</h1>
+        <p>{{ __('admin.news.create_intro') }}</p>
     </div>
 </div>
 

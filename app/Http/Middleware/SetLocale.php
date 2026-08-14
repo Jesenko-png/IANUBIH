@@ -15,6 +15,7 @@ class SetLocale
         abort_unless(in_array($locale, ['bs', 'en'], true), 404);
 
         app()->setLocale($locale);
+        $request->session()->put('locale', $locale);
 
         return $next($request);
     }

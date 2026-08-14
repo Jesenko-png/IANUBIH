@@ -21,12 +21,17 @@
         <nav class="admin-nav" aria-label="{{ __('account.administration') }}">
             @if (auth()->user()->canManageNews())
                 <a href="{{ route('admin.news.index') }}" @class(['active' => request()->routeIs('admin.news.*')])>{{ __('account.news') }}</a>
+                <a href="{{ route('admin.cooperation-inquiries.index') }}" @class(['active' => request()->routeIs('admin.cooperation-inquiries.*')])>{{ __('cooperation.admin.navigation') }}</a>
             @endif
             @if (auth()->user()->isSuperAdmin())
                 <a href="{{ route('admin.users.index') }}" @class(['active' => request()->routeIs('admin.users.*')])>{{ __('account.users') }}</a>
             @endif
             <a href="{{ route('account.show', ['locale' => app()->getLocale()]) }}" @class(['active' => request()->routeIs('account.*')])>{{ __('account.my_account') }}</a>
             <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" target="_blank" rel="noopener">{{ __('account.open_website') }}</a>
+            <span class="admin-language-switcher" aria-label="{{ __('auth.language') }}">
+                <a href="{{ request()->fullUrlWithQuery(['locale' => 'bs']) }}" @class(['active' => app()->getLocale() === 'bs']) lang="bs" aria-label="Bosanski">BS</a>
+                <a href="{{ request()->fullUrlWithQuery(['locale' => 'en']) }}" @class(['active' => app()->getLocale() === 'en']) lang="en" aria-label="English">EN</a>
+            </span>
             <span class="admin-user">{{ auth()->user()->name }}</span>
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

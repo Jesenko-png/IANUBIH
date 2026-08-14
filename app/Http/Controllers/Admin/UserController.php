@@ -22,7 +22,7 @@ class UserController extends Controller
 
     public function update(Request $request, User $user): RedirectResponse
     {
-        abort_if($user->isSuperAdmin(), 422, 'Uloga glavnog administratora se ne može mijenjati.');
+        abort_if($user->isSuperAdmin(), 422, __('admin.users.cannot_change_super'));
 
         $data = $request->validate([
             'role' => ['required', Rule::in([User::ROLE_MEMBER, User::ROLE_ADMIN])],
@@ -33,7 +33,7 @@ class UserController extends Controller
         return redirect()
             ->route('admin.users.index')
             ->with('status', $user->role === User::ROLE_ADMIN
-                ? 'Korisniku je odobreno objavljivanje.'
-                : 'Administratorsko ovlaštenje je uklonjeno.');
+                ? __('admin.users.permission_granted')
+                : __('admin.users.permission_removed'));
     }
 }

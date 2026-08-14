@@ -48,7 +48,7 @@ class NewsController extends Controller
 
         return redirect()
             ->route('admin.news.index')
-            ->with('status', 'Vijest je uspješno sačuvana.');
+            ->with('status', __('admin.news.saved'));
     }
 
     public function edit(NewsPost $newsPost): View
@@ -83,7 +83,7 @@ class NewsController extends Controller
 
         return redirect()
             ->route('admin.news.index')
-            ->with('status', 'Izmjene su uspješno sačuvane.');
+            ->with('status', __('admin.news.updated'));
     }
 
     public function destroy(NewsPost $newsPost): RedirectResponse
@@ -94,7 +94,7 @@ class NewsController extends Controller
 
         return redirect()
             ->route('admin.news.index')
-            ->with('status', 'Vijest je obrisana.');
+            ->with('status', __('admin.news.deleted'));
     }
 
     private function normalizedData(NewsPostRequest $request): array

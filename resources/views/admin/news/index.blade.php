@@ -1,24 +1,24 @@
 @extends('layouts.admin')
 
-@section('title', 'Aktuelnosti')
+@section('title', __('admin.news.index_title'))
 
 @section('content')
 <div class="admin-page-heading">
     <div>
-        <span class="admin-eyebrow">CMS modul</span>
-        <h1>Aktuelnosti</h1>
-        <p>Kreirajte, uredite i objavite vijesti na bosanskom i engleskom jeziku.</p>
+        <span class="admin-eyebrow">{{ __('admin.news.eyebrow') }}</span>
+        <h1>{{ __('admin.news.index_title') }}</h1>
+        <p>{{ __('admin.news.index_intro') }}</p>
     </div>
-    <a href="{{ route('admin.news.create') }}" class="admin-button admin-button-primary">Nova vijest</a>
+    <a href="{{ route('admin.news.create') }}" class="admin-button admin-button-primary">{{ __('admin.news.new') }}</a>
 </div>
 
-<section class="admin-panel" aria-label="Spisak vijesti">
+<section class="admin-panel" aria-label="{{ __('admin.news.list_label') }}">
     @if ($newsPosts->isEmpty())
         <div class="admin-empty">
             <span>01</span>
-            <h2>Još nema vijesti</h2>
-            <p>Dodajte prvu vijest i sačuvajte je kao nacrt ili je odmah objavite.</p>
-            <a href="{{ route('admin.news.create') }}" class="admin-button admin-button-primary">Dodaj prvu vijest</a>
+            <h2>{{ __('admin.news.empty_title') }}</h2>
+            <p>{{ __('admin.news.empty_text') }}</p>
+            <a href="{{ route('admin.news.create') }}" class="admin-button admin-button-primary">{{ __('admin.news.add_first') }}</a>
         </div>
     @else
         <div class="admin-news-list">
@@ -38,24 +38,24 @@
                                 'status-scheduled' => $isScheduled,
                                 'status-draft' => ! $post->isPublished() && ! $isScheduled,
                             ])>
-                                {{ $post->isPublished() ? 'Objavljeno' : ($isScheduled ? 'Zakazano' : 'Nacrt') }}
+                                {{ $post->isPublished() ? __('admin.news.status_published') : ($isScheduled ? __('admin.news.status_scheduled') : __('admin.news.status_draft')) }}
                             </span>
-                            <span>{{ $post->category_bs }}</span>
-                            <span>{{ optional($post->published_at)->format('d.m.Y. H:i') ?: 'Bez datuma objave' }}</span>
+                            <span>{{ $post->localized('category') }}</span>
+                            <span>{{ optional($post->published_at)->format('d.m.Y. H:i') ?: __('admin.news.no_publication_date') }}</span>
                         </div>
-                        <h2>{{ $post->title_bs }}</h2>
-                        <p>{{ $post->excerpt_bs }}</p>
-                        <small>Zadnja izmjena: {{ $post->updated_at->format('d.m.Y. H:i') }}@if($post->author) · {{ $post->author->name }}@endif</small>
+                        <h2>{{ $post->localized('title') }}</h2>
+                        <p>{{ $post->localized('excerpt') }}</p>
+                        <small>{{ __('admin.news.last_updated', ['date' => $post->updated_at->format('d.m.Y. H:i')]) }}@if($post->author) · {{ $post->author->name }}@endif</small>
                     </div>
                     <div class="admin-news-actions">
                         @if ($post->isPublished())
-                            <a href="{{ route('news.show', ['locale' => 'bs', 'newsPost' => $post]) }}" target="_blank" rel="noopener" class="admin-button admin-button-secondary">Pregled</a>
+                            <a href="{{ route('news.show', ['locale' => app()->getLocale(), 'newsPost' => $post]) }}" target="_blank" rel="noopener" class="admin-button admin-button-secondary">{{ __('admin.news.view') }}</a>
                         @endif
-                        <a href="{{ route('admin.news.edit', $post) }}" class="admin-button admin-button-secondary">Uredi</a>
-                        <form method="POST" action="{{ route('admin.news.destroy', $post) }}" onsubmit="return confirm('Trajno obrisati ovu vijest?')">
+                        <a href="{{ route('admin.news.edit', $post) }}" class="admin-button admin-button-secondary">{{ __('admin.news.edit') }}</a>
+                        <form method="POST" action="{{ route('admin.news.destroy', $post) }}" onsubmit="return confirm(@js(__('admin.news.delete_confirm')))">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="admin-button admin-button-danger">Obriši</button>
+                            <button type="submit" class="admin-button admin-button-danger">{{ __('admin.news.delete') }}</button>
                         </form>
                     </div>
                 </article>
@@ -63,17 +63,17 @@
         </div>
 
         @if ($newsPosts->hasPages())
-            <nav class="admin-pagination" aria-label="Stranice">
+            <nav class="admin-pagination" aria-label="{{ __('admin.news.pages') }}">
                 @if ($newsPosts->onFirstPage())
-                    <span>Prethodna</span>
+                    <span>{{ __('admin.common.previous') }}</span>
                 @else
-                    <a href="{{ $newsPosts->previousPageUrl() }}">Prethodna</a>
+                    <a href="{{ $newsPosts->previousPageUrl() }}">{{ __('admin.common.previous') }}</a>
                 @endif
                 <strong>{{ $newsPosts->currentPage() }} / {{ $newsPosts->lastPage() }}</strong>
                 @if ($newsPosts->hasMorePages())
-                    <a href="{{ $newsPosts->nextPageUrl() }}">Sljedeća</a>
+                    <a href="{{ $newsPosts->nextPageUrl() }}">{{ __('admin.common.next') }}</a>
                 @else
-                    <span>Sljedeća</span>
+                    <span>{{ __('admin.common.next') }}</span>
                 @endif
             </nav>
         @endif

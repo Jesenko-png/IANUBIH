@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\ApplySessionLocale;
 use App\Http\Middleware\EnsureAdmin;
 use App\Http\Middleware\EnsureSuperAdmin;
 use App\Http\Middleware\SetLocale;
@@ -15,6 +16,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        $middleware->web(append: [
+            ApplySessionLocale::class,
+        ]);
+
         $middleware->alias([
             'admin' => EnsureAdmin::class,
             'locale' => SetLocale::class,

@@ -44,20 +44,6 @@ class NewsPostRequest extends FormRequest
 
     public function attributes(): array
     {
-        return [
-            'title_bs' => 'naslov na bosanskom',
-            'title_en' => 'naslov na engleskom',
-            'category_bs' => 'kategorija na bosanskom',
-            'category_en' => 'kategorija na engleskom',
-            'excerpt_bs' => 'sažetak na bosanskom',
-            'excerpt_en' => 'sažetak na engleskom',
-            'body_bs' => 'sadržaj na bosanskom',
-            'body_en' => 'sadržaj na engleskom',
-            'image' => 'naslovna slika',
-            'image_alt_bs' => 'opis slike na bosanskom',
-            'image_alt_en' => 'opis slike na engleskom',
-            'status' => 'status',
-            'published_at' => 'datum objave',
-        ];
+        return __('admin.news.validation_attributes');
     }
 }

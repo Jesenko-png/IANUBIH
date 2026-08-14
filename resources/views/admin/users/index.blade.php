@@ -1,21 +1,21 @@
 @extends('layouts.admin')
 
-@section('title', 'Korisnici')
+@section('title', __('admin.users.title'))
 
 @section('content')
 <div class="admin-page-heading">
     <div>
-        <span class="admin-eyebrow">Dozvole</span>
-        <h1>Korisnici</h1>
-        <p>Samo glavni administrator može odobriti ili ukloniti pravo objavljivanja.</p>
+        <span class="admin-eyebrow">{{ __('admin.users.eyebrow') }}</span>
+        <h1>{{ __('admin.users.title') }}</h1>
+        <p>{{ __('admin.users.intro') }}</p>
     </div>
 </div>
 
-<section class="admin-panel users-panel" aria-label="Korisnički nalozi">
+<section class="admin-panel users-panel" aria-label="{{ __('admin.users.list_label') }}">
     <div class="permission-legend">
-        <div><strong>Korisnik</strong><span>Nema pristup CMS-u</span></div>
-        <div><strong>Administrator</strong><span>Može objavljivati i uređivati vijesti</span></div>
-        <div><strong>Glavni administrator</strong><span>Upravlja vijestima i dozvolama</span></div>
+        <div><strong>{{ __('admin.users.member') }}</strong><span>{{ __('admin.users.member_description') }}</span></div>
+        <div><strong>{{ __('admin.users.administrator') }}</strong><span>{{ __('admin.users.administrator_description') }}</span></div>
+        <div><strong>{{ __('admin.users.super_administrator') }}</strong><span>{{ __('admin.users.super_administrator_description') }}</span></div>
     </div>
 
     <div class="user-list">
@@ -25,21 +25,21 @@
                 <div class="user-identity">
                     <h2>{{ $user->name }}</h2>
                     <p>{{ $user->email }}</p>
-                    <small>Kreiran {{ $user->created_at->format('d.m.Y. H:i') }}</small>
+                    <small>{{ __('admin.users.created', ['date' => $user->created_at->format('d.m.Y. H:i')]) }}</small>
                 </div>
 
                 @if ($user->isSuperAdmin())
-                    <span class="account-role account-role-super">Glavni administrator</span>
+                    <span class="account-role account-role-super">{{ __('admin.users.super_administrator') }}</span>
                 @else
                     <form method="POST" action="{{ route('admin.users.update', $user) }}" class="user-role-form">
                         @csrf
                         @method('PATCH')
-                        <label for="role-{{ $user->id }}">Uloga</label>
+                        <label for="role-{{ $user->id }}">{{ __('admin.users.role') }}</label>
                         <select id="role-{{ $user->id }}" name="role">
-                            <option value="member" @selected($user->role === 'member')>Korisnik</option>
-                            <option value="admin" @selected($user->role === 'admin')>Administrator</option>
+                            <option value="member" @selected($user->role === 'member')>{{ __('admin.users.member') }}</option>
+                            <option value="admin" @selected($user->role === 'admin')>{{ __('admin.users.administrator') }}</option>
                         </select>
-                        <button type="submit" class="admin-button admin-button-primary">Sačuvaj dozvolu</button>
+                        <button type="submit" class="admin-button admin-button-primary">{{ __('admin.users.save_permission') }}</button>
                     </form>
                 @endif
             </article>
@@ -47,17 +47,17 @@
     </div>
 
     @if ($users->hasPages())
-        <nav class="admin-pagination" aria-label="Stranice korisnika">
+        <nav class="admin-pagination" aria-label="{{ __('admin.users.pages') }}">
             @if ($users->onFirstPage())
-                <span>Prethodna</span>
+                <span>{{ __('admin.common.previous') }}</span>
             @else
-                <a href="{{ $users->previousPageUrl() }}">Prethodna</a>
+                <a href="{{ $users->previousPageUrl() }}">{{ __('admin.common.previous') }}</a>
             @endif
             <strong>{{ $users->currentPage() }} / {{ $users->lastPage() }}</strong>
             @if ($users->hasMorePages())
-                <a href="{{ $users->nextPageUrl() }}">Sljedeća</a>
+                <a href="{{ $users->nextPageUrl() }}">{{ __('admin.common.next') }}</a>
             @else
-                <span>Sljedeća</span>
+                <span>{{ __('admin.common.next') }}</span>
             @endif
         </nav>
     @endif
