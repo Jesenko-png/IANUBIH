@@ -26,6 +26,10 @@
             <h1 id="login-title">{{ __('auth.heading') }}</h1>
             <p class="login-intro">{{ __('auth.intro') }}</p>
 
+            @if (session('status'))
+                <div class="admin-alert admin-alert-success" role="status">{{ session('status') }}</div>
+            @endif
+
             @if ($errors->login->any())
                 <div class="admin-alert admin-alert-error" role="alert">{{ $errors->login->first() }}</div>
             @endif
@@ -40,6 +44,7 @@
                 <div class="form-field">
                     <label for="password">{{ __('auth.password') }}</label>
                     <input id="password" type="password" name="password" autocomplete="current-password" required>
+                    <a class="forgot-password-link" href="{{ route('password.request', ['locale' => app()->getLocale()]) }}">{{ __('auth.forgot_link') }}</a>
                 </div>
                 <label class="checkbox-field">
                     <input type="checkbox" name="remember" value="1">
