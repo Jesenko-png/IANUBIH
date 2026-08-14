@@ -45,7 +45,7 @@ class AuthController extends Controller
             return redirect()->intended(route('admin.news.index'));
         }
 
-        return redirect()->route('account.show');
+        return redirect()->route('account.show', ['locale' => app()->getLocale()]);
     }
 
     public function register(Request $request): RedirectResponse
@@ -87,23 +87,29 @@ class AuthController extends Controller
         }
 
         return redirect()
-            ->route('account.show')
+            ->route('account.show', ['locale' => app()->getLocale()])
             ->with('status', __('auth.account_created_pending'));
     }
 
     public function destroy(Request $request): RedirectResponse
     {
+        $this->setLocale($request);
+        $locale = app()->getLocale();
+
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('login');
+        return redirect()->route('login', ['locale' => $locale]);
     }
 
     private function setLocale(Request $request): void
     {
         $locale = $request->string('locale')->toString();
 
-        app()->setLocale(in_array($locale, ['bs', 'en'], true) ? $locale : 'bs');
+        $locale = in_array($locale, ['bs', 'en'], true) ? $locale : 'bs';
+
+        app()->setLocale($locale);
+        $request->session()->put('locale', $locale);
     }
 }
