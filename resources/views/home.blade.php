@@ -98,12 +98,9 @@
 </section>
 
 <section id="projects" class="ianubih-section initiative-section" aria-labelledby="initiative-title">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row initiative-row">
-            <div class="col-md-6 initiative-image-wrap wow fadeInLeft">
-                <img src="{{ asset('assets/new-event/images/b-web.jpg') }}" alt="{{ __('home.initiative.image_alt') }}" class="initiative-image">
-            </div>
-            <div class="col-md-6 initiative-content wow fadeInRight">
+            <div class="col-md-7 initiative-content wow fadeInUp">
                 <span class="section-eyebrow section-eyebrow-light">{{ __('home.initiative.eyebrow') }}</span>
                 <h2 id="initiative-title">{{ __('home.initiative.title') }}</h2>
                 <p>{{ __('home.initiative.text') }}</p>
