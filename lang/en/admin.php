@@ -82,7 +82,7 @@ return [
     'users' => [
         'eyebrow' => 'Permissions',
         'title' => 'Users',
-        'intro' => 'Only the chief administrator can grant or remove administration access.',
+        'intro' => 'The chief administrator can assign or change user and administration roles.',
         'list_label' => 'User accounts',
         'member' => 'User',
         'member_description' => 'No access to content administration',
@@ -94,7 +94,8 @@ return [
         'role' => 'Role',
         'save_permission' => 'Save permission',
         'pages' => 'User pages',
-        'cannot_change_super' => 'The chief administrator role cannot be changed.',
+        'cannot_change_self' => 'You cannot change the role of your own account.',
+        'promoted_super' => 'The user has been made a chief administrator.',
         'permission_granted' => 'Administration access has been granted to the user.',
         'permission_removed' => 'Administration access has been removed.',
     ],

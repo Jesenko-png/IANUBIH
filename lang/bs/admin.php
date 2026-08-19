@@ -82,7 +82,7 @@ return [
     'users' => [
         'eyebrow' => 'Dozvole',
         'title' => 'Korisnici',
-        'intro' => 'Samo glavni administrator može odobriti ili ukloniti administratorsko pravo.',
+        'intro' => 'Glavni administrator može dodijeliti ili promijeniti korisničke i administratorske uloge.',
         'list_label' => 'Korisnički nalozi',
         'member' => 'Korisnik',
         'member_description' => 'Nema pristup administraciji sadržaja',
@@ -94,7 +94,8 @@ return [
         'role' => 'Uloga',
         'save_permission' => 'Sačuvaj dozvolu',
         'pages' => 'Stranice korisnika',
-        'cannot_change_super' => 'Uloga glavnog administratora se ne može mijenjati.',
+        'cannot_change_self' => 'Ne možete promijeniti ulogu vlastitog naloga.',
+        'promoted_super' => 'Korisnik je postavljen za glavnog administratora.',
         'permission_granted' => 'Korisniku je odobreno administratorsko pravo.',
         'permission_removed' => 'Administratorsko pravo je uklonjeno.',
     ],

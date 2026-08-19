@@ -28,7 +28,7 @@
                     <small>{{ __('admin.users.created', ['date' => $user->created_at->format('d.m.Y. H:i')]) }}</small>
                 </div>
 
-                @if ($user->isSuperAdmin())
+                @if (auth()->id() === $user->id)
                     <span class="account-role account-role-super">{{ __('admin.users.super_administrator') }}</span>
                 @else
                     <form method="POST" action="{{ route('admin.users.update', $user) }}" class="user-role-form">
@@ -38,6 +38,7 @@
                         <select id="role-{{ $user->id }}" name="role">
                             <option value="member" @selected($user->role === 'member')>{{ __('admin.users.member') }}</option>
                             <option value="admin" @selected($user->role === 'admin')>{{ __('admin.users.administrator') }}</option>
+                            <option value="super_admin" @selected($user->role === 'super_admin')>{{ __('admin.users.super_administrator') }}</option>
                         </select>
                         <button type="submit" class="admin-button admin-button-primary">{{ __('admin.users.save_permission') }}</button>
                     </form>

@@ -22,18 +22,24 @@ class UserController extends Controller
 
     public function update(Request $request, User $user): RedirectResponse
     {
-        abort_if($user->isSuperAdmin(), 422, __('admin.users.cannot_change_super'));
+        abort_if($request->user()->is($user), 422, __('admin.users.cannot_change_self'));
 
         $data = $request->validate([
-            'role' => ['required', Rule::in([User::ROLE_MEMBER, User::ROLE_ADMIN])],
+            'role' => ['required', Rule::in([
+                User::ROLE_MEMBER,
+                User::ROLE_ADMIN,
+                User::ROLE_SUPER_ADMIN,
+            ])],
         ]);
 
         $user->update($data);
 
         return redirect()
             ->route('admin.users.index')
-            ->with('status', $user->role === User::ROLE_ADMIN
-                ? __('admin.users.permission_granted')
-                : __('admin.users.permission_removed'));
+            ->with('status', match ($user->role) {
+                User::ROLE_SUPER_ADMIN => __('admin.users.promoted_super'),
+                User::ROLE_ADMIN => __('admin.users.permission_granted'),
+                default => __('admin.users.permission_removed'),
+            });
     }
 }
