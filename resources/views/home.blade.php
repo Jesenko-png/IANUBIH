@@ -180,6 +180,7 @@
 </section>
 
 <section id="publications" class="ianubih-section publications-section" aria-labelledby="publications-title">
+    <span class="publication-line-trigger" aria-hidden="true"></span>
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('home.publications.eyebrow') }}</span>

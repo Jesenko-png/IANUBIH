@@ -1016,6 +1016,24 @@ input:focus {
     z-index: 0;
 }
 
+.publications-section.line-ready::before {
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 1.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.publications-section.line-ready.line-filled::before {
+    clip-path: inset(0 0 0 0);
+}
+
+.publication-line-trigger {
+    height: 1px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 43%;
+    width: 100%;
+}
+
 .publications-section > .container {
     position: relative;
     z-index: 1;
@@ -3950,6 +3968,11 @@ input:focus {
     .hero-connection-signals path,
     .hero-connection-points circle {
         animation: none;
+    }
+
+    .publications-section.line-ready::before {
+        clip-path: none;
+        transition: none;
     }
 
     .expertise-marquee-group:not(:first-child),
