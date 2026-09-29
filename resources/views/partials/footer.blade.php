@@ -50,9 +50,9 @@
                     Facebook
                 </a>
                 <div class="footer-legal">
-                    <span>{{ __('home.footer.privacy') }}</span>
-                    <span>{{ __('home.footer.cookies') }}</span>
-                    <span>{{ __('home.footer.terms') }}</span>
+                    <a href="{{ route('privacy', ['locale' => app()->getLocale()]) }}">{{ __('home.footer.privacy') }}</a>
+                    <a href="{{ route('cookies', ['locale' => app()->getLocale()]) }}">{{ __('home.footer.cookies') }}</a>
+                    <a href="{{ route('terms', ['locale' => app()->getLocale()]) }}">{{ __('home.footer.terms') }}</a>
                 </div>
             </div>
         </div>

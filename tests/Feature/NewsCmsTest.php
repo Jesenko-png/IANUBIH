@@ -4,8 +4,11 @@ namespace Tests\Feature;
 
 use App\Models\NewsPost;
 use App\Models\User;
+use App\Notifications\ResetPasswordNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
 
@@ -98,7 +101,8 @@ class NewsCmsTest extends TestCase
             'role' => User::ROLE_SUPER_ADMIN,
         ]);
 
-        $this->post(route('logout'))->assertRedirect(route('login'));
+        $this->post(route('logout'), ['locale' => 'bs'])
+            ->assertRedirect(route('login', ['locale' => 'bs']));
 
         $this->get('/login')
             ->assertOk()
@@ -110,7 +114,7 @@ class NewsCmsTest extends TestCase
             'register_email' => 'drugi@ianubih.ba',
             'register_password' => 'DrugaLozinka2026',
             'register_password_confirmation' => 'DrugaLozinka2026',
-        ])->assertRedirect(route('account.show'));
+        ])->assertRedirect(route('account.show', ['locale' => 'bs']));
 
         $this->assertDatabaseHas('users', [
             'email' => 'drugi@ianubih.ba',
@@ -125,13 +129,85 @@ class NewsCmsTest extends TestCase
     {
         $this->get('/bs')
             ->assertOk()
-            ->assertSee(route('login'))
+            ->assertSee(route('login', ['locale' => 'bs']))
             ->assertSeeText('Prijava');
 
         $this->get('/en')
             ->assertOk()
-            ->assertSee(route('login'))
+            ->assertSee(route('login', ['locale' => 'en']))
             ->assertSeeText('Login');
+    }
+
+    public function test_login_and_registration_are_bilingual(): void
+    {
+        $this->get(route('login', ['locale' => 'bs']))
+            ->assertOk()
+            ->assertSee('lang="bs"', false)
+            ->assertSeeText('Prijava')
+            ->assertSeeText('Kreiraj nalog');
+
+        $this->get(route('login', ['locale' => 'en']))
+            ->assertOk()
+            ->assertSee('lang="en"', false)
+            ->assertSeeText('Sign in')
+            ->assertSeeText('Create account')
+            ->assertSeeText('Confirm password');
+    }
+
+    public function test_user_can_request_and_complete_a_bilingual_password_reset(): void
+    {
+        Notification::fake();
+        $member = User::factory()->create(['role' => User::ROLE_MEMBER]);
+
+        $this->get(route('password.request', ['locale' => 'en']))
+            ->assertOk()
+            ->assertSeeText('Forgot your password?')
+            ->assertSeeText('Send password reset link');
+
+        $this->post(route('password.email'), [
+            'locale' => 'en',
+            'email' => $member->email,
+        ])->assertSessionHas('status');
+
+        Notification::assertSentTo($member, ResetPasswordNotification::class);
+        $notification = Notification::sent($member, ResetPasswordNotification::class)->first();
+        $this->assertSame('Set a new IANUBIH password', $notification->toMail($member)->subject);
+
+        $this->get(route('password.reset', [
+            'token' => $notification->token,
+            'email' => $member->email,
+            'locale' => 'en',
+        ]))
+            ->assertOk()
+            ->assertSeeText('Set a new password');
+
+        $this->post(route('password.update'), [
+            'locale' => 'en',
+            'token' => $notification->token,
+            'email' => $member->email,
+            'password' => 'NewSecurePassword2026',
+            'password_confirmation' => 'NewSecurePassword2026',
+        ])->assertRedirect(route('login', ['locale' => 'en']));
+
+        $this->assertTrue(Hash::check('NewSecurePassword2026', $member->fresh()->password));
+    }
+
+    public function test_member_account_uses_the_language_selected_during_login(): void
+    {
+        $member = User::factory()->create(['role' => User::ROLE_MEMBER]);
+
+        $this->post(route('login.store'), [
+            'locale' => 'en',
+            'email' => $member->email,
+            'password' => 'password',
+        ])->assertRedirect(route('account.show', ['locale' => 'en']));
+
+        $this->get(route('account.show', ['locale' => 'en']))
+            ->assertOk()
+            ->assertSee('lang="en"', false)
+            ->assertSeeText('User account')
+            ->assertSeeText('Your account is awaiting administrator approval.')
+            ->assertSeeText('you do not yet have publishing access');
     }
 
     public function test_only_super_admin_can_grant_news_administration_permission(): void

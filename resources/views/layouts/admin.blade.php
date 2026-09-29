@@ -22,6 +22,7 @@
             @if (auth()->user()->canManageNews())
                 <a href="{{ route('admin.news.index') }}" @class(['active' => request()->routeIs('admin.news.*')])>{{ __('account.news') }}</a>
                 <a href="{{ route('admin.cooperation-inquiries.index') }}" @class(['active' => request()->routeIs('admin.cooperation-inquiries.*')])>{{ __('cooperation.admin.navigation') }}</a>
+                <a href="{{ route('admin.analytics.index') }}" @class(['active' => request()->routeIs('admin.analytics.*')])>{{ __('account.analytics') }}</a>
             @endif
             @if (auth()->user()->isSuperAdmin())
                 <a href="{{ route('admin.users.index') }}" @class(['active' => request()->routeIs('admin.users.*')])>{{ __('account.users') }}</a>

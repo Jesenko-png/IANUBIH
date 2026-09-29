@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('cooperation-inquiries', AdminCooperationInquiryController::class)
             ->parameters(['cooperation-inquiries' => 'cooperationInquiry'])
             ->only(['index', 'show']);
+        Route::view('/analytics', 'admin.analytics.index')->name('analytics.index');
 
         Route::middleware('super_admin')->group(function () {
             Route::post('/cooperation-inquiries/setup', [AdminCooperationInquiryController::class, 'setup'])

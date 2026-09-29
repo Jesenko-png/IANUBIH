@@ -22,6 +22,7 @@ class ExampleTest extends TestCase
             ->assertSeeText('Mudrost koja usmjerava.')
             ->assertSee('assets/new-event/css/ianubih.css')
             ->assertSee('assets/new-event/js/ianubih.js')
+            ->assertSee('assets/new-event/js/analytics-consent.js')
             ->assertDontSee('assets/new-event/js/smoothscroll.js')
             ->assertDontSeeText('Web Design Conference');
 
@@ -31,6 +32,7 @@ class ExampleTest extends TestCase
             ->assertSeeText('Wisdom that guides.')
             ->assertSee('assets/new-event/css/ianubih.css')
             ->assertSee('assets/new-event/js/ianubih.js')
+            ->assertSee('assets/new-event/js/analytics-consent.js')
             ->assertDontSee('assets/new-event/js/smoothscroll.js')
             ->assertDontSeeText('Web Design Conference');
     }
@@ -63,6 +65,9 @@ class ExampleTest extends TestCase
             'news',
             'cooperation',
             'contact',
+            'privacy-policy',
+            'cookie-policy',
+            'terms-of-use',
         ];
 
         foreach (['bs', 'en'] as $locale) {
@@ -70,6 +75,32 @@ class ExampleTest extends TestCase
                 $this->get("/{$locale}/{$path}")->assertOk();
             }
         }
+    }
+
+    public function test_legal_pages_and_footer_links_are_localized(): void
+    {
+        $this->get('/bs/privacy-policy')
+            ->assertOk()
+            ->assertSeeText('Pravila privatnosti')
+            ->assertSeeText('Vaša prava')
+            ->assertSee(route('cookies', ['locale' => 'bs']))
+            ->assertSee(route('terms', ['locale' => 'bs']));
+
+        $this->get('/en/privacy-policy')
+            ->assertOk()
+            ->assertSeeText('Privacy Policy')
+            ->assertSeeText('Your rights')
+            ->assertSee(route('cookies', ['locale' => 'en']))
+            ->assertSee(route('terms', ['locale' => 'en']));
+
+        $this->get('/bs/cookie-policy')
+            ->assertOk()
+            ->assertSeeText('Politika kolačića')
+            ->assertSeeText('Postavke kolačića');
+
+        $this->get('/en/terms-of-use')
+            ->assertOk()
+            ->assertSeeText('Terms of Use');
     }
 
     public function test_the_fields_page_contains_all_nine_areas_in_both_languages(): void

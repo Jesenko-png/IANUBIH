@@ -6,6 +6,7 @@ return [
     'user_account' => 'User account',
     'my_account' => 'My account',
     'news' => 'News',
+    'analytics' => 'Analytics',
     'users' => 'Users',
     'open_website' => 'Open website',
     'logout' => 'Log out',

@@ -197,6 +197,90 @@ a {
     box-shadow: var(--shadow);
 }
 
+/* Analytics */
+.analytics-overview {
+    overflow: hidden;
+}
+
+.analytics-status-card {
+    align-items: center;
+    background: var(--navy);
+    color: rgba(255, 255, 255, 0.7);
+    display: grid;
+    gap: 24px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    padding: clamp(30px, 5vw, 54px);
+}
+
+.analytics-status-dot {
+    background: #5dc485;
+    border: 7px solid rgba(93, 196, 133, 0.18);
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 12px;
+    width: 12px;
+}
+
+.analytics-status-card .admin-eyebrow {
+    color: var(--gold);
+}
+
+.analytics-status-card h2 {
+    color: var(--white);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(27px, 3vw, 38px);
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+.analytics-status-card p {
+    margin: 0;
+}
+
+.analytics-status-card code {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: var(--white);
+    font-size: 13px;
+    padding: 11px 14px;
+}
+
+.analytics-information-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.analytics-information-grid article {
+    min-height: 260px;
+    padding: 42px;
+}
+
+.analytics-information-grid article + article {
+    border-left: 1px solid var(--border);
+}
+
+.analytics-information-grid article > span {
+    color: var(--gold);
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.analytics-information-grid h3 {
+    color: var(--navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 23px;
+    line-height: 1.25;
+    margin: 0 0 13px;
+}
+
+.analytics-information-grid p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0;
+}
+
 .admin-button {
     align-items: center;
     border: 2px solid transparent;
@@ -873,6 +957,19 @@ a {
 }
 
 @media (max-width: 1050px) {
+    .analytics-information-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-information-grid article {
+        min-height: 0;
+    }
+
+    .analytics-information-grid article + article {
+        border-left: 0;
+        border-top: 1px solid var(--border);
+    }
+
     .editor-grid {
         grid-template-columns: 1fr;
     }
@@ -927,6 +1024,19 @@ a {
 
     .admin-main {
         padding-top: 35px;
+    }
+
+    .analytics-status-card {
+        align-items: flex-start;
+        grid-template-columns: auto minmax(0, 1fr);
+    }
+
+    .analytics-status-card code {
+        grid-column: 1 / -1;
+    }
+
+    .analytics-information-grid article {
+        padding: 30px 24px;
     }
 
     .admin-news-list {

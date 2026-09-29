@@ -10,3 +10,4 @@ require __DIR__.'/site/events.php';
 require __DIR__.'/site/news.php';
 require __DIR__.'/site/cooperation.php';
 require __DIR__.'/site/contact.php';
+require __DIR__.'/site/legal.php';
