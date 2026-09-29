@@ -21,6 +21,7 @@
         <nav class="admin-nav" aria-label="{{ __('account.administration') }}">
             @if (auth()->user()->canManageNews())
                 <a href="{{ route('admin.news.index') }}" @class(['active' => request()->routeIs('admin.news.*')])>{{ __('account.news') }}</a>
+                <a href="{{ route('admin.members.index') }}" @class(['active' => request()->routeIs('admin.members.*')])>{{ __('account.members') }}</a>
                 <a href="{{ route('admin.cooperation-inquiries.index') }}" @class(['active' => request()->routeIs('admin.cooperation-inquiries.*')])>{{ __('cooperation.admin.navigation') }}</a>
                 <a href="{{ route('admin.analytics.index') }}" @class(['active' => request()->routeIs('admin.analytics.*')])>{{ __('account.analytics') }}</a>
             @endif

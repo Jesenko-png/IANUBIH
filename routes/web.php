@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\CooperationInquiryController as AdminCooperationInquiryController;
+use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -40,12 +41,15 @@ Route::middleware('auth')->group(function () {
         Route::resource('news', AdminNewsController::class)
             ->parameters(['news' => 'newsPost'])
             ->except('show');
+        Route::resource('members', AdminMemberController::class)->except('show');
         Route::resource('cooperation-inquiries', AdminCooperationInquiryController::class)
             ->parameters(['cooperation-inquiries' => 'cooperationInquiry'])
             ->only(['index', 'show']);
         Route::view('/analytics', 'admin.analytics.index')->name('analytics.index');
 
         Route::middleware('super_admin')->group(function () {
+            Route::post('/members/setup', [AdminMemberController::class, 'setup'])
+                ->name('members.setup');
             Route::post('/cooperation-inquiries/setup', [AdminCooperationInquiryController::class, 'setup'])
                 ->name('cooperation-inquiries.setup');
             Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');

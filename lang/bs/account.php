@@ -6,6 +6,7 @@ return [
     'user_account' => 'Korisnički nalog',
     'my_account' => 'Moj nalog',
     'news' => 'Aktuelnosti',
+    'members' => 'Članovi',
     'analytics' => 'Analitika',
     'users' => 'Korisnici',
     'open_website' => 'Otvori web stranicu',

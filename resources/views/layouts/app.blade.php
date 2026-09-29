@@ -54,7 +54,7 @@
     <script src="{{ asset('assets/new-event/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/custom.js') }}"></script>
-    <script src="{{ asset('assets/new-event/js/ianubih.js') }}"></script>
+    <script src="{{ asset('assets/new-event/js/ianubih.js') }}?v={{ filemtime(public_path('assets/new-event/js/ianubih.js')) }}"></script>
     <script src="{{ asset('assets/new-event/js/analytics-consent.js') }}?v={{ filemtime(public_path('assets/new-event/js/analytics-consent.js')) }}"></script>
 
     @stack('scripts')

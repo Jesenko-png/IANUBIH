@@ -1391,3 +1391,29 @@ a {
         font-size: 17px;
     }
 }
+
+/* Member administration */
+.admin-member-avatar {
+    align-items: center;
+    background: var(--navy);
+    color: var(--gold);
+    display: flex;
+    font-size: 45px;
+    height: 125px;
+    justify-content: center;
+    width: 190px;
+}
+
+.admin-member-current-photo {
+    height: 210px;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 760px) {
+    .admin-member-row .admin-member-avatar {
+        height: 190px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
