@@ -6,6 +6,29 @@
 @section('content')
 <section id="intro" class="ianubih-hero parallax-section" aria-labelledby="hero-title">
     <div class="hero-shade"></div>
+    <svg class="hero-connection-map" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <g class="hero-connection-lines">
+            <path d="M-50 270 L185 330 L115 610 L390 780 L690 850 L1050 770 L1320 520 L1210 255 L1490 175" />
+            <path d="M-40 625 L115 610 L260 470 L185 330" />
+            <path d="M390 780 L450 625 L690 850" />
+            <path d="M1050 770 L980 620 L1320 520 L1490 670" />
+            <path d="M1210 255 L1380 375 L1320 520" />
+        </g>
+        <g class="hero-connection-signals">
+            <path d="M-50 270 L185 330 L115 610 L390 780 L690 850 L1050 770 L1320 520 L1210 255 L1490 175" />
+            <path d="M-40 625 L115 610 L260 470 L185 330" />
+            <path d="M1050 770 L980 620 L1320 520 L1490 670" />
+        </g>
+        <g class="hero-connection-points">
+            <circle cx="185" cy="330" r="5" />
+            <circle cx="115" cy="610" r="5" />
+            <circle cx="390" cy="780" r="5" />
+            <circle cx="690" cy="850" r="5" />
+            <circle cx="1050" cy="770" r="5" />
+            <circle cx="1320" cy="520" r="5" />
+            <circle cx="1210" cy="255" r="5" />
+        </g>
+    </svg>
     <div class="container hero-container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">

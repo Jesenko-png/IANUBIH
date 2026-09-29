@@ -454,6 +454,78 @@ input:focus {
     top: 0;
 }
 
+.hero-connection-map {
+    height: 100%;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero-connection-lines,
+.hero-connection-signals {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+}
+
+.hero-connection-lines {
+    stroke: rgba(255, 255, 255, 0.13);
+}
+
+.hero-connection-signals {
+    stroke: rgba(216, 185, 100, 0.72);
+    stroke-width: 2.5;
+}
+
+.hero-connection-signals path:first-child {
+    animation: hero-signal-travel 15s linear infinite;
+    stroke-dasharray: 18 205;
+}
+
+.hero-connection-signals path:nth-child(2) {
+    animation: hero-signal-travel-short 11s linear infinite reverse;
+    stroke-dasharray: 12 155;
+}
+
+.hero-connection-signals path:nth-child(3) {
+    animation: hero-signal-travel-long 18s linear infinite reverse;
+    stroke-dasharray: 22 245;
+}
+
+.hero-connection-points circle {
+    fill: var(--knowledge-gold);
+    opacity: 0.7;
+    animation: hero-node-glow 4s ease-in-out infinite;
+}
+
+.hero-connection-points circle:nth-child(2n) {
+    animation-delay: -2s;
+}
+
+.hero-connection-points circle:nth-child(3n) {
+    animation-delay: -3s;
+}
+
+@keyframes hero-signal-travel {
+    to { stroke-dashoffset: -892; }
+}
+
+@keyframes hero-signal-travel-short {
+    to { stroke-dashoffset: -668; }
+}
+
+@keyframes hero-signal-travel-long {
+    to { stroke-dashoffset: -1068; }
+}
+
+@keyframes hero-node-glow {
+    50% { opacity: 0.25; }
+}
+
 .hero-container {
     position: relative;
     z-index: 2;
@@ -3459,6 +3531,11 @@ input:focus {
         padding: 118px 0 75px;
     }
 
+    .hero-connection-map {
+        opacity: 0.55;
+        transform: translateY(-36%);
+    }
+
     .hero-logo {
         height: 92px;
         margin-bottom: 22px;
@@ -3866,6 +3943,12 @@ input:focus {
     }
 
     .expertise-marquee-track {
+        animation: none;
+    }
+
+    .hero-connection-signals,
+    .hero-connection-signals path,
+    .hero-connection-points circle {
         animation: none;
     }
 
