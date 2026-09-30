@@ -32,4 +32,13 @@ return [
         'heading' => 'Your account is awaiting administrator approval.',
         'description' => 'You can sign in to your account, but you do not yet have publishing access. The chief administrator must assign you the administrator role.',
     ],
+    'password' => [
+        'heading' => 'Change password',
+        'intro' => 'Enter your current password, then choose a new one. You will stay signed in after the change.',
+        'current' => 'Current password',
+        'new' => 'New password',
+        'confirm' => 'Confirm new password',
+        'save' => 'Change password',
+        'changed' => 'Your password has been changed successfully.',
+    ],
 ];

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\AnalyticsController as AdminAnalyticsController;
 use App\Http\Controllers\Admin\CooperationInquiryController as AdminCooperationInquiryController;
 use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
@@ -34,6 +35,9 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/account', [AccountController::class, 'show'])->name('account.show');
+    Route::put('/account/password', [AccountController::class, 'updatePassword'])
+        ->middleware('throttle:6,1')
+        ->name('account.password.update');
     Route::post('/logout', [AdminAuthController::class, 'destroy'])->name('logout');
 
     Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
@@ -45,7 +49,7 @@ Route::middleware('auth')->group(function () {
         Route::resource('cooperation-inquiries', AdminCooperationInquiryController::class)
             ->parameters(['cooperation-inquiries' => 'cooperationInquiry'])
             ->only(['index', 'show']);
-        Route::view('/analytics', 'admin.analytics.index')->name('analytics.index');
+        Route::get('/analytics', [AdminAnalyticsController::class, 'index'])->name('analytics.index');
 
         Route::middleware('super_admin')->group(function () {
             Route::post('/members/setup', [AdminMemberController::class, 'setup'])

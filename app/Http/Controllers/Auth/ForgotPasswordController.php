@@ -26,11 +26,23 @@ class ForgotPasswordController extends Controller
             'email' => ['required', 'email'],
         ]);
 
+        if (in_array(config('mail.default'), ['log', 'array'], true)) {
+            return back()
+                ->withInput($request->only('email', 'locale'))
+                ->withErrors(['email' => __('auth.reset_mail_not_configured')]);
+        }
+
         try {
-            Password::sendResetLink($request->only('email'));
+            $status = Password::sendResetLink($request->only('email'));
         } catch (Throwable $exception) {
             report($exception);
 
+            return back()
+                ->withInput($request->only('email', 'locale'))
+                ->withErrors(['email' => __('auth.reset_unavailable')]);
+        }
+
+        if (! in_array($status, [Password::RESET_LINK_SENT, Password::INVALID_USER, Password::RESET_THROTTLED], true)) {
             return back()
                 ->withInput($request->only('email', 'locale'))
                 ->withErrors(['email' => __('auth.reset_unavailable')]);

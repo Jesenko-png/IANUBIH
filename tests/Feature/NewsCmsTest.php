@@ -157,6 +157,7 @@ class NewsCmsTest extends TestCase
     public function test_user_can_request_and_complete_a_bilingual_password_reset(): void
     {
         Notification::fake();
+        config()->set('mail.default', 'smtp');
         $member = User::factory()->create(['role' => User::ROLE_MEMBER]);
 
         $this->get(route('password.request', ['locale' => 'en']))

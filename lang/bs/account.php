@@ -32,4 +32,13 @@ return [
         'heading' => 'Nalog čeka administratorsko odobrenje.',
         'description' => 'Možete se prijaviti na nalog, ali još nemate pristup objavljivanju. Glavni administrator mora vam dodijeliti ulogu administratora.',
     ],
+    'password' => [
+        'heading' => 'Promjena lozinke',
+        'intro' => 'Unesite trenutnu lozinku, a zatim novu. Ostat ćete prijavljeni nakon promjene.',
+        'current' => 'Trenutna lozinka',
+        'new' => 'Nova lozinka',
+        'confirm' => 'Ponovite novu lozinku',
+        'save' => 'Promijeni lozinku',
+        'changed' => 'Lozinka je uspješno promijenjena.',
+    ],
 ];

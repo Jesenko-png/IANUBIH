@@ -31,4 +31,29 @@
         <p>{{ __('account.member.description') }}</p>
     @endif
 </section>
+
+<section class="admin-panel account-password-card" aria-labelledby="account-password-title">
+    <h2 id="account-password-title">{{ __('account.password.heading') }}</h2>
+    <p>{{ __('account.password.intro') }}</p>
+
+    <form method="POST" action="{{ route('account.password.update') }}" class="admin-form">
+        @csrf
+        @method('PUT')
+        <input type="hidden" name="locale" value="{{ app()->getLocale() }}">
+        <div class="form-field">
+            <label for="current_password">{{ __('account.password.current') }}</label>
+            <input id="current_password" type="password" name="current_password" autocomplete="current-password" required>
+        </div>
+        <div class="form-field">
+            <label for="password">{{ __('account.password.new') }}</label>
+            <input id="password" type="password" name="password" autocomplete="new-password" required>
+            <small class="field-help">{{ __('auth.password_help') }}</small>
+        </div>
+        <div class="form-field">
+            <label for="password_confirmation">{{ __('account.password.confirm') }}</label>
+            <input id="password_confirmation" type="password" name="password_confirmation" autocomplete="new-password" required>
+        </div>
+        <button type="submit" class="admin-button admin-button-primary">{{ __('account.password.save') }}</button>
+    </form>
+</section>
 @endsection

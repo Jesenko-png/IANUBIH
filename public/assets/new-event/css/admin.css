@@ -281,6 +281,197 @@ a {
     margin: 0;
 }
 
+.analytics-dashboard-heading {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 18px;
+}
+
+.analytics-dashboard-heading h2,
+.analytics-panel-heading h2,
+.analytics-setup-panel h2 {
+    color: var(--navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(25px, 3vw, 34px);
+    margin: 6px 0 0;
+}
+
+.analytics-dashboard-heading small {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.analytics-metrics {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.analytics-metric-card {
+    border-top: 3px solid var(--gold);
+    padding: 28px 32px;
+}
+
+.analytics-metric-card span {
+    color: var(--muted);
+    display: block;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.analytics-metric-card strong {
+    color: var(--navy);
+    display: block;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1;
+}
+
+.analytics-chart-panel,
+.analytics-list-panel,
+.analytics-setup-panel {
+    margin-top: 18px;
+    padding: 32px;
+}
+
+.analytics-panel-heading {
+    align-items: end;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.analytics-panel-heading h2 {
+    font-size: 27px;
+}
+
+.analytics-panel-heading p {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+.analytics-chart {
+    align-items: end;
+    display: grid;
+    gap: 9px;
+    grid-auto-columns: minmax(38px, 1fr);
+    grid-auto-flow: column;
+    min-height: 215px;
+    overflow-x: auto;
+}
+
+.analytics-chart-column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.analytics-chart-column strong,
+.analytics-chart-column small {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.analytics-chart-track {
+    align-items: end;
+    background: var(--ivory);
+    display: flex;
+    height: 155px;
+    width: min(100%, 48px);
+}
+
+.analytics-chart-track > span {
+    background: linear-gradient(180deg, var(--gold), #c68d2a);
+    display: block;
+    min-height: 0;
+    width: 100%;
+}
+
+.analytics-lists {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.analytics-lists .analytics-panel-heading {
+    margin-bottom: 14px;
+}
+
+.analytics-list-row {
+    align-items: center;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 18px;
+    justify-content: space-between;
+    padding: 13px 0;
+}
+
+.analytics-list-row span {
+    color: var(--muted);
+    font-size: 12px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.analytics-list-row strong {
+    color: var(--navy);
+    font-size: 13px;
+}
+
+.analytics-empty,
+.analytics-consent-note {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.analytics-consent-note {
+    margin: 20px 0 0;
+}
+
+.analytics-setup-panel {
+    margin-top: 22px;
+    max-width: 950px;
+    padding: clamp(30px, 5vw, 54px);
+}
+
+.analytics-setup-panel p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.analytics-setup-status {
+    background: #fff5de;
+    border-left: 3px solid var(--gold);
+    color: var(--navy);
+    font-size: 13px;
+    margin: 22px 0;
+    padding: 14px 18px;
+}
+
+.analytics-setup-panel ol {
+    color: var(--navy);
+    display: grid;
+    font-size: 13px;
+    gap: 13px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+    padding-left: 20px;
+}
+
+.analytics-setup-panel .analytics-setup-note {
+    margin-bottom: 0;
+}
+
 .admin-button {
     align-items: center;
     border: 2px solid transparent;
@@ -535,6 +726,28 @@ a {
 .account-role-super {
     background: var(--navy);
     color: var(--gold);
+}
+
+.account-password-card {
+    margin-top: 28px;
+    max-width: 900px;
+    padding: clamp(34px, 6vw, 65px);
+}
+
+.account-password-card h2 {
+    color: var(--navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: clamp(27px, 4vw, 36px);
+    margin: 0 0 12px;
+}
+
+.account-password-card p {
+    color: var(--muted);
+    margin-bottom: 26px;
+}
+
+.account-password-card .admin-form {
+    max-width: 520px;
 }
 
 .users-panel {
@@ -1415,5 +1628,33 @@ a {
         height: 190px;
         margin-bottom: 20px;
         width: 100%;
+    }
+}
+
+@media (max-width: 760px) {
+    .analytics-dashboard-heading,
+    .analytics-panel-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .analytics-metrics,
+    .analytics-lists {
+        grid-template-columns: 1fr;
+    }
+
+    .analytics-chart-panel,
+    .analytics-list-panel {
+        padding: 24px;
+    }
+
+    .analytics-chart {
+        gap: 5px;
+        overflow-x: auto;
+    }
+
+    .analytics-chart-column {
+        min-width: 34px;
     }
 }
