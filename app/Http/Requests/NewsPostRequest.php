@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use App\Models\NewsPost;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Validation\Rule;
 
 class NewsPostRequest extends FormRequest
@@ -17,6 +18,9 @@ class NewsPostRequest extends FormRequest
     {
         /** @var NewsPost|null $newsPost */
         $newsPost = $this->route('newsPost');
+        $secondaryImagesReady = Schema::hasColumn('news_posts', 'secondary_image_path')
+            && Schema::hasColumn('news_posts', 'secondary_image_alt_bs')
+            && Schema::hasColumn('news_posts', 'secondary_image_alt_en');
 
         return [
             'title_bs' => ['required', 'string', 'max:255'],
@@ -37,6 +41,17 @@ class NewsPostRequest extends FormRequest
             ],
             'image_alt_bs' => ['nullable', 'string', 'max:255'],
             'image_alt_en' => ['nullable', 'string', 'max:255'],
+            'secondary_image' => [
+                Rule::prohibitedIf(! $secondaryImagesReady),
+                'nullable',
+                'image',
+                'mimes:jpg,jpeg,png,webp',
+                'max:5120',
+                'dimensions:min_width=600,min_height=350',
+            ],
+            'secondary_image_alt_bs' => [Rule::prohibitedIf(! $secondaryImagesReady), 'nullable', 'string', 'max:255'],
+            'secondary_image_alt_en' => [Rule::prohibitedIf(! $secondaryImagesReady), 'nullable', 'string', 'max:255'],
+            'remove_secondary_image' => [Rule::prohibitedIf(! $secondaryImagesReady), 'nullable', 'boolean'],
             'status' => ['required', Rule::in(['draft', 'published'])],
             'published_at' => ['nullable', 'date'],
         ];

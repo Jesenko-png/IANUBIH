@@ -134,7 +134,6 @@
                         <div class="document-item">
                             <i class="fa {{ $document['icon'] }}" aria-hidden="true"></i>
                             <span>{{ $document['title'] }}</span>
-                            <small>{{ __('about.documents.status') }}</small>
                         </div>
                     @endforeach
                 </div>

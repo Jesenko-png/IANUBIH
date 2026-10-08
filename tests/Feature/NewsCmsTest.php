@@ -41,17 +41,20 @@ class NewsCmsTest extends TestCase
         $this->get('/bs/news')
             ->assertOk()
             ->assertSee($published->title_bs)
+            ->assertSee('/uploads/news/test.jpg')
             ->assertDontSee('Nacrt vijest')
             ->assertDontSee('Zakazana vijest');
 
         $this->get('/bs')
             ->assertOk()
             ->assertSee($published->title_bs)
+            ->assertSee('/uploads/news/test.jpg')
             ->assertDontSee('Nacrt vijest')
             ->assertDontSee('Zakazana vijest');
 
         $this->get('/en/news/'.$published->slug)
             ->assertOk()
+            ->assertSee('/uploads/news/test.jpg')
             ->assertSee('Published news');
     }
 
@@ -77,6 +80,18 @@ class NewsCmsTest extends TestCase
         $this->get('/admin/news')->assertRedirect('/login');
         $this->get('/admin/news/create')->assertRedirect('/login');
         $this->get('/admin/login')->assertNotFound();
+    }
+
+    public function test_signed_in_users_do_not_get_a_server_error_on_the_login_page(): void
+    {
+        $admin = User::factory()->create(['role' => User::ROLE_ADMIN]);
+        $member = User::factory()->create(['role' => User::ROLE_MEMBER]);
+
+        $this->actingAs($admin)->get('/login')
+            ->assertRedirect(route('admin.news.index'));
+
+        $this->actingAs($member)->get('/login?locale=en')
+            ->assertRedirect(route('account.show', ['locale' => 'en']));
     }
 
     public function test_first_account_becomes_super_admin_and_later_accounts_require_approval(): void
@@ -270,6 +285,9 @@ class NewsCmsTest extends TestCase
         $this->assertSame('nova-vijest-akademije', $post->slug);
         $this->assertTrue($post->isPublished());
         Storage::disk('public')->assertExists($post->image_path);
+        $this->get(route('admin.news.index'))
+            ->assertOk()
+            ->assertSee(Storage::disk('public')->url($post->image_path));
 
         $this->actingAs($admin)->put(route('admin.news.update', $post), [
             'title_bs' => 'Uređena vijest Akademije',
@@ -314,6 +332,102 @@ class NewsCmsTest extends TestCase
             ->assertOk()
             ->assertDontSee('<script>', false)
             ->assertSee('&lt;script&gt;', false);
+    }
+
+    public function test_news_can_have_an_optional_second_image_that_can_be_replaced_and_removed(): void
+    {
+        Storage::fake('public');
+        $admin = User::factory()->create(['role' => User::ROLE_ADMIN]);
+        $fields = [
+            'title_bs' => 'Vijest sa dvije slike',
+            'title_en' => 'News with two images',
+            'category_bs' => 'Saopćenje',
+            'category_en' => 'Announcement',
+            'excerpt_bs' => 'Sažetak vijesti sa dvije slike.',
+            'excerpt_en' => 'Summary of news with two images.',
+            'body_bs' => 'Sadržaj vijesti.',
+            'body_en' => 'News content.',
+            'secondary_image_alt_bs' => 'Druga slika',
+            'secondary_image_alt_en' => 'Second image',
+            'status' => 'published',
+            'published_at' => '',
+        ];
+        $upload = fn () => new UploadedFile(
+            public_path('assets/new-event/images/b-web.jpg'),
+            'vijest.jpg',
+            'image/jpeg',
+            null,
+            true,
+        );
+
+        $this->actingAs($admin)->post(route('admin.news.store'), [
+            ...$fields,
+            'image' => $upload(),
+            'secondary_image' => $upload(),
+        ])->assertRedirect(route('admin.news.index'));
+
+        $post = NewsPost::sole();
+        $firstSecondaryPath = $post->secondary_image_path;
+        $this->assertNotNull($firstSecondaryPath);
+        Storage::disk('public')->assertExists([$post->image_path, $firstSecondaryPath]);
+
+        $this->get('/bs/news/'.$post->slug)
+            ->assertOk()
+            ->assertSee(Storage::disk('public')->url($firstSecondaryPath))
+            ->assertSee('Druga slika');
+        $this->get('/en/news/'.$post->slug)
+            ->assertOk()
+            ->assertSee('Second image');
+
+        $this->actingAs($admin)->put(route('admin.news.update', $post), [
+            ...$fields,
+            'secondary_image' => $upload(),
+        ])->assertRedirect(route('admin.news.index'));
+
+        $post->refresh();
+        $this->assertNotSame($firstSecondaryPath, $post->secondary_image_path);
+        Storage::disk('public')->assertMissing($firstSecondaryPath);
+        Storage::disk('public')->assertExists($post->secondary_image_path);
+
+        $secondSecondaryPath = $post->secondary_image_path;
+        $this->actingAs($admin)->put(route('admin.news.update', $post), [
+            ...$fields,
+            'remove_secondary_image' => '1',
+        ])->assertRedirect(route('admin.news.index'));
+
+        $post->refresh();
+        $this->assertNull($post->secondary_image_path);
+        $this->assertNull($post->secondary_image_alt_bs);
+        Storage::disk('public')->assertMissing($secondSecondaryPath);
+        Storage::disk('public')->assertExists($post->image_path);
+
+        $this->actingAs($admin)->put(route('admin.news.update', $post), [
+            ...$fields,
+            'secondary_image' => $upload(),
+        ])->assertRedirect(route('admin.news.index'));
+
+        $post->refresh();
+        $coverPath = $post->image_path;
+        $thirdSecondaryPath = $post->secondary_image_path;
+        $this->actingAs($admin)->delete(route('admin.news.destroy', $post))
+            ->assertRedirect(route('admin.news.index'));
+
+        Storage::disk('public')->assertMissing([$coverPath, $thirdSecondaryPath]);
+    }
+
+    public function test_only_super_admin_can_prepare_news_images_database(): void
+    {
+        $admin = User::factory()->create(['role' => User::ROLE_ADMIN]);
+        $superAdmin = User::factory()->create(['role' => User::ROLE_SUPER_ADMIN]);
+
+        $this->actingAs($admin)
+            ->post(route('admin.news.secondary-images.setup'))
+            ->assertForbidden();
+
+        $this->actingAs($superAdmin)
+            ->post(route('admin.news.secondary-images.setup'))
+            ->assertRedirect(route('admin.news.index'))
+            ->assertSessionHas('status');
     }
 
     private function postData(array $overrides = []): array

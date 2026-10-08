@@ -22,7 +22,11 @@ class ExampleTest extends TestCase
             ->assertSeeText('Mudrost koja usmjerava.')
             ->assertSee('assets/new-event/css/ianubih.css')
             ->assertSee('assets/new-event/js/ianubih.js')
+            ->assertSee('assets/new-event/images/hero-background.mp4')
+            ->assertSee('assets/new-event/images/projects-background.mp4')
+            ->assertSee('discipline-equations')
             ->assertSee('assets/new-event/js/analytics-consent.js')
+            ->assertDontSee('hero-connection-map')
             ->assertDontSee('assets/new-event/js/smoothscroll.js')
             ->assertDontSeeText('Web Design Conference');
 
@@ -32,6 +36,8 @@ class ExampleTest extends TestCase
             ->assertSeeText('Wisdom that guides.')
             ->assertSee('assets/new-event/css/ianubih.css')
             ->assertSee('assets/new-event/js/ianubih.js')
+            ->assertSee('assets/new-event/images/hero-background.mp4')
+            ->assertSee('assets/new-event/images/projects-background.mp4')
             ->assertSee('assets/new-event/js/analytics-consent.js')
             ->assertDontSee('assets/new-event/js/smoothscroll.js')
             ->assertDontSeeText('Web Design Conference');

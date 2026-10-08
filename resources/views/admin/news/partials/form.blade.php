@@ -70,7 +70,7 @@
 
             <h2>{{ __('admin.news.cover_image') }}</h2>
             @if ($post?->image_path)
-                <img class="current-cover" src="{{ Storage::url($post->image_path) }}" alt="{{ __('admin.news.current_cover_alt') }}">
+                <img class="current-cover" src="{{ Storage::disk('public')->url($post->image_path) }}" alt="{{ __('admin.news.current_cover_alt') }}">
             @endif
             <div class="form-field">
                 <label for="image">{{ $post ? __('admin.news.replace_image') : __('admin.news.select_image') }}</label>
@@ -85,6 +85,33 @@
                 <label for="image_alt_en">{{ __('admin.news.image_alt_en') }}</label>
                 <input id="image_alt_en" name="image_alt_en" value="{{ old('image_alt_en', $post?->image_alt_en) }}" maxlength="255">
             </div>
+
+            @if ($secondaryImagesReady)
+                <hr>
+                <h2>{{ __('admin.news.secondary_image_title') }}</h2>
+                @if ($post?->secondary_image_path)
+                    <img class="current-cover" src="{{ Storage::disk('public')->url($post->secondary_image_path) }}" alt="{{ __('admin.news.current_secondary_image_alt') }}">
+                @endif
+                <div class="form-field">
+                    <label for="secondary_image">{{ $post?->secondary_image_path ? __('admin.news.replace_secondary_image') : __('admin.news.select_secondary_image') }}</label>
+                    <input id="secondary_image" type="file" name="secondary_image" accept="image/jpeg,image/png,image/webp">
+                    <small class="field-help">{{ __('admin.news.image_help') }}</small>
+                </div>
+                @if ($post?->secondary_image_path)
+                    <div class="form-field">
+                        <label><input type="checkbox" name="remove_secondary_image" value="1" @checked(old('remove_secondary_image'))> {{ __('admin.news.remove_secondary_image') }}</label>
+                        <small class="field-help">{{ __('admin.news.remove_secondary_image_help') }}</small>
+                    </div>
+                @endif
+                <div class="form-field">
+                    <label for="secondary_image_alt_bs">{{ __('admin.news.secondary_image_alt_bs') }}</label>
+                    <input id="secondary_image_alt_bs" name="secondary_image_alt_bs" value="{{ old('secondary_image_alt_bs', $post?->secondary_image_alt_bs) }}" maxlength="255">
+                </div>
+                <div class="form-field">
+                    <label for="secondary_image_alt_en">{{ __('admin.news.secondary_image_alt_en') }}</label>
+                    <input id="secondary_image_alt_en" name="secondary_image_alt_en" value="{{ old('secondary_image_alt_en', $post?->secondary_image_alt_en) }}" maxlength="255">
+                </div>
+            @endif
 
             <div class="editor-actions">
                 <button type="submit" class="admin-button admin-button-primary">{{ __('admin.news.save') }}</button>

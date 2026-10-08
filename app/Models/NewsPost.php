@@ -25,6 +25,9 @@ class NewsPost extends Model
         'image_path',
         'image_alt_bs',
         'image_alt_en',
+        'secondary_image_path',
+        'secondary_image_alt_bs',
+        'secondary_image_alt_en',
         'status',
         'published_at',
     ];

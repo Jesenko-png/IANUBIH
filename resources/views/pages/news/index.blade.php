@@ -43,7 +43,7 @@
                 @foreach ($newsPosts as $post)
                     <article class="news-archive-card wow fadeInUp" data-wow-delay="{{ ($loop->index % 3) * 0.1 }}s">
                         <a class="news-archive-image" href="{{ route('news.show', ['locale' => app()->getLocale(), 'newsPost' => $post]) }}">
-                            <img src="{{ Storage::url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
+                            <img src="{{ Storage::disk('public')->url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
                             <span>{{ $post->localized('category') }}</span>
                         </a>
                         <div class="news-archive-card-body">

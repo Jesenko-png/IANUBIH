@@ -65,46 +65,45 @@ return [
     ],
     'president' => [
         'eyebrow' => 'Predsjednikova poruka',
-        'title' => 'Poruka koja treba predstavljati glas i pravac Akademije',
-        'status' => 'Čeka zvaničnu autorizaciju',
-        'text' => 'Tekst predsjednikove poruke, ime, funkcija i fotografija bit će objavljeni nakon što Akademija dostavi i odobri zvanični sadržaj. Ovaj prostor je već pripremljen u dizajnu stranice.',
+        'title' => 'Poruka predsjednika Akademije',
+        'status' => 'U pripremi',
+        'text' => 'Ovaj dio stranice je u pripremi.',
     ],
     'governance' => [
         'eyebrow' => 'Upravljanje',
         'title' => 'Odgovorno i transparentno upravljanje',
-        'text' => 'Upravljačka struktura treba posjetiocima jasno pokazati odgovornosti, način donošenja odluka i stručnu organizaciju Akademije. Objavit ćemo samo zvanično potvrđene sastave i funkcije.',
+        'text' => 'Jasna podjela odgovornosti, akademska nezavisnost i saradnja među članovima važni su za rad Akademije i ostvarivanje njenih ciljeva.',
         'items' => [
             [
                 'title' => 'Rukovodstvo',
-                'text' => 'Predsjednik, potpredsjednici i druge rukovodeće funkcije bit će predstavljeni sa zvaničnim biografijama.',
+                'text' => 'Usklađuje prioritete Akademije i podržava razvoj programa, partnerstava i javnih aktivnosti.',
             ],
             [
                 'title' => 'Organi Akademije',
-                'text' => 'Sastav, nadležnosti i način rada organa bit će objavljeni prema važećim aktima Akademije.',
+                'text' => 'Pružaju institucionalni okvir za donošenje odluka, koordinaciju aktivnosti i odgovorno praćenje rada.',
             ],
             [
                 'title' => 'Razredi i stručna tijela',
-                'text' => 'Članovi će biti povezani s pripadajućim razredima, područjima ekspertize i stručnim tijelima.',
+                'text' => 'Okupljaju članove prema područjima stručnosti i podstiču razmjenu znanja između različitih disciplina.',
             ],
         ],
     ],
     'documents' => [
-        'eyebrow' => 'Dokumenti i transparentnost',
-        'title' => 'Institucionalni dokumenti na jednom mjestu',
-        'text' => 'Ova sekcija je pripremljena za javno dostupne akte, izvještaje i politike. Dokumenti će biti dodani nakon zvanične verifikacije.',
-        'status' => 'U pripremi',
+        'eyebrow' => 'Način rada',
+        'title' => 'Transparentnost i odgovornost u svakom koraku',
+        'text' => 'Rad Akademije usmjeren je na jasne institucionalne principe, praćenje rezultata i otvorenu komunikaciju sa zajednicom.',
         'items' => [
             [
                 'icon' => 'fa-file-text-o',
-                'title' => 'Statut i institucionalni akti',
+                'title' => 'Jasni institucionalni principi',
             ],
             [
                 'icon' => 'fa-line-chart',
-                'title' => 'Izvještaji o radu',
+                'title' => 'Praćenje rada i rezultata',
             ],
             [
                 'icon' => 'fa-shield',
-                'title' => 'Politike i odluke',
+                'title' => 'Odgovornost prema zajednici',
             ],
         ],
     ],

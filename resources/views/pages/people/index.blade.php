@@ -55,7 +55,7 @@
                     <article class="people-member-card">
                         <a class="people-member-image" href="{{ route('people.show', ['locale' => app()->getLocale(), 'slug' => $member->slug]) }}" aria-label="{{ __('members.public.view_profile') }}: {{ $member->name }}">
                             @if ($member->photo_path)
-                                <img src="{{ Storage::url($member->photo_path) }}" alt="{{ $member->name }}" loading="lazy">
+                                <img src="{{ Storage::disk('public')->url($member->photo_path) }}" alt="{{ $member->name }}" loading="lazy">
                             @else
                                 <span aria-hidden="true"><i class="fa fa-user"></i></span>
                             @endif

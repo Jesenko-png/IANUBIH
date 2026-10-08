@@ -12,6 +12,19 @@
     <a href="{{ route('admin.news.create') }}" class="admin-button admin-button-primary">{{ __('admin.news.new') }}</a>
 </div>
 
+@if (! $secondaryImagesReady)
+    <section class="admin-panel admin-empty" aria-labelledby="news-images-setup-title">
+        <h2 id="news-images-setup-title">{{ __('admin.news.images_setup_title') }}</h2>
+        <p>{{ auth()->user()->isSuperAdmin() ? __('admin.news.images_setup_super') : __('admin.news.images_setup_admin') }}</p>
+        @if (auth()->user()->isSuperAdmin())
+            <form method="POST" action="{{ route('admin.news.secondary-images.setup') }}">
+                @csrf
+                <button type="submit" class="admin-button admin-button-primary">{{ __('admin.news.images_setup_button') }}</button>
+            </form>
+        @endif
+    </section>
+@endif
+
 <section class="admin-panel" aria-label="{{ __('admin.news.list_label') }}">
     @if ($newsPosts->isEmpty())
         <div class="admin-empty">
@@ -29,7 +42,7 @@
                         && $post->published_at->isFuture();
                 @endphp
                 <article class="admin-news-row">
-                    <img src="{{ Storage::url($post->image_path) }}" alt="">
+                    <img src="{{ Storage::disk('public')->url($post->image_path) }}" alt="">
                     <div class="admin-news-copy">
                         <div class="admin-news-meta">
                             <span @class([

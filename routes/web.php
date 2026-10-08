@@ -52,6 +52,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/analytics', [AdminAnalyticsController::class, 'index'])->name('analytics.index');
 
         Route::middleware('super_admin')->group(function () {
+            Route::post('/news/secondary-images/setup', [AdminNewsController::class, 'setupSecondaryImages'])
+                ->name('news.secondary-images.setup');
             Route::post('/members/setup', [AdminMemberController::class, 'setup'])
                 ->name('members.setup');
             Route::post('/cooperation-inquiries/setup', [AdminCooperationInquiryController::class, 'setup'])

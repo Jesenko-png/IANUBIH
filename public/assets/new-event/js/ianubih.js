@@ -34,7 +34,46 @@
         });
     }
 
+    function playBackgroundVideo(video) {
+        var source = video.querySelector("source[data-src]");
+
+        if (source) {
+            source.src = source.getAttribute("data-src");
+            source.removeAttribute("data-src");
+            video.load();
+        }
+
+        video.muted = true;
+        var playback = video.play();
+
+        if (playback && typeof playback.catch === "function") {
+            playback.catch(function () {});
+        }
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
+        var backgroundVideos = document.querySelectorAll(".section-background-video");
+
+        if (!prefersReducedMotion && backgroundVideos.length) {
+            if ("IntersectionObserver" in window) {
+                var videoObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            playBackgroundVideo(entry.target);
+                        } else {
+                            entry.target.pause();
+                        }
+                    });
+                }, { rootMargin: "150px 0px", threshold: 0 });
+
+                backgroundVideos.forEach(function (video) {
+                    videoObserver.observe(video);
+                });
+            } else {
+                backgroundVideos.forEach(playBackgroundVideo);
+            }
+        }
+
         var publications = document.querySelector(".publications-section");
         var publicationLineTrigger = document.querySelector(".publication-line-trigger");
 

@@ -81,7 +81,7 @@
             <hr>
             <h2>{{ __('members.admin.photo') }}</h2>
             @if ($member?->photo_path)
-                <img class="current-cover admin-member-current-photo" src="{{ Storage::url($member->photo_path) }}" alt="{{ $member->name }}">
+                <img class="current-cover admin-member-current-photo" src="{{ Storage::disk('public')->url($member->photo_path) }}" alt="{{ $member->name }}">
                 <label class="checkbox-field"><input type="checkbox" name="remove_photo" value="1" @checked(old('remove_photo'))> {{ __('members.admin.remove_photo') }}</label>
             @endif
             <div class="form-field">

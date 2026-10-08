@@ -47,6 +47,9 @@ class MemberCmsTest extends TestCase
         $member = AcademyMember::firstOrFail();
         $this->assertSame('test-clan', $member->slug);
         Storage::disk('public')->assertExists($member->photo_path);
+        $this->get(route('admin.members.index'))
+            ->assertOk()
+            ->assertSee(Storage::disk('public')->url($member->photo_path));
         $this->get('/bs/people')->assertDontSee('Test Član');
         $this->get('/bs/people/'.$member->slug)->assertNotFound();
 

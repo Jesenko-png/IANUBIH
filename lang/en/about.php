@@ -65,46 +65,45 @@ return [
     ],
     'president' => [
         'eyebrow' => 'President’s message',
-        'title' => 'A message representing the voice and direction of the Academy',
-        'status' => 'Awaiting official approval',
-        'text' => 'The President’s message, name, position and photograph will be published after the Academy provides and approves the official content. This space has already been prepared within the page design.',
+        'title' => 'A message from the Academy’s President',
+        'status' => 'In preparation',
+        'text' => 'This section is in preparation.',
     ],
     'governance' => [
         'eyebrow' => 'Governance',
         'title' => 'Responsible and transparent governance',
-        'text' => 'The governance structure should clearly show responsibilities, decision-making processes and the Academy’s professional organization. Only officially confirmed compositions and positions will be published.',
+        'text' => 'Clear responsibilities, academic independence and cooperation among members are important to the Academy’s work and the pursuit of its goals.',
         'items' => [
             [
                 'title' => 'Leadership',
-                'text' => 'The President, Vice Presidents and other leadership positions will be presented with official biographies.',
+                'text' => 'Coordinates the Academy’s priorities and supports the development of programmes, partnerships and public activities.',
             ],
             [
                 'title' => 'Academy bodies',
-                'text' => 'The composition, responsibilities and work of the Academy’s bodies will be published in accordance with its valid acts.',
+                'text' => 'Provide an institutional framework for decision-making, coordinating activities and monitoring work responsibly.',
             ],
             [
                 'title' => 'Divisions and expert bodies',
-                'text' => 'Members will be connected with their respective divisions, fields of expertise and expert bodies.',
+                'text' => 'Bring members together by field of expertise and encourage the exchange of knowledge across disciplines.',
             ],
         ],
     ],
     'documents' => [
-        'eyebrow' => 'Documents and transparency',
-        'title' => 'Institutional documents in one place',
-        'text' => 'This section is prepared for publicly available acts, reports and policies. Documents will be added following official verification.',
-        'status' => 'In preparation',
+        'eyebrow' => 'How we work',
+        'title' => 'Transparency and responsibility at every step',
+        'text' => 'The Academy’s work is guided by clear institutional principles, attention to results and open communication with the community.',
         'items' => [
             [
                 'icon' => 'fa-file-text-o',
-                'title' => 'Statute and institutional acts',
+                'title' => 'Clear institutional principles',
             ],
             [
                 'icon' => 'fa-line-chart',
-                'title' => 'Activity reports',
+                'title' => 'Monitoring work and results',
             ],
             [
                 'icon' => 'fa-shield',
-                'title' => 'Policies and decisions',
+                'title' => 'Responsibility to the community',
             ],
         ],
     ],

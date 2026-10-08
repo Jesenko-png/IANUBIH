@@ -40,7 +40,7 @@
                 @foreach ($members as $member)
                     <article class="admin-news-row admin-member-row">
                         @if ($member->photo_path)
-                            <img src="{{ Storage::url($member->photo_path) }}" alt="">
+                            <img src="{{ Storage::disk('public')->url($member->photo_path) }}" alt="">
                         @else
                             <div class="admin-member-avatar" aria-hidden="true"><i class="fa fa-user"></i></div>
                         @endif

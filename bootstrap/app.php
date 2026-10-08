@@ -26,6 +26,9 @@ return Application::configure(basePath: dirname(__DIR__))
             'super_admin' => EnsureSuperAdmin::class,
         ]);
         $middleware->redirectGuestsTo(fn (Request $request) => route('login'));
+        $middleware->redirectUsersTo(fn (Request $request) => $request->user()?->canManageNews()
+            ? route('admin.news.index')
+            : route('account.show', ['locale' => app()->getLocale()]));
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

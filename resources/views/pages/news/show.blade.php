@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <figure class="news-article-cover">
-                    <img src="{{ Storage::url($newsPost->image_path) }}" alt="{{ $newsPost->localized('image_alt') ?: $newsPost->localized('title') }}">
+                    <img src="{{ Storage::disk('public')->url($newsPost->image_path) }}" alt="{{ $newsPost->localized('image_alt') ?: $newsPost->localized('title') }}">
                 </figure>
                 <div class="news-article-layout">
                     <aside class="news-article-aside">
@@ -37,6 +37,11 @@
                     </aside>
                     <div class="news-article-body">
                         {!! nl2br(e($newsPost->localized('body'))) !!}
+                        @if ($newsPost->secondary_image_path)
+                            <figure class="news-article-secondary-image">
+                                <img src="{{ Storage::disk('public')->url($newsPost->secondary_image_path) }}" alt="{{ $newsPost->localized('secondary_image_alt') ?: $newsPost->localized('title') }}" loading="lazy">
+                            </figure>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -55,7 +60,7 @@
             @foreach ($relatedPosts as $post)
                 <article class="news-archive-card">
                     <a class="news-archive-image" href="{{ route('news.show', ['locale' => app()->getLocale(), 'newsPost' => $post]) }}">
-                        <img src="{{ Storage::url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
+                        <img src="{{ Storage::disk('public')->url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
                         <span>{{ $post->localized('category') }}</span>
                     </a>
                     <div class="news-archive-card-body">

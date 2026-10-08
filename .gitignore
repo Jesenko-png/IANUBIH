@@ -34,3 +34,7 @@ Thumbs.db
 /public/assets/new-event/images/Mladi naučnici.jpg
 /public/assets/new-event/images/naucna dijaspora.jpg
 /public/assets/new-event/images/Održivi razvoj.jpg
+
+# Original background videos stay local; the optimized versions are used on the site.
+/public/assets/new-event/images/top screen.mp4
+/public/assets/new-event/images/projelkti i inicijative backgrouind.mp4

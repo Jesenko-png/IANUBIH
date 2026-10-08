@@ -29,7 +29,7 @@
             <aside class="member-profile-aside">
                 <div class="member-profile-image">
                     @if ($member->photo_path)
-                        <img src="{{ Storage::url($member->photo_path) }}" alt="{{ $member->name }}">
+                        <img src="{{ Storage::disk('public')->url($member->photo_path) }}" alt="{{ $member->name }}">
                     @else
                         <span aria-hidden="true"><i class="fa fa-user"></i></span>
                     @endif

@@ -5,30 +5,10 @@
 
 @section('content')
 <section id="intro" class="ianubih-hero parallax-section" aria-labelledby="hero-title">
+    <video class="section-background-video" autoplay muted loop playsinline preload="none" poster="{{ asset('assets/new-event/images/f-web.jpg') }}" aria-hidden="true" tabindex="-1">
+        <source data-src="{{ asset('assets/new-event/images/hero-background.mp4') }}" type="video/mp4">
+    </video>
     <div class="hero-shade"></div>
-    <svg class="hero-connection-map" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
-        <g class="hero-connection-lines">
-            <path d="M-50 270 L185 330 L115 610 L390 780 L690 850 L1050 770 L1320 520 L1210 255 L1490 175" />
-            <path d="M-40 625 L115 610 L260 470 L185 330" />
-            <path d="M390 780 L450 625 L690 850" />
-            <path d="M1050 770 L980 620 L1320 520 L1490 670" />
-            <path d="M1210 255 L1380 375 L1320 520" />
-        </g>
-        <g class="hero-connection-signals">
-            <path d="M-50 270 L185 330 L115 610 L390 780 L690 850 L1050 770 L1320 520 L1210 255 L1490 175" />
-            <path d="M-40 625 L115 610 L260 470 L185 330" />
-            <path d="M1050 770 L980 620 L1320 520 L1490 670" />
-        </g>
-        <g class="hero-connection-points">
-            <circle cx="185" cy="330" r="5" />
-            <circle cx="115" cy="610" r="5" />
-            <circle cx="390" cy="780" r="5" />
-            <circle cx="690" cy="850" r="5" />
-            <circle cx="1050" cy="770" r="5" />
-            <circle cx="1320" cy="520" r="5" />
-            <circle cx="1210" cy="255" r="5" />
-        </g>
-    </svg>
     <div class="container hero-container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -99,28 +79,11 @@
     </div>
 </section>
 
-@php($sliderImages = ['slider 1.jpg', 'slider 2.jpg', 'slider 3.jpg', 'slider 4.jpg', 'slider 5.jpg'])
-<section class="expertise-marquee-section" aria-hidden="true">
-    <div class="expertise-marquee">
-        <div class="expertise-marquee-track">
-            @for($group = 0; $group < 2; $group++)
-                <div class="expertise-marquee-group">
-                    @for($repeat = 0; $repeat < 3; $repeat++)
-                        <div class="expertise-marquee-set">
-                            @foreach($sliderImages as $sliderImage)
-                                <span class="expertise-marquee-item">
-                                    <img src="{{ asset('assets/new-event/images/' . $sliderImage) }}" alt="" loading="lazy">
-                                </span>
-                            @endforeach
-                        </div>
-                    @endfor
-                </div>
-            @endfor
-        </div>
-    </div>
-</section>
-
 <section id="projects" class="ianubih-section initiative-section" aria-labelledby="initiative-title">
+    <video class="section-background-video" autoplay muted loop playsinline preload="none" poster="{{ asset('assets/new-event/images/b-web.jpg') }}" aria-hidden="true" tabindex="-1">
+        <source data-src="{{ asset('assets/new-event/images/projects-background.mp4') }}" type="video/mp4">
+    </video>
+    <div class="initiative-shade" aria-hidden="true"></div>
     <div class="container">
         <div class="row initiative-row">
             <div class="col-md-7 initiative-content wow fadeInUp">
@@ -137,6 +100,20 @@
 </section>
 
 <section id="disciplines" class="ianubih-section disciplines-section" aria-labelledby="disciplines-title">
+    <div class="discipline-equations" aria-hidden="true">
+        <span class="discipline-equation">∇ × E = −∂B/∂t</span>
+        <span class="discipline-equation">∫ f(x) dx</span>
+        <span class="discipline-equation">Σ</span>
+        <span class="discipline-equation">E = mc²</span>
+        <span class="discipline-equation">Δx · Δp ≥ ℏ/2</span>
+        <span class="discipline-equation">λ</span>
+        <span class="discipline-equation">A = πr²</span>
+        <span class="discipline-equation">α + β</span>
+        <span class="discipline-equation">F = ma</span>
+        <span class="discipline-equation">∂²u/∂t²</span>
+        <span class="discipline-equation">Ω</span>
+        <span class="discipline-equation">∑ aₙ</span>
+    </div>
     <div class="container">
         <div class="row disciplines-heading-row">
             <div class="col-md-8 wow fadeInUp">
@@ -319,7 +296,7 @@
                 <div class="col-md-4">
                     <article class="news-card wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
                         <div class="news-image-wrap">
-                            <img src="{{ Storage::url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
+                            <img src="{{ Storage::disk('public')->url($post->image_path) }}" alt="{{ $post->localized('image_alt') ?: $post->localized('title') }}" loading="lazy">
                         </div>
                         <div class="news-body">
                             <span class="content-tag">{{ $post->localized('category') }}</span>
