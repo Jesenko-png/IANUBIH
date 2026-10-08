@@ -22,7 +22,6 @@
             <h2 id="analytics-status-title">{{ __('admin.analytics.status_active') }}</h2>
             <p>{{ __('admin.analytics.status_text') }}</p>
         </div>
-        <code>G-2KJZQ71XQX</code>
     </div>
 
 </section>
