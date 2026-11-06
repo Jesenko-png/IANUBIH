@@ -3,10 +3,10 @@
     $currentRouteParameters = request()->route()?->parameters() ?? [];
 @endphp
 
-<nav class="navbar navbar-fixed-top custom-navbar" role="navigation" aria-label="{{ __('navigation.home') }}">
+<nav class="navbar navbar-fixed-top custom-navbar" role="navigation" aria-label="{{ __('navigation.main') }}">
     <div class="container navbar-main">
         <div class="navbar-header">
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Menu">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="{{ __('navigation.main') }}">
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
                 <span class="icon icon-bar"></span>
@@ -22,19 +22,15 @@
             </a>
         </div>
 
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li @class(['active' => request()->routeIs('about')])><a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('navigation.about') }}</a></li>
-                <li @class(['active' => request()->routeIs('fields')])><a href="{{ route('fields', ['locale' => app()->getLocale()]) }}">{{ __('navigation.areas') }}</a></li>
-                <li @class(['active' => request()->routeIs('projects')])><a href="{{ route('projects', ['locale' => app()->getLocale()]) }}">{{ __('navigation.projects') }}</a></li>
-                <li @class(['active' => request()->routeIs('publications')])><a href="{{ route('publications', ['locale' => app()->getLocale()]) }}">{{ __('navigation.publications') }}</a></li>
-                <li @class(['active' => request()->routeIs('news')])><a href="{{ route('news', ['locale' => app()->getLocale()]) }}">{{ __('navigation.news') }}</a></li>
-                <li @class(['active' => request()->routeIs('cooperation')])><a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}">{{ __('navigation.cooperation') }}</a></li>
-                <li @class(['active' => request()->routeIs('contact')])><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="nav-contact-link">{{ __('navigation.contact') }}</a></li>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="nav navbar-nav navbar-right academy-nav">
+                @foreach (config('academy_navigation') as $menuItem)
+                    @include('partials.navigation-item', ['item' => $menuItem, 'depth' => 0])
+                @endforeach
                 <li class="navbar-utility navbar-search hidden-xs hidden-sm">
-                    <a href="{{ route('people', ['locale' => app()->getLocale()]) }}">
+                    <a href="{{ route('people', ['locale' => app()->getLocale()]) }}" aria-label="{{ __('navigation.search') }}">
                         <i class="fa fa-search" aria-hidden="true"></i>
-                        {{ __('navigation.search') }}
+                        <span class="academy-search-label">{{ __('navigation.search') }}</span>
                     </a>
                 </li>
                 <li class="navbar-utility navbar-language hidden-xs hidden-sm">

@@ -4,7 +4,8 @@
 @section('description', __('publications.meta.description'))
 
 @section('content')
-<section class="inner-hero publications-hero" aria-labelledby="page-title">
+<section class="inner-hero publications-hero has-video" aria-labelledby="page-title">
+    @include('partials.hero-video', ['file' => 'o-akademiji-web.mp4', 'poster' => 'register-bg.jpg'])
     <div class="inner-hero-shade"></div>
     <div class="container inner-hero-content">
         <div class="row">

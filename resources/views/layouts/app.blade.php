@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/ianubih.css') }}?v={{ filemtime(public_path('assets/new-event/css/ianubih.css')) }}">
+    <link rel="stylesheet" href="{{ asset('assets/new-event/css/academy-menu.css') }}?v={{ filemtime(public_path('assets/new-event/css/academy-menu.css')) }}">
 
     @stack('styles')
 </head>
@@ -55,6 +56,7 @@
     <script src="{{ asset('assets/new-event/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/custom.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/ianubih.js') }}?v={{ filemtime(public_path('assets/new-event/js/ianubih.js')) }}"></script>
+    <script src="{{ asset('assets/new-event/js/academy-menu.js') }}?v={{ filemtime(public_path('assets/new-event/js/academy-menu.js')) }}"></script>
     <script src="{{ asset('assets/new-event/js/analytics-consent.js') }}?v={{ filemtime(public_path('assets/new-event/js/analytics-consent.js')) }}"></script>
 
     @stack('scripts')

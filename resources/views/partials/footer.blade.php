@@ -41,6 +41,7 @@
                     <li><a href="{{ route('fields', ['locale' => app()->getLocale()]) }}">{{ __('navigation.areas') }}</a></li>
                     <li><a href="{{ route('publications', ['locale' => app()->getLocale()]) }}">{{ __('navigation.publications') }}</a></li>
                     <li><a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}">{{ __('navigation.cooperation') }}</a></li>
+                    <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('navigation.contact') }}</a></li>
                 </ul>
             </div>
             <div class="col-md-4 col-sm-3">

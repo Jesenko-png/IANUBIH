@@ -2,8 +2,13 @@
 
 return [
     'home' => 'Home',
+    'main' => 'Main menu',
     'about' => 'About',
     'people' => 'People',
+    'members' => 'Members',
+    'organization' => 'Organization',
+    'awards' => 'Awards',
+    'overview' => 'Overview',
     'areas' => 'Fields',
     'projects' => 'Projects',
     'publications' => 'Publications',
