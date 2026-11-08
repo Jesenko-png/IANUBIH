@@ -31,7 +31,17 @@ return [
         'organization' => [
             'overview' => ['title' => 'Organizacija'],
             'board' => ['title' => 'Uprava'],
-            'presidency' => ['title' => 'Predsjedništvo'],
+            'presidency' => [
+                'title' => 'Predsjedništvo',
+                'role' => 'Predsjednik Akademije',
+                'name' => 'Akademik prof. dr. Almir Badnjević',
+                'position' => 'Predsjednik Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini',
+                'field' => 'Biomedicinski inženjering, medicinski uređaji, metrologija i vještačka inteligencija',
+                'institution' => 'Univerzitet u Sarajevu',
+                'country' => 'Bosna i Hercegovina',
+                'image_alt' => 'Akademik prof. dr. Almir Badnjević, predsjednik IASABIH-a',
+                'bio' => "Akademik prof. dr. Almir Badnjević izabran je za predsjednika Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini na vanrednoj elektronskoj sjednici Skupštine Akademije održanoj 6. novembra 2026. godine. Jedan je od osnivača Akademije, a u njenom početnom periodu obavljao je dužnost izvršnog direktora.\n\nUniverzitetski je profesor na Univerzitetu u Sarajevu, s međunarodnim akademskim angažmanima na univerzitetima u Warwicku, Rimu i Podgorici. Njegov naučni rad obuhvata biomedicinski inženjering, medicinske uređaje, metrologiju i primjenu vještačke inteligencije. Autor je i koautor više od 200 naučnih i stručnih publikacija te spada među 2% najcitiranijih naučnika u svijetu.\n\nFellow je Svjetske akademije umjetnosti i nauka (WAAS), redovni član Evropske akademije nauka i umjetnosti (EASA), Fellow međunarodnih organizacija IUPESM i AAIA te UN Cyber Fellow. Trenutno obavlja dužnost direktora Agencije za identifikacione dokumente, evidenciju i razmjenu podataka Bosne i Hercegovine (IDDEEA).",
+            ],
             'assembly' => ['title' => 'Skupština'],
             'divisions' => [
                 'title' => 'Razredi',

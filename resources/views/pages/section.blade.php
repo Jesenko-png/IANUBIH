@@ -16,6 +16,7 @@
     $overviewRoute = $overviewRoutes[$section];
     $isOverview = $topic === 'overview' && $item === null;
     $isOrganizationOverview = $section === 'organization' && $isOverview;
+    $isPresidency = $section === 'organization' && $topic === 'presidency' && $item === null;
     $childPages = config('academy_pages.'.$section.'.'.$topic, []);
 @endphp
 
@@ -55,6 +56,29 @@
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 @endforeach
+            </div>
+        @elseif ($isPresidency)
+            @php($president = __('sections.pages.organization.presidency'))
+            <div class="member-profile-layout">
+                <aside class="member-profile-aside">
+                    <div class="member-profile-image">
+                        <img src="{{ asset('assets/new-event/images/almir-badnjevic-predsjednik-iasabih.jpeg') }}" alt="{{ $president['image_alt'] }}">
+                    </div>
+                </aside>
+                <div class="member-profile-main">
+                    <span class="content-tag">{{ $president['role'] }}</span>
+                    <h2>{{ $president['name'] }}</h2>
+                    <p class="member-profile-position">{{ $president['position'] }}</p>
+                    <dl class="member-profile-facts">
+                        <div><dt>{{ __('members.public.field') }}</dt><dd>{{ $president['field'] }}</dd></div>
+                        <div><dt>{{ __('members.public.institution') }}</dt><dd>{{ $president['institution'] }}</dd></div>
+                        <div><dt>{{ __('members.public.country') }}</dt><dd>{{ $president['country'] }}</dd></div>
+                    </dl>
+                    <div class="member-profile-biography">
+                        <h3>{{ __('members.public.about_member') }}</h3>
+                        <p>{{ $president['bio'] }}</p>
+                    </div>
+                </div>
             </div>
         @elseif ($section === 'organization' && $item === null && is_array($childPages))
             <div class="academy-section-grid">
