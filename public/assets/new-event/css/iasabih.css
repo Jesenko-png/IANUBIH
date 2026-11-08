@@ -1196,6 +1196,8 @@ input:focus {
 }
 
 .network-visual {
+    --network-orbit-inner: 107px;
+    --network-orbit-outer: 155px;
     background: radial-gradient(circle at center, rgba(29, 92, 131, 0.12), rgba(18, 36, 58, 0.02) 58%, transparent 59%);
     height: 440px;
     overflow: hidden;
@@ -1235,21 +1237,48 @@ input:focus {
 }
 
 .network-node {
+    --orbit-duration: 18s;
+    --orbit-radius: var(--network-orbit-outer);
+    --orbit-start: 0deg;
+    animation: network-node-orbit var(--orbit-duration) linear infinite;
     background: var(--knowledge-gold);
     border: 5px solid var(--warm-ivory);
     border-radius: 50%;
     box-shadow: 0 0 0 1px rgba(201, 164, 76, 0.5);
     height: 20px;
+    left: calc(50% - 10px);
     position: absolute;
+    top: calc(50% - 10px);
+    will-change: transform;
     width: 20px;
     z-index: 4;
 }
 
-.node-one { left: 12%; top: 22%; }
-.node-two { right: 12%; top: 18%; }
-.node-three { bottom: 15%; left: 20%; }
-.node-four { bottom: 18%; right: 16%; }
-.node-five { right: 8%; top: 50%; }
+.node-one { --orbit-start: -150deg; }
+.node-two { --orbit-start: -30deg; }
+.node-three { --orbit-start: 90deg; }
+.node-four {
+    --orbit-duration: 13s;
+    --orbit-radius: var(--network-orbit-inner);
+    --orbit-start: 155deg;
+    animation-direction: reverse;
+}
+.node-five {
+    --orbit-duration: 13s;
+    --orbit-radius: var(--network-orbit-inner);
+    --orbit-start: 15deg;
+    animation-direction: reverse;
+}
+
+@keyframes network-node-orbit {
+    from {
+        transform: rotate(var(--orbit-start)) translateX(var(--orbit-radius));
+    }
+
+    to {
+        transform: rotate(calc(var(--orbit-start) + 360deg)) translateX(var(--orbit-radius));
+    }
+}
 
 .network-line {
     background: rgba(29, 92, 131, 0.3);
@@ -3601,6 +3630,8 @@ input:focus {
     }
 
     .network-visual {
+        --network-orbit-inner: 86px;
+        --network-orbit-outer: 127px;
         height: 330px;
     }
 
@@ -3886,6 +3917,10 @@ input:focus {
 
     .discipline-equations {
         display: none;
+    }
+
+    .network-node {
+        animation-play-state: paused;
     }
 
     *,
