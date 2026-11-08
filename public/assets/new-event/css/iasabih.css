@@ -696,10 +696,10 @@ input:focus {
 
 /* Disciplines */
 .disciplines-section {
-    background-color: var(--warm-ivory);
+    background-color: var(--bosnian-blue);
     background-image:
-        linear-gradient(rgba(18, 36, 58, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(18, 36, 58, 0.035) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
     background-size: 72px 72px;
     isolation: isolate;
     overflow: hidden;
@@ -721,21 +721,21 @@ input:focus {
 
 .discipline-equation {
     animation: discipline-equation-fade 8s ease-in-out infinite;
-    color: rgba(29, 92, 131, 0.58);
+    color: rgba(255, 255, 255, 0.45);
     font-family: "Source Serif 4", Georgia, serif;
     font-size: clamp(30px, 4vw, 68px);
     font-style: italic;
     line-height: 1;
     opacity: 0;
     position: absolute;
-    text-shadow: 0 0 24px rgba(29, 92, 131, 0.12);
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.1);
     transform: translate3d(0, 14px, 0) rotate(var(--equation-angle, -5deg));
     white-space: nowrap;
 }
 
 .discipline-equation:nth-child(2n) {
     animation-duration: 9s;
-    color: rgba(151, 113, 36, 0.62);
+    color: rgba(201, 164, 76, 0.72);
 }
 
 .discipline-equation:nth-child(1) { left: 3%; top: 4%; animation-delay: -0.5s; }
@@ -786,17 +786,36 @@ input:focus {
 }
 
 .disciplines-section h2 {
+    color: var(--white);
     margin-bottom: 22px;
 }
 
 .disciplines-section p {
+    color: rgba(255, 255, 255, 0.84);
     max-width: 790px;
+}
+
+.disciplines-section .section-eyebrow {
+    color: var(--knowledge-gold);
+}
+
+.disciplines-section .btn-iasabih-primary {
+    background: var(--knowledge-gold);
+    border-color: var(--knowledge-gold);
+    color: var(--midnight-navy);
+}
+
+.disciplines-section .btn-iasabih-primary:hover,
+.disciplines-section .btn-iasabih-primary:focus {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--midnight-navy);
 }
 
 .disciplines-heading-row {
     align-items: flex-end;
     display: flex;
-    margin-bottom: 54px;
+    margin-bottom: 0;
 }
 
 .disciplines-heading-action {
