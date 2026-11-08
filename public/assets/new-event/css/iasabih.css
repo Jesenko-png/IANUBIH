@@ -697,10 +697,6 @@ input:focus {
 /* Disciplines */
 .disciplines-section {
     background-color: var(--bosnian-blue);
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
-    background-size: 72px 72px;
     isolation: isolate;
     overflow: hidden;
     position: relative;
@@ -815,7 +811,7 @@ input:focus {
 .disciplines-heading-row {
     align-items: flex-end;
     display: flex;
-    margin-bottom: 0;
+    margin-bottom: 54px;
 }
 
 .disciplines-heading-action {
