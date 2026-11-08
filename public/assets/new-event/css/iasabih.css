@@ -568,7 +568,19 @@ input:focus {
 
 /* Pillars */
 .pillars-section {
-    background: #edf4f7;
+    background: linear-gradient(135deg, #122f45 0%, #1d5c83 100%);
+}
+
+.pillars-section .section-eyebrow {
+    color: var(--knowledge-gold);
+}
+
+.pillars-section .section-heading h2 {
+    color: var(--white);
+}
+
+.pillars-section .section-heading p {
+    color: rgba(255, 255, 255, 0.82);
 }
 
 .pillar-grid {
