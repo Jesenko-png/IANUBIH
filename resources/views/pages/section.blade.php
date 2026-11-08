@@ -62,7 +62,7 @@
             <div class="member-profile-layout">
                 <aside class="member-profile-aside">
                     <div class="member-profile-image">
-                        <img src="{{ asset('assets/new-event/images/almir-badnjevic-predsjednik-iasabih.jpeg') }}" alt="{{ $president['image_alt'] }}">
+                        <img src="{{ asset('uploads/news/almir-badnjevic-predsjednik-iasabih.jpeg') }}" alt="{{ $president['image_alt'] }}">
                     </div>
                 </aside>
                 <div class="member-profile-main">
