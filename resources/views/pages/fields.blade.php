@@ -22,7 +22,7 @@
     </div>
 </section>
 
-<section class="ianubih-section fields-intro" aria-labelledby="fields-intro-title">
+<section class="iasabih-section fields-intro" aria-labelledby="fields-intro-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -38,7 +38,7 @@
     </div>
 </section>
 
-<section class="ianubih-section field-catalogue" aria-labelledby="field-catalogue-title">
+<section class="iasabih-section field-catalogue" aria-labelledby="field-catalogue-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('fields.areas.eyebrow') }}</span>
@@ -79,7 +79,7 @@
     </div>
 </section>
 
-<section class="ianubih-section field-methods" aria-labelledby="field-methods-title">
+<section class="iasabih-section field-methods" aria-labelledby="field-methods-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('fields.methods.eyebrow') }}</span>
@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section class="ianubih-section fields-cta" aria-labelledby="fields-cta-title">
+<section class="iasabih-section fields-cta" aria-labelledby="fields-cta-title">
     <div class="container">
         <div class="row">
             <div class="col-md-8 wow fadeInUp">
@@ -109,8 +109,8 @@
                 <p>{{ __('fields.cta.text') }}</p>
             </div>
             <div class="col-md-4 fields-cta-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('fields.cta.primary') }}</a>
-                <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('fields.cta.secondary') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('fields.cta.primary') }}</a>
+                <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('fields.cta.secondary') }}</a>
             </div>
         </div>
     </div>

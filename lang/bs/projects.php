@@ -2,13 +2,13 @@
 
 return [
     'meta' => [
-        'title' => 'Projekti i inicijative | IANUBIH',
+        'title' => 'Projekti i inicijative | IASABIH',
         'description' => 'Istražite projektne pravce, stručne inicijative i mogućnosti saradnje Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini.',
     ],
     'hero' => [
         'eyebrow' => 'Projekti i inicijative',
         'title' => 'Ideje koje povezuju znanje i djelovanje',
-        'text' => 'IANUBIH okuplja različite discipline, generacije i institucije kako bi stručne ideje pretvorio u projekte, javne programe, publikacije i partnerstva od društvenog značaja.',
+        'text' => 'IASABIH okuplja različite discipline, generacije i institucije kako bi stručne ideje pretvorio u projekte, javne programe, publikacije i partnerstva od društvenog značaja.',
         'home' => 'Početna',
         'current' => 'Projekti i inicijative',
     ],
@@ -62,7 +62,7 @@ return [
                     ['label' => 'Trajanje', 'value' => 'Početak: februar 2024.; trajanje: 36 mjeseci'],
                     ['label' => 'Obuhvat', 'value' => '8 institucija iz 5 zemalja'],
                     ['label' => 'Koordinator', 'value' => 'Fakultet zdravstvenih studija Sveučilišta u Rijeci'],
-                    ['label' => 'Predstavnici IANUBIH', 'value' => 'akad. Mirza Žižak i akad. Krešimir Pavelić'],
+                    ['label' => 'Predstavnici IASABIH', 'value' => 'akad. Mirza Žižak i akad. Krešimir Pavelić'],
                 ],
             ],
             [
@@ -74,7 +74,7 @@ return [
                 'text' => 'Prvi naučni skup o budućnosti Bosanske Posavine otvorio je pitanja perspektive regije, društveno-ekonomske revitalizacije, demografskih kretanja i iseljavanja.',
                 'meta' => [
                     ['label' => 'Status', 'value' => 'Uspješno završen prvi naučni skup'],
-                    ['label' => 'Organizator', 'value' => 'Razred za održivi razvoj IANUBIH'],
+                    ['label' => 'Organizator', 'value' => 'Razred za održivi razvoj IASABIH'],
                     ['label' => 'Voditelj', 'value' => 'akademik Dubravac'],
                     ['label' => 'Fokus', 'value' => 'Revitalizacija, demografija i problem iseljavanja'],
                 ],

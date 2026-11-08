@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $title.' | IANUBIH')
-@section('description', $title.' | IANUBIH')
+@section('title', $title.' | IASABIH')
+@section('description', $title.' | IASABIH')
 
 @section('content')
 @php
@@ -43,7 +43,7 @@
     </div>
 </section>
 
-<section class="ianubih-section academy-section-body">
+<section class="iasabih-section academy-section-body">
     <div class="container">
         @if ($isOrganizationOverview)
             <div class="academy-section-grid">

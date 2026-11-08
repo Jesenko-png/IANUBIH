@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Publications | IANUBIH',
+        'title' => 'Publications | IASABIH',
         'description' => 'The journal Science, Art and Religion, proceedings and other verified publications of the International Academy of Sciences and Arts in Bosnia and Herzegovina.',
     ],
     'hero' => [
@@ -15,14 +15,14 @@ return [
     'intro' => [
         'eyebrow' => 'Publishing activity',
         'title' => 'From research to a lasting record',
-        'text_first' => 'IANUBIH supports publishing projects that combine scientific reliability, interdisciplinary dialogue and responsibility towards the public.',
+        'text_first' => 'IASABIH supports publishing projects that combine scientific reliability, interdisciplinary dialogue and responsibility towards the public.',
         'text_second' => 'This page lists only publications that can be confirmed through official Academy or publisher sources. The register will grow as new publications are formally verified.',
         'highlight' => 'A published idea becomes part of shared knowledge — open to verification, discussion and new research.',
     ],
     'journal' => [
         'eyebrow' => 'The Academy’s official journal',
         'title' => 'Science, Art and Religion',
-        'text' => 'IANUBIH’s international interdisciplinary journal publishes work at the intersection of science, art and religion, creating space for informed dialogue across fields of knowledge.',
+        'text' => 'IASABIH’s international interdisciplinary journal publishes work at the intersection of science, art and religion, creating space for informed dialogue across fields of knowledge.',
         'facts_label' => 'Journal features',
         'facts' => [
             'Peer-reviewed scientific journal',
@@ -37,17 +37,17 @@ return [
             ['label' => 'Established', 'value' => '2022'],
         ],
         'primary' => 'Visit the journal',
-        'secondary' => 'Browse the IANUBIH archive',
+        'secondary' => 'Browse the IASABIH archive',
     ],
     'issues' => [
         'eyebrow' => 'Selected issues',
         'title' => 'Recent issues of SAR',
-        'intro' => 'The most recent publicly verified issues are highlighted below. Links open the official IANUBIH archive or the complete PDF issue.',
+        'intro' => 'The most recent publicly verified issues are highlighted below. Links open the official IASABIH archive or the complete PDF issue.',
         'items' => [
             [
                 'type' => 'Science, Art and Religion',
                 'title' => 'SAR 2026, Vol. 5, No. 1',
-                'text' => 'The January–March 2026 issue, recorded in the official IANUBIH archive.',
+                'text' => 'The January–March 2026 issue, recorded in the official IASABIH archive.',
                 'date' => 'January–March 2026',
                 'url' => 'https://www.sarjournal.org/toc/SAR/5/1',
                 'link' => 'Open issue',

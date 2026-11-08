@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="robots" content="noindex, nofollow">
-    <title>@yield('title', __('account.administration')) | IANUBIH</title>
+    <title>@yield('title', __('account.administration')) | IASABIH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
 <body class="admin-body">
     <header class="admin-header">
         <a class="admin-brand" href="{{ auth()->user()->canManageNews() ? route('admin.news.index') : route('account.show') }}">
-            <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IANUBIH">
-            <span><strong>IANUBIH</strong><small>{{ auth()->user()->canManageNews() ? __('account.content_administration') : __('account.user_account') }}</small></span>
+            <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IASABIH">
+            <span><strong>IASABIH</strong><small>{{ auth()->user()->canManageNews() ? __('account.content_administration') : __('account.user_account') }}</small></span>
         </a>
 
         <nav class="admin-nav" aria-label="{{ __('account.administration') }}">

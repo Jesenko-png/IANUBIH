@@ -22,7 +22,7 @@
     </div>
 </section>
 
-<section class="ianubih-section projects-intro" aria-labelledby="projects-intro-title">
+<section class="iasabih-section projects-intro" aria-labelledby="projects-intro-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -38,7 +38,7 @@
     </div>
 </section>
 
-<section class="ianubih-section project-formats" aria-labelledby="project-formats-title">
+<section class="iasabih-section project-formats" aria-labelledby="project-formats-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('projects.formats.eyebrow') }}</span>
@@ -61,7 +61,7 @@
     </div>
 </section>
 
-<section class="ianubih-section project-register" aria-labelledby="project-register-title">
+<section class="iasabih-section project-register" aria-labelledby="project-register-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('projects.register.eyebrow') }}</span>
@@ -94,7 +94,7 @@
     </div>
 </section>
 
-<section class="ianubih-section project-process" aria-labelledby="project-process-title">
+<section class="iasabih-section project-process" aria-labelledby="project-process-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('projects.process.eyebrow') }}</span>
@@ -114,7 +114,7 @@
     </div>
 </section>
 
-<section class="ianubih-section projects-cta" aria-labelledby="projects-cta-title">
+<section class="iasabih-section projects-cta" aria-labelledby="projects-cta-title">
     <div class="container">
         <div class="row">
             <div class="col-md-8 wow fadeInUp">
@@ -123,8 +123,8 @@
                 <p>{{ __('projects.cta.text') }}</p>
             </div>
             <div class="col-md-4 projects-cta-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('projects.cta.primary') }}</a>
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('projects.cta.secondary') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('projects.cta.primary') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('projects.cta.secondary') }}</a>
             </div>
         </div>
     </div>

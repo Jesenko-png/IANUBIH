@@ -13,8 +13,8 @@
                 <h1 id="page-title">{{ __('cooperation.hero.title') }}</h1>
                 <p>{{ __('cooperation.hero.text') }}</p>
                 <div class="cooperation-hero-actions">
-                    <a href="#cooperation-form" class="btn btn-ianubih-gold">{{ __('cooperation.hero.primary') }}</a>
-                    <a href="#cooperation-models" class="btn btn-ianubih-light-outline">{{ __('cooperation.hero.secondary') }}</a>
+                    <a href="#cooperation-form" class="btn btn-iasabih-gold">{{ __('cooperation.hero.primary') }}</a>
+                    <a href="#cooperation-models" class="btn btn-iasabih-light-outline">{{ __('cooperation.hero.secondary') }}</a>
                 </div>
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('cooperation.hero.home') }}</a>
@@ -26,7 +26,7 @@
     </div>
 </section>
 
-<section class="ianubih-section cooperation-intro" aria-labelledby="cooperation-intro-title">
+<section class="iasabih-section cooperation-intro" aria-labelledby="cooperation-intro-title">
     <div class="container">
         <div class="row cooperation-intro-row">
             <div class="col-md-5 wow fadeInUp">
@@ -42,7 +42,7 @@
     </div>
 </section>
 
-<section class="ianubih-section cooperation-audiences" aria-labelledby="cooperation-audiences-title">
+<section class="iasabih-section cooperation-audiences" aria-labelledby="cooperation-audiences-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('cooperation.audiences.eyebrow') }}</span>
@@ -63,7 +63,7 @@
     </div>
 </section>
 
-<section id="cooperation-models" class="ianubih-section cooperation-models" aria-labelledby="cooperation-models-title">
+<section id="cooperation-models" class="iasabih-section cooperation-models" aria-labelledby="cooperation-models-title">
     <div class="cooperation-constellation" aria-hidden="true">
         <span class="cooperation-orbit cooperation-orbit-one"></span>
         <span class="cooperation-orbit cooperation-orbit-two"></span>
@@ -96,7 +96,7 @@
     </div>
 </section>
 
-<section class="ianubih-section cooperation-process" aria-labelledby="cooperation-process-title">
+<section class="iasabih-section cooperation-process" aria-labelledby="cooperation-process-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('cooperation.process.eyebrow') }}</span>
@@ -116,7 +116,7 @@
     </div>
 </section>
 
-<section id="cooperation-form" class="ianubih-section cooperation-inquiry" aria-labelledby="cooperation-form-title">
+<section id="cooperation-form" class="iasabih-section cooperation-inquiry" aria-labelledby="cooperation-form-title">
     <div class="container">
         <div class="cooperation-inquiry-grid">
             <div class="cooperation-contact-panel wow fadeInUp">
@@ -125,9 +125,9 @@
                 <p>{{ __('cooperation.contact.text') }}</p>
 
                 <div class="cooperation-contact-links">
-                    <a href="mailto:info@ianubih.ba">
+                    <a href="mailto:info@iasabih.ba">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <span><small>{{ __('cooperation.contact.email_label') }}</small>info@ianubih.ba</span>
+                        <span><small>{{ __('cooperation.contact.email_label') }}</small>info@iasabih.ba</span>
                     </a>
                     <a href="tel:+38761914913">
                         <i class="fa fa-phone" aria-hidden="true"></i>
@@ -160,7 +160,7 @@
                 @if(session('cooperation_error'))
                     <div class="cooperation-form-alert cooperation-form-alert-error" role="alert">
                         <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
-                        <span>{{ session('cooperation_error') }} <a href="mailto:info@ianubih.ba">info@ianubih.ba</a></span>
+                        <span>{{ session('cooperation_error') }} <a href="mailto:info@iasabih.ba">info@iasabih.ba</a></span>
                     </div>
                 @endif
 
@@ -228,7 +228,7 @@
                         <span>{{ __('cooperation.form.consent') }}</span>
                     </label>
 
-                    <button type="submit" class="btn btn-ianubih-primary">{{ __('cooperation.form.submit') }}</button>
+                    <button type="submit" class="btn btn-iasabih-primary">{{ __('cooperation.form.submit') }}</button>
                     <small class="cooperation-required-note">{{ __('cooperation.form.required_note') }}</small>
                 </form>
             </div>

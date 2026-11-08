@@ -4,7 +4,7 @@
 @section('description', __('home.meta.description'))
 
 @section('content')
-<section id="intro" class="ianubih-hero parallax-section" aria-labelledby="hero-title">
+<section id="intro" class="iasabih-hero parallax-section" aria-labelledby="hero-title">
     <video class="section-background-video" autoplay muted loop playsinline preload="none" poster="{{ asset('assets/new-event/images/f-web.jpg') }}" aria-hidden="true" tabindex="-1">
         <source data-src="{{ asset('assets/new-event/images/hero-background.mp4') }}" type="video/mp4">
     </video>
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content">
-                    <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="hero-logo wow fadeInDown" alt="IANUBIH logo">
+                    <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="hero-logo wow fadeInDown" alt="IASABIH logo">
                     <p class="hero-eyebrow wow fadeInUp" data-wow-delay="0.2s">{{ __('home.hero.eyebrow') }}</p>
                     <h1 id="hero-title" class="wow fadeInUp" data-wow-delay="0.35s">
                         <span>{{ __('home.hero.title_first') }}</span>
@@ -21,8 +21,8 @@
                     </h1>
                     <p class="hero-lead wow fadeInUp" data-wow-delay="0.5s">{{ __('home.hero.text') }}</p>
                     <div class="hero-actions wow fadeInUp" data-wow-delay="0.65s">
-                        <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.hero.primary') }}</a>
-                        <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-outline">{{ __('home.hero.secondary') }}</a>
+                        <a href="{{ route('about', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('home.hero.primary') }}</a>
+                        <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-outline">{{ __('home.hero.secondary') }}</a>
                     </div>
                     <a href="{{ route('people', ['locale' => app()->getLocale()]) }}" class="hero-quick-link wow fadeInUp" data-wow-delay="0.8s">
                         {{ __('home.hero.expert') }} <span aria-hidden="true">→</span>
@@ -33,7 +33,7 @@
     </div>
 </section>
 
-<section id="about" class="ianubih-section statement-section" aria-labelledby="statement-title">
+<section id="about" class="iasabih-section statement-section" aria-labelledby="statement-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<section id="areas" class="ianubih-section pillars-section" aria-labelledby="pillars-title">
+<section id="areas" class="iasabih-section pillars-section" aria-labelledby="pillars-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('home.pillars.eyebrow') }}</span>
@@ -79,7 +79,7 @@
     </div>
 </section>
 
-<section id="projects" class="ianubih-section initiative-section" aria-labelledby="initiative-title">
+<section id="projects" class="iasabih-section initiative-section" aria-labelledby="initiative-title">
     <video class="section-background-video" autoplay muted loop playsinline preload="none" poster="{{ asset('assets/new-event/images/b-web.jpg') }}" aria-hidden="true" tabindex="-1">
         <source data-src="{{ asset('assets/new-event/images/projects-background.mp4') }}" type="video/mp4">
     </video>
@@ -91,15 +91,15 @@
                 <h2 id="initiative-title">{{ __('home.initiative.title') }}</h2>
                 <p>{{ __('home.initiative.text') }}</p>
                 <div class="section-actions">
-                    <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('home.initiative.primary') }}</a>
-                    <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('home.initiative.secondary') }}</a>
+                    <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('home.initiative.primary') }}</a>
+                    <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('home.initiative.secondary') }}</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="disciplines" class="ianubih-section disciplines-section" aria-labelledby="disciplines-title">
+<section id="disciplines" class="iasabih-section disciplines-section" aria-labelledby="disciplines-title">
     <div class="discipline-equations" aria-hidden="true">
         <span class="discipline-equation">∇ × E = −∂B/∂t</span>
         <span class="discipline-equation">∫ f(x) dx</span>
@@ -122,7 +122,7 @@
                 <p>{{ __('home.disciplines.text') }}</p>
             </div>
             <div class="col-md-3 col-md-offset-1 disciplines-heading-action wow fadeInUp" data-wow-delay="0.1s">
-                <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.disciplines.cta') }}</a>
+                <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('home.disciplines.cta') }}</a>
             </div>
         </div>
 
@@ -156,7 +156,7 @@
     </div>
 </section>
 
-<section id="publications" class="ianubih-section publications-section" aria-labelledby="publications-title">
+<section id="publications" class="iasabih-section publications-section" aria-labelledby="publications-title">
     <span class="publication-line-trigger" aria-hidden="true"></span>
     <div class="container">
         <div class="section-heading wow fadeInUp">
@@ -179,13 +179,13 @@
         </div>
 
         <div class="section-actions section-actions-dark wow fadeInUp">
-            <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.publications.all') }}</a>
-            <a href="https://www.sarjournal.org/" class="btn btn-ianubih-secondary" target="_blank" rel="noopener noreferrer">{{ __('home.publications.journal') }}</a>
+            <a href="{{ route('publications', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('home.publications.all') }}</a>
+            <a href="https://www.sarjournal.org/" class="btn btn-iasabih-secondary" target="_blank" rel="noopener noreferrer">{{ __('home.publications.journal') }}</a>
         </div>
     </div>
 </section>
 
-<section id="events" class="ianubih-section events-section" aria-labelledby="events-title">
+<section id="events" class="iasabih-section events-section" aria-labelledby="events-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -215,7 +215,7 @@
     </div>
 </section>
 
-<section id="people" class="ianubih-section people-section" aria-labelledby="people-title">
+<section id="people" class="iasabih-section people-section" aria-labelledby="people-title">
     <div class="people-pattern" aria-hidden="true"></div>
     <div class="container people-content">
         <div class="row">
@@ -232,14 +232,14 @@
                         <i class="fa fa-search" aria-hidden="true"></i>
                         <input id="expert-query" type="search" name="q" value="{{ request('q') }}" placeholder="{{ __('home.people.placeholder') }}">
                     </div>
-                    <button type="submit" class="btn btn-ianubih-gold">{{ __('home.people.button') }}</button>
+                    <button type="submit" class="btn btn-iasabih-gold">{{ __('home.people.button') }}</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<section id="network" class="ianubih-section network-section" aria-labelledby="network-title">
+<section id="network" class="iasabih-section network-section" aria-labelledby="network-title">
     <div class="container">
         <div class="row network-row">
             <div class="col-md-6 wow fadeInLeft">
@@ -259,13 +259,13 @@
                 <span class="section-eyebrow">{{ __('home.network.eyebrow') }}</span>
                 <h2 id="network-title">{{ __('home.network.title') }}</h2>
                 <p>{{ __('home.network.text') }}</p>
-                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.network.cta') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('home.network.cta') }}</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="cooperation" class="ianubih-section cooperation-section" aria-labelledby="cooperation-title">
+<section id="cooperation" class="iasabih-section cooperation-section" aria-labelledby="cooperation-title">
     <div class="container">
         <div class="row">
             <div class="col-md-9 wow fadeInUp">
@@ -275,14 +275,14 @@
                 <p>{{ __('home.cooperation.text_second') }}</p>
             </div>
             <div class="col-md-3 cooperation-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="mailto:info@ianubih.ba" class="btn btn-ianubih-gold">{{ __('home.cooperation.primary') }}</a>
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('home.cooperation.secondary') }}</a>
+                <a href="mailto:info@iasabih.ba" class="btn btn-iasabih-gold">{{ __('home.cooperation.primary') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('home.cooperation.secondary') }}</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="news" class="ianubih-section news-section" aria-labelledby="news-title">
+<section id="news" class="iasabih-section news-section" aria-labelledby="news-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('home.news.eyebrow') }}</span>
@@ -317,7 +317,7 @@
         @endif
 
         <div class="section-actions section-actions-centered wow fadeInUp">
-            <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('home.news.all') }}</a>
+            <a href="{{ route('news', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('home.news.all') }}</a>
         </div>
     </div>
 </section>

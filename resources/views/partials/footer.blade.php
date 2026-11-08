@@ -8,9 +8,9 @@
             </div>
             <div class="col-md-7">
                 <div class="contact-list">
-                    <a href="mailto:info@ianubih.ba" class="contact-item">
+                    <a href="mailto:info@iasabih.ba" class="contact-item">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <span><small>{{ __('home.contact.email_label') }}</small>info@ianubih.ba</span>
+                        <span><small>{{ __('home.contact.email_label') }}</small>info@iasabih.ba</span>
                     </a>
                     <a href="tel:+38761914913" class="contact-item">
                         <i class="fa fa-phone" aria-hidden="true"></i>
@@ -29,8 +29,8 @@
         <div class="row footer-main">
             <div class="col-md-5 col-sm-6 footer-brand-block">
                 <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="footer-brand">
-                    <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IANUBIH logo">
-                    <span>IANUBIH</span>
+                    <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IASABIH logo">
+                    <span>IASABIH</span>
                 </a>
                 <p>{{ __('home.footer.description') }}</p>
             </div>
@@ -46,7 +46,7 @@
             </div>
             <div class="col-md-4 col-sm-3">
                 <h3>{{ __('home.footer.follow') }}</h3>
-                <a href="https://www.facebook.com/IANUBIH/" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <a href="https://www.facebook.com/IASABIH/" class="footer-social" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <i class="fa fa-facebook" aria-hidden="true"></i>
                     Facebook
                 </a>
@@ -59,8 +59,8 @@
         </div>
 
         <div class="footer-bottom">
-            <span>&copy; {{ date('Y') }} IANUBIH. {{ __('home.footer.rights') }}</span>
-            <span>Design: <a rel="nofollow" href="https://jesenko1.free.nf/" target="_blank">Jesenko Idrizovic</a></span>
+            <span>&copy; {{ date('Y') }} IASABIH. {{ __('home.footer.rights') }}</span>
+            <span>Design: <a href="https://www.linkedin.com/in/jesenko-idrizovic-7125bb3b0" target="_blank" rel="noopener noreferrer">Jesenko Idrizovic</a></span>
         </div>
     </div>
 </footer>

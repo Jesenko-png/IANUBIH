@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Fields of activity | IANUBIH',
+        'title' => 'Fields of activity | IASABIH',
         'description' => 'Explore the interdisciplinary fields of activity of the International Academy of Sciences and Arts in Bosnia and Herzegovina.',
     ],
     'hero' => [
@@ -16,7 +16,7 @@ return [
         'eyebrow' => 'Interdisciplinary approach',
         'title' => 'Complex challenges require shared responses',
         'text_first' => 'The Academy’s divisions bring members together by field of expertise. At the same time, we foster cooperation between disciplines because the issues shaping health, technology, culture, sustainable development and the future of society cannot be understood from a single perspective.',
-        'text_second' => 'The fields below provide a framework for IANUBIH’s future projects, expert discussions, publications, public events and international partnerships.',
+        'text_second' => 'The fields below provide a framework for IASABIH’s future projects, expert discussions, publications, public events and international partnerships.',
         'highlight' => 'A discipline provides depth. Cooperation between disciplines provides the full picture.',
     ],
     'areas' => [
@@ -74,7 +74,7 @@ return [
     'connection' => [
         'eyebrow' => 'Connecting fields',
         'title' => 'Knowledge becomes stronger when it crosses the boundaries of its own discipline',
-        'text_first' => 'IANUBIH develops a space where experts from different fields can jointly ask the right questions, exchange methods and shape evidence-based proposals.',
+        'text_first' => 'IASABIH develops a space where experts from different fields can jointly ask the right questions, exchange methods and shape evidence-based proposals.',
         'text_second' => 'This approach enables scientific and artistic insights to connect with public institutions, international partners, young researchers and the wider community.',
         'image_alt' => 'A model of connected scientific disciplines',
     ],

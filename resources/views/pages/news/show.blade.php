@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $newsPost->localized('title') . ' | IANUBIH')
+@section('title', $newsPost->localized('title') . ' | IASABIH')
 @section('description', $newsPost->localized('excerpt'))
 
 @section('content')
@@ -50,7 +50,7 @@
 </article>
 
 @if ($relatedPosts->isNotEmpty())
-<section class="ianubih-section related-news" aria-labelledby="related-news-title">
+<section class="iasabih-section related-news" aria-labelledby="related-news-title">
     <div class="container">
         <div class="section-heading">
             <span class="section-eyebrow">{{ __('news.related.eyebrow') }}</span>

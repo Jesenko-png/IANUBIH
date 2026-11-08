@@ -61,7 +61,7 @@ class CooperationController extends Controller
 
         if (config('mail.default') !== 'log') {
             try {
-                Mail::to('info@ianubih.ba')->send(
+                Mail::to('info@iasabih.ba')->send(
                     new CooperationInquiryMail($validated, app()->getLocale())
                 );
             } catch (Throwable $exception) {

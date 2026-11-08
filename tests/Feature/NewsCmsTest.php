@@ -103,16 +103,16 @@ class NewsCmsTest extends TestCase
             ->assertSee(route('register'));
 
         $this->post(route('register'), [
-            'name' => 'IANUBIH Administrator',
-            'register_email' => 'admin@ianubih.ba',
+            'name' => 'IASABIH Administrator',
+            'register_email' => 'admin@iasabih.ba',
             'register_password' => 'SigurnaLozinka2026',
             'register_password_confirmation' => 'SigurnaLozinka2026',
         ])->assertRedirect(route('admin.news.index'));
 
         $this->assertAuthenticated();
         $this->assertDatabaseHas('users', [
-            'name' => 'IANUBIH Administrator',
-            'email' => 'admin@ianubih.ba',
+            'name' => 'IASABIH Administrator',
+            'email' => 'admin@iasabih.ba',
             'role' => User::ROLE_SUPER_ADMIN,
         ]);
 
@@ -126,13 +126,13 @@ class NewsCmsTest extends TestCase
 
         $this->post(route('register'), [
             'name' => 'Novi korisnik',
-            'register_email' => 'drugi@ianubih.ba',
+            'register_email' => 'drugi@iasabih.ba',
             'register_password' => 'DrugaLozinka2026',
             'register_password_confirmation' => 'DrugaLozinka2026',
         ])->assertRedirect(route('account.show', ['locale' => 'bs']));
 
         $this->assertDatabaseHas('users', [
-            'email' => 'drugi@ianubih.ba',
+            'email' => 'drugi@iasabih.ba',
             'role' => User::ROLE_MEMBER,
         ]);
         $this->assertDatabaseCount('users', 2);
@@ -187,7 +187,7 @@ class NewsCmsTest extends TestCase
 
         Notification::assertSentTo($member, ResetPasswordNotification::class);
         $notification = Notification::sent($member, ResetPasswordNotification::class)->first();
-        $this->assertSame('Set a new IANUBIH password', $notification->toMail($member)->subject);
+        $this->assertSame('Set a new IASABIH password', $notification->toMail($member)->subject);
 
         $this->get(route('password.reset', [
             'token' => $notification->token,

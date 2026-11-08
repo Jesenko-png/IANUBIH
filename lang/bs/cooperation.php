@@ -2,8 +2,8 @@
 
 return [
     'meta' => [
-        'title' => 'Saradnja | IANUBIH',
-        'description' => 'Pokrenite saradnju s IANUBIH kroz zajedničke projekte, istraživanja, događaje, publikacije, programe za mlade i stručne inicijative.',
+        'title' => 'Saradnja | IASABIH',
+        'description' => 'Pokrenite saradnju s IASABIH kroz zajedničke projekte, istraživanja, događaje, publikacije, programe za mlade i stručne inicijative.',
     ],
     'hero' => [
         'eyebrow' => 'Saradnja i partnerstva',
@@ -17,7 +17,7 @@ return [
     'intro' => [
         'eyebrow' => 'Otvorena akademska mreža',
         'title' => 'Partnerstva koja znanje pretvaraju u djelovanje',
-        'text_first' => 'IANUBIH povezuje naučnu i umjetničku izvrsnost s institucijama i ljudima koji žele stvarati mjerljiv doprinos društvu.',
+        'text_first' => 'IASABIH povezuje naučnu i umjetničku izvrsnost s institucijama i ljudima koji žele stvarati mjerljiv doprinos društvu.',
         'text_second' => 'Zajedno možemo razvijati projekte, događaje, publikacije, stručne inicijative i programe koji povezuju Bosnu i Hercegovinu s regionalnom i međunarodnom akademskom zajednicom.',
         'highlight' => 'Tražimo zajednički cilj, jasnu vrijednost za društvo i partnerstvo zasnovano na stručnosti, odgovornosti i međusobnom povjerenju.',
     ],
@@ -128,7 +128,7 @@ return [
         'note_items' => [
             'problem ili priliku na koju inicijativa odgovara;',
             'cilj i očekivane rezultate;',
-            'predloženu ulogu IANUBIH i drugih partnera;',
+            'predloženu ulogu IASABIH i drugih partnera;',
             'okvirni vremenski plan i kontakt-osobu.',
         ],
     ],
@@ -153,7 +153,7 @@ return [
         'initiative_placeholder' => 'Kratak radni naziv prijedloga',
         'message' => 'Opišite prijedlog saradnje',
         'message_placeholder' => 'Navedite cilj, očekivane rezultate, predložene partnere i okvirni vremenski plan.',
-        'consent' => 'Saglasan/na sam da IANUBIH koristi unesene podatke isključivo radi razmatranja i odgovora na ovaj upit.',
+        'consent' => 'Saglasan/na sam da IASABIH koristi unesene podatke isključivo radi razmatranja i odgovora na ovaj upit.',
         'submit' => 'Pošaljite prijedlog',
         'required_note' => '* Obavezno polje',
         'success' => 'Hvala. Vaš prijedlog saradnje je uspješno zaprimljen.',
@@ -196,7 +196,7 @@ return [
         'next' => 'Sljedeća',
         'back' => 'Nazad na prijedloge',
         'submitted_by' => 'Prijedlog je poslao/la :name.',
-        'reply_subject' => 'Odgovor IANUBIH: :title',
+        'reply_subject' => 'Odgovor IASABIH: :title',
         'reply' => 'Odgovori e-poštom',
         'proposal' => 'Prijedlog saradnje',
         'message' => 'Opis prijedloga',

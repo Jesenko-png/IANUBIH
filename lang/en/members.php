@@ -2,7 +2,7 @@
 
 return [
     'public' => [
-        'meta_title' => 'Members and expertise | IANUBIH',
+        'meta_title' => 'Members and expertise | IASABIH',
         'meta_description' => 'Meet the members of the International Academy of Sciences and Arts in Bosnia and Herzegovina and explore their expertise.',
         'eyebrow' => 'People of the Academy',
         'title' => 'Members and expertise',

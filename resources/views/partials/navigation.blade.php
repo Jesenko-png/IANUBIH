@@ -17,8 +17,8 @@
             </span>
 
             <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="navbar-brand">
-                <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="navbar-brand-logo" alt="IANUBIH logo">
-                <span>IANUBIH</span>
+                <img src="{{ asset('assets/new-event/images/logo.jpg') }}" class="navbar-brand-logo" alt="IASABIH logo">
+                <span>IASABIH</span>
             </a>
         </div>
 

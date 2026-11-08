@@ -2,13 +2,13 @@
 
 return [
     'meta' => [
-        'title' => 'About the Academy | IANUBIH',
+        'title' => 'About the Academy | IASABIH',
         'description' => 'Discover the mission, vision, values and institutional framework of the International Academy of Sciences and Arts in Bosnia and Herzegovina.',
     ],
     'hero' => [
         'eyebrow' => 'About the Academy',
         'title' => 'An academy connecting knowledge, experience and responsibility',
-        'text' => 'IANUBIH is a contemporary international academic institution that brings together scientists, artists, researchers and experts around ideas important to Bosnia and Herzegovina and wider society.',
+        'text' => 'IASABIH is a contemporary international academic institution that brings together scientists, artists, researchers and experts around ideas important to Bosnia and Herzegovina and wider society.',
         'home' => 'Home',
         'current' => 'About the Academy',
     ],
@@ -112,8 +112,8 @@ return [
         'title' => 'Essential information about the Academy',
         'items' => [
             [
-                'question' => 'What is IANUBIH?',
-                'answer' => 'IANUBIH is the International Academy of Sciences and Arts in Bosnia and Herzegovina — an international academic community of scientists, artists, researchers and experts.',
+                'question' => 'What is IASABIH?',
+                'answer' => 'IASABIH is the International Academy of Sciences and Arts in Bosnia and Herzegovina — an international academic community of scientists, artists, researchers and experts.',
             ],
             [
                 'question' => 'Who does the Academy bring together?',
@@ -124,7 +124,7 @@ return [
                 'answer' => 'It develops projects and initiatives, organizes academic events, publishes academic work, promotes interdisciplinary dialogue and builds international partnerships.',
             ],
             [
-                'question' => 'How can I cooperate with IANUBIH?',
+                'question' => 'How can I cooperate with IASABIH?',
                 'answer' => 'Universities, research centres, institutions, donors, media and researchers can contact the Academy using the contact details or the cooperation page.',
             ],
         ],

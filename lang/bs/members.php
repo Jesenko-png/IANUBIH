@@ -2,7 +2,7 @@
 
 return [
     'public' => [
-        'meta_title' => 'Članovi i ekspertiza | IANUBIH',
+        'meta_title' => 'Članovi i ekspertiza | IASABIH',
         'meta_description' => 'Upoznajte članove Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini i područja njihove ekspertize.',
         'eyebrow' => 'Ljudi Akademije',
         'title' => 'Članovi i ekspertiza',

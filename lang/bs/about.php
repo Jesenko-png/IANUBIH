@@ -2,13 +2,13 @@
 
 return [
     'meta' => [
-        'title' => 'O Akademiji | IANUBIH',
+        'title' => 'O Akademiji | IASABIH',
         'description' => 'Upoznajte misiju, viziju, vrijednosti i institucionalni okvir Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini.',
     ],
     'hero' => [
         'eyebrow' => 'O Akademiji',
         'title' => 'Akademija koja povezuje znanje, iskustvo i odgovornost',
-        'text' => 'IANUBIH je savremena međunarodna akademska institucija koja okuplja naučnike, umjetnike, istraživače i stručnjake oko ideja važnih za Bosnu i Hercegovinu i šire društvo.',
+        'text' => 'IASABIH je savremena međunarodna akademska institucija koja okuplja naučnike, umjetnike, istraživače i stručnjake oko ideja važnih za Bosnu i Hercegovinu i šire društvo.',
         'home' => 'Početna',
         'current' => 'O Akademiji',
     ],
@@ -112,8 +112,8 @@ return [
         'title' => 'Osnovne informacije o Akademiji',
         'items' => [
             [
-                'question' => 'Šta je IANUBIH?',
-                'answer' => 'IANUBIH je Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini — međunarodna akademska zajednica naučnika, umjetnika, istraživača i stručnjaka.',
+                'question' => 'Šta je IASABIH?',
+                'answer' => 'IASABIH je Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini — međunarodna akademska zajednica naučnika, umjetnika, istraživača i stručnjaka.',
             ],
             [
                 'question' => 'Koga Akademija okuplja?',
@@ -124,7 +124,7 @@ return [
                 'answer' => 'Razvija projekte i inicijative, organizuje akademske događaje, objavljuje publikacije, podstiče interdisciplinarni dijalog i gradi međunarodna partnerstva.',
             ],
             [
-                'question' => 'Kako mogu sarađivati s IANUBIH-om?',
+                'question' => 'Kako mogu sarađivati s IASABIH-om?',
                 'answer' => 'Univerziteti, istraživački centri, institucije, donatori, mediji i istraživači mogu se obratiti Akademiji putem kontakt podataka ili stranice za saradnju.',
             ],
         ],

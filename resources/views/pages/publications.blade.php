@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="ianubih-section publications-intro" aria-labelledby="publications-intro-title">
+<section class="iasabih-section publications-intro" aria-labelledby="publications-intro-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -39,12 +39,12 @@
     </div>
 </section>
 
-<section class="ianubih-section journal-feature" aria-labelledby="journal-title">
+<section class="iasabih-section journal-feature" aria-labelledby="journal-title">
     <div class="container">
         <div class="journal-feature-grid">
             <div class="journal-cover wow fadeInUp" aria-hidden="true">
                 <div class="journal-cover-top">
-                    <span>IANUBIH</span>
+                    <span>IASABIH</span>
                     <span>SAR</span>
                 </div>
                 <div class="journal-cover-title">
@@ -81,15 +81,15 @@
                 </dl>
 
                 <div class="journal-actions">
-                    <a href="https://www.sarjournal.org/" class="btn btn-ianubih-gold" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.primary') }}</a>
-                    <a href="https://www.sarjournal.org/lov/SAR" class="btn btn-ianubih-light-outline" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.secondary') }}</a>
+                    <a href="https://www.sarjournal.org/" class="btn btn-iasabih-gold" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.primary') }}</a>
+                    <a href="https://www.sarjournal.org/lov/SAR" class="btn btn-iasabih-light-outline" target="_blank" rel="noopener noreferrer">{{ __('publications.journal.secondary') }}</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="ianubih-section issue-section" aria-labelledby="issues-title">
+<section class="iasabih-section issue-section" aria-labelledby="issues-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('publications.issues.eyebrow') }}</span>
@@ -118,7 +118,7 @@
     </div>
 </section>
 
-<section class="ianubih-section publication-library" aria-labelledby="library-title">
+<section class="iasabih-section publication-library" aria-labelledby="library-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -157,7 +157,7 @@
     </div>
 </section>
 
-<section class="ianubih-section publication-formats" aria-labelledby="publication-formats-title">
+<section class="iasabih-section publication-formats" aria-labelledby="publication-formats-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('publications.formats.eyebrow') }}</span>
@@ -177,7 +177,7 @@
     </div>
 </section>
 
-<section class="ianubih-section publications-cta" aria-labelledby="publications-cta-title">
+<section class="iasabih-section publications-cta" aria-labelledby="publications-cta-title">
     <div class="container">
         <div class="row">
             <div class="col-md-8 wow fadeInUp">
@@ -186,8 +186,8 @@
                 <p>{{ __('publications.cta.text') }}</p>
             </div>
             <div class="col-md-4 publications-cta-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="https://www.sarjournal.org/" class="btn btn-ianubih-gold" target="_blank" rel="noopener noreferrer">{{ __('publications.cta.primary') }}</a>
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('publications.cta.secondary') }}</a>
+                <a href="https://www.sarjournal.org/" class="btn btn-iasabih-gold" target="_blank" rel="noopener noreferrer">{{ __('publications.cta.primary') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('publications.cta.secondary') }}</a>
             </div>
         </div>
     </div>

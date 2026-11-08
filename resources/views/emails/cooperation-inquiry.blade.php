@@ -6,7 +6,7 @@
 </head>
 <body style="color:#202a33;font-family:Arial,sans-serif;line-height:1.6;margin:0;padding:28px;">
     <div style="margin:0 auto;max-width:680px;">
-        <p style="color:#1d5c83;font-size:12px;font-weight:700;letter-spacing:.12em;margin:0 0 8px;text-transform:uppercase;">IANUBIH</p>
+        <p style="color:#1d5c83;font-size:12px;font-weight:700;letter-spacing:.12em;margin:0 0 8px;text-transform:uppercase;">IASABIH</p>
         <h1 style="color:#12243a;font-family:Georgia,serif;font-size:30px;margin:0 0 28px;">{{ $labels['heading'] }}</h1>
 
         <table role="presentation" style="border-collapse:collapse;width:100%;">

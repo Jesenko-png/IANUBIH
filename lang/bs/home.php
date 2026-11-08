@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'IANUBIH | Znanje koje povezuje',
+        'title' => 'IASABIH | Znanje koje povezuje',
         'description' => 'Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini povezuje naučnike, umjetnike, istraživače i stručnjake radi doprinosa društvu.',
     ],
     'topbar' => [
@@ -13,7 +13,7 @@ return [
         'eyebrow' => 'Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini',
         'title_first' => 'Znanje koje povezuje.',
         'title_second' => 'Mudrost koja usmjerava.',
-        'text' => 'IANUBIH okuplja istaknute naučnike, umjetnike, istraživače i stručnjake iz Bosne i Hercegovine, regije i svijeta. Povezujemo discipline, generacije i ideje kako bismo znanje pretvorili u doprinos društvu.',
+        'text' => 'IASABIH okuplja istaknute naučnike, umjetnike, istraživače i stručnjake iz Bosne i Hercegovine, regije i svijeta. Povezujemo discipline, generacije i ideje kako bismo znanje pretvorili u doprinos društvu.',
         'primary' => 'Upoznajte Akademiju',
         'secondary' => 'Istražite naš rad',
         'expert' => 'Pronađite eksperta',
@@ -116,7 +116,7 @@ return [
         'calendar_title' => 'Kalendar novih događaja je u pripremi',
         'calendar_text' => 'Ovdje će biti objavljeni datumi, lokacije, organizatori, kratki opisi i informacije o prijavi za predstojeće programe Akademije.',
         'location' => 'Sarajevo i online',
-        'organizer' => 'IANUBIH',
+        'organizer' => 'IASABIH',
         'all' => 'Pogledajte sve događaje',
         'register' => 'Prijavite se',
     ],
@@ -132,7 +132,7 @@ return [
     'network' => [
         'eyebrow' => 'Međunarodna mreža',
         'title' => 'Iz Bosne i Hercegovine prema svijetu. Iz svijeta prema Bosni i Hercegovini.',
-        'text' => 'IANUBIH povezuje akademsku zajednicu u Bosni i Hercegovini s članovima, istraživačima i institucijama u drugim zemljama. Posebnu vrijednost vidimo u povezivanju naučne dijaspore, međunarodnih članova i novih generacija istraživača.',
+        'text' => 'IASABIH povezuje akademsku zajednicu u Bosni i Hercegovini s članovima, istraživačima i institucijama u drugim zemljama. Posebnu vrijednost vidimo u povezivanju naučne dijaspore, međunarodnih članova i novih generacija istraživača.',
         'cta' => 'Istražite međunarodnu mrežu',
         'visual_label' => 'Konstelacija znanja',
     ],
@@ -147,7 +147,7 @@ return [
     'news' => [
         'eyebrow' => 'Novosti',
         'title' => 'Aktuelno iz Akademije',
-        'intro' => 'Pratite aktivnosti, inicijative i javne programe IANUBIH-a.',
+        'intro' => 'Pratite aktivnosti, inicijative i javne programe IASABIH-a.',
         'items' => [
             [
                 'image' => 'f-web.jpg',

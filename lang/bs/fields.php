@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Područja djelovanja | IANUBIH',
+        'title' => 'Područja djelovanja | IASABIH',
         'description' => 'Istražite interdisciplinarna područja djelovanja Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini.',
     ],
     'hero' => [
@@ -16,7 +16,7 @@ return [
         'eyebrow' => 'Interdisciplinarni pristup',
         'title' => 'Složeni izazovi zahtijevaju zajedničke odgovore',
         'text_first' => 'Razredi Akademije okupljaju članove prema područjima ekspertize. Istovremeno razvijamo saradnju između disciplina jer pitanja koja oblikuju zdravlje, tehnologiju, kulturu, održivi razvoj i budućnost društva nije moguće razumjeti iz samo jedne perspektive.',
-        'text_second' => 'Područja u nastavku predstavljaju okvir za buduće projekte, stručne rasprave, publikacije, javne događaje i međunarodna partnerstva IANUBIH-a.',
+        'text_second' => 'Područja u nastavku predstavljaju okvir za buduće projekte, stručne rasprave, publikacije, javne događaje i međunarodna partnerstva IASABIH-a.',
         'highlight' => 'Disciplina daje dubinu. Saradnja među disciplinama daje cjelovitu sliku.',
     ],
     'areas' => [
@@ -74,7 +74,7 @@ return [
     'connection' => [
         'eyebrow' => 'Povezivanje područja',
         'title' => 'Znanje postaje snažnije kada prelazi granice vlastite discipline',
-        'text_first' => 'IANUBIH razvija prostor u kojem stručnjaci iz različitih oblasti mogu zajedno postaviti prava pitanja, razmijeniti metode i oblikovati prijedloge zasnovane na dokazima.',
+        'text_first' => 'IASABIH razvija prostor u kojem stručnjaci iz različitih oblasti mogu zajedno postaviti prava pitanja, razmijeniti metode i oblikovati prijedloge zasnovane na dokazima.',
         'text_second' => 'Takav pristup omogućava da se naučni i umjetnički uvidi povežu s javnim institucijama, međunarodnim partnerima, mladim istraživačima i širom zajednicom.',
         'image_alt' => 'Model povezanih naučnih disciplina',
     ],

@@ -2,8 +2,8 @@
 
 return [
     'meta' => [
-        'title' => 'Cooperation | IANUBIH',
-        'description' => 'Start a partnership with IANUBIH through joint projects, research, events, publications, programmes for young scientists and expert initiatives.',
+        'title' => 'Cooperation | IASABIH',
+        'description' => 'Start a partnership with IASABIH through joint projects, research, events, publications, programmes for young scientists and expert initiatives.',
     ],
     'hero' => [
         'eyebrow' => 'Cooperation and partnerships',
@@ -17,7 +17,7 @@ return [
     'intro' => [
         'eyebrow' => 'An open academic network',
         'title' => 'Partnerships that turn knowledge into action',
-        'text_first' => 'IANUBIH connects scientific and artistic excellence with institutions and people committed to creating measurable value for society.',
+        'text_first' => 'IASABIH connects scientific and artistic excellence with institutions and people committed to creating measurable value for society.',
         'text_second' => 'Together we can develop projects, events, publications, expert initiatives and programmes that connect Bosnia and Herzegovina with the regional and international academic community.',
         'highlight' => 'We look for a shared goal, clear public value and a partnership grounded in expertise, responsibility and mutual trust.',
     ],
@@ -128,7 +128,7 @@ return [
         'note_items' => [
             'the problem or opportunity the initiative addresses;',
             'its objective and expected results;',
-            'the proposed role of IANUBIH and other partners;',
+            'the proposed role of IASABIH and other partners;',
             'the indicative timeline and contact person.',
         ],
     ],
@@ -153,7 +153,7 @@ return [
         'initiative_placeholder' => 'A short working title for the proposal',
         'message' => 'Describe the cooperation proposal',
         'message_placeholder' => 'State the objective, expected results, proposed partners and indicative timeline.',
-        'consent' => 'I agree that IANUBIH may use the submitted data solely to review and respond to this enquiry.',
+        'consent' => 'I agree that IASABIH may use the submitted data solely to review and respond to this enquiry.',
         'submit' => 'Send proposal',
         'required_note' => '* Required field',
         'success' => 'Thank you. Your cooperation proposal has been received successfully.',
@@ -196,7 +196,7 @@ return [
         'next' => 'Next',
         'back' => 'Back to proposals',
         'submitted_by' => 'Submitted by :name.',
-        'reply_subject' => 'IANUBIH response: :title',
+        'reply_subject' => 'IASABIH response: :title',
         'reply' => 'Reply by email',
         'proposal' => 'Cooperation proposal',
         'message' => 'Proposal description',

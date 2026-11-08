@@ -8,7 +8,7 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>IANUBIH</title>
+    <title>IASABIH</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
 
         </nav>
 
-        <h1>IANUBIH</h1>
+        <h1>IASABIH</h1>
 
         <p>
             {{ __('messages.language_test') }}

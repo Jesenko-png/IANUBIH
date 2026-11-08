@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Aktuelnosti | IANUBIH',
+        'title' => 'Aktuelnosti | IASABIH',
         'description' => 'Najnovije vijesti, saopćenja, događaji i aktivnosti Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini.',
     ],
     'hero' => [
@@ -14,7 +14,7 @@ return [
     ],
     'list' => [
         'eyebrow' => 'Najnovije objave',
-        'title' => 'Aktuelno iz IANUBIH-a',
+        'title' => 'Aktuelno iz IASABIH-a',
         'intro' => 'Saopćenja, priče i informacije o radu članova, projektima, publikacijama i javnim događajima Akademije.',
         'read_more' => 'Pročitajte više',
     ],

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>{{ __('auth.reset_page_title') }} | IANUBIH</title>
+    <title>{{ __('auth.reset_page_title') }} | IASABIH</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
@@ -19,8 +19,8 @@
             </nav>
 
             <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="login-brand">
-                <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IANUBIH">
-                <span>IANUBIH</span>
+                <img src="{{ asset('assets/new-event/images/logo.jpg') }}" alt="IASABIH">
+                <span>IASABIH</span>
             </a>
             <p class="login-eyebrow">{{ __('auth.reset_eyebrow') }}</p>
             <h1 id="reset-password-title">{{ __('auth.reset_heading') }}</h1>

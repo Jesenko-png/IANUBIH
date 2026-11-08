@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'IANUBIH | Knowledge that connects',
+        'title' => 'IASABIH | Knowledge that connects',
         'description' => 'The International Academy of Sciences and Arts in Bosnia and Herzegovina connects scientists, artists, researchers and experts to contribute to society.',
     ],
     'topbar' => [
@@ -13,7 +13,7 @@ return [
         'eyebrow' => 'International Academy of Sciences and Arts in Bosnia and Herzegovina',
         'title_first' => 'Knowledge that connects.',
         'title_second' => 'Wisdom that guides.',
-        'text' => 'IANUBIH brings together distinguished scientists, artists, researchers and experts from Bosnia and Herzegovina, the region and the world. We connect disciplines, generations and ideas to turn knowledge into a contribution to society.',
+        'text' => 'IASABIH brings together distinguished scientists, artists, researchers and experts from Bosnia and Herzegovina, the region and the world. We connect disciplines, generations and ideas to turn knowledge into a contribution to society.',
         'primary' => 'Discover the Academy',
         'secondary' => 'Explore our work',
         'expert' => 'Find an expert',
@@ -116,7 +116,7 @@ return [
         'calendar_title' => 'The calendar of new events is being prepared',
         'calendar_text' => 'Dates, venues, organizers, short descriptions and registration information for the Academy’s upcoming programmes will be published here.',
         'location' => 'Sarajevo and online',
-        'organizer' => 'IANUBIH',
+        'organizer' => 'IASABIH',
         'all' => 'View all events',
         'register' => 'Register',
     ],
@@ -132,7 +132,7 @@ return [
     'network' => [
         'eyebrow' => 'International network',
         'title' => 'From Bosnia and Herzegovina to the world. From the world to Bosnia and Herzegovina.',
-        'text' => 'IANUBIH connects the academic community in Bosnia and Herzegovina with members, researchers and institutions in other countries. We see particular value in connecting the scientific diaspora, international members and new generations of researchers.',
+        'text' => 'IASABIH connects the academic community in Bosnia and Herzegovina with members, researchers and institutions in other countries. We see particular value in connecting the scientific diaspora, international members and new generations of researchers.',
         'cta' => 'Explore the international network',
         'visual_label' => 'Constellation of knowledge',
     ],
@@ -147,7 +147,7 @@ return [
     'news' => [
         'eyebrow' => 'News',
         'title' => 'Latest from the Academy',
-        'intro' => 'Follow IANUBIH activities, initiatives and public programmes.',
+        'intro' => 'Follow IASABIH activities, initiatives and public programmes.',
         'items' => [
             [
                 'image' => 'f-web.jpg',

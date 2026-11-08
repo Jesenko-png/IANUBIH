@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="@yield('description', __('home.meta.description'))">
 
-    <title>@yield('title', 'IANUBIH')</title>
+    <title>@yield('title', 'IASABIH')</title>
 
     <link rel="canonical" href="{{ route($seoRouteName, $seoRouteParameters) }}">
     <link rel="alternate" hreflang="bs" href="{{ route($seoRouteName, array_merge($seoRouteParameters, ['locale' => 'bs'])) }}">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/new-event/css/ianubih.css') }}?v={{ filemtime(public_path('assets/new-event/css/ianubih.css')) }}">
+    <link rel="stylesheet" href="{{ asset('assets/new-event/css/iasabih.css') }}?v={{ filemtime(public_path('assets/new-event/css/iasabih.css')) }}">
     <link rel="stylesheet" href="{{ asset('assets/new-event/css/academy-menu.css') }}?v={{ filemtime(public_path('assets/new-event/css/academy-menu.css')) }}">
 
     @stack('styles')
@@ -55,7 +55,7 @@
     <script src="{{ asset('assets/new-event/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/new-event/js/custom.js') }}"></script>
-    <script src="{{ asset('assets/new-event/js/ianubih.js') }}?v={{ filemtime(public_path('assets/new-event/js/ianubih.js')) }}"></script>
+    <script src="{{ asset('assets/new-event/js/iasabih.js') }}?v={{ filemtime(public_path('assets/new-event/js/iasabih.js')) }}"></script>
     <script src="{{ asset('assets/new-event/js/academy-menu.js') }}?v={{ filemtime(public_path('assets/new-event/js/academy-menu.js')) }}"></script>
     <script src="{{ asset('assets/new-event/js/analytics-consent.js') }}?v={{ filemtime(public_path('assets/new-event/js/analytics-consent.js')) }}"></script>
 

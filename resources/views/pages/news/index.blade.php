@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="ianubih-section news-archive" aria-labelledby="news-list-title">
+<section class="iasabih-section news-archive" aria-labelledby="news-list-title">
     <div class="container">
         <div class="news-archive-heading">
             <div>
@@ -78,7 +78,7 @@
     </div>
 </section>
 
-<section class="ianubih-section news-contact-cta" aria-labelledby="news-contact-title">
+<section class="iasabih-section news-contact-cta" aria-labelledby="news-contact-title">
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -87,7 +87,7 @@
                 <p>{{ __('news.cta.text') }}</p>
             </div>
             <div class="col-md-4 news-contact-actions">
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('news.cta.button') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('news.cta.button') }}</a>
             </div>
         </div>
     </div>

@@ -24,14 +24,14 @@
     </div>
 </section>
 
-<section class="ianubih-section legal-section">
+<section class="iasabih-section legal-section">
     <div class="container">
         <div class="legal-layout">
             <aside class="legal-summary" aria-label="{{ __('legal.common.document_information') }}">
                 <span>{{ __('legal.common.updated_label') }}</span>
                 <strong>{{ __('legal.common.updated_date') }}</strong>
                 <p>{{ __('legal.common.contact_note') }}</p>
-                <a href="mailto:info@ianubih.ba">info@ianubih.ba</a>
+                <a href="mailto:info@iasabih.ba">info@iasabih.ba</a>
             </aside>
 
             <div class="legal-document">
@@ -86,7 +86,7 @@
                     <span class="section-eyebrow">{{ __('legal.common.contact_eyebrow') }}</span>
                     <h2>{{ __('legal.common.contact_title') }}</h2>
                     <p>{{ __('legal.common.contact_text') }}</p>
-                    <a href="mailto:info@ianubih.ba" class="btn btn-ianubih-primary">info@ianubih.ba</a>
+                    <a href="mailto:info@iasabih.ba" class="btn btn-iasabih-primary">info@iasabih.ba</a>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
 <script>
     document.querySelectorAll('[data-open-cookie-settings]').forEach(function (button) {
         button.addEventListener('click', function () {
-            var settingsButton = document.querySelector('.ianubih-cookie-settings');
+            var settingsButton = document.querySelector('.iasabih-cookie-settings');
 
             if (settingsButton) {
                 settingsButton.click();

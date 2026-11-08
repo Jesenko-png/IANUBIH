@@ -7,7 +7,7 @@ return [
         'document_information' => 'Document information',
         'updated_label' => 'Last updated',
         'updated_date' => '29 September 2026',
-        'contact_note' => 'For questions about privacy or use of the website, contact IANUBIH.',
+        'contact_note' => 'For questions about privacy or use of the website, contact IASABIH.',
         'contact_eyebrow' => 'Contact',
         'contact_title' => 'Do you have a question about these terms?',
         'contact_text' => 'For requests concerning personal data, cookies or use of content, contact us by email.',
@@ -15,8 +15,8 @@ return [
     ],
     'privacy' => [
         'meta' => [
-            'title' => 'Privacy Policy | IANUBIH',
-            'description' => 'Information on how IANUBIH collects, uses, retains and protects the personal data of website users.',
+            'title' => 'Privacy Policy | IASABIH',
+            'description' => 'Information on how IASABIH collects, uses, retains and protects the personal data of website users.',
         ],
         'title' => 'Privacy Policy',
         'intro' => 'This policy explains what data we collect through the website, why we process it and the rights you have in relation to your data.',
@@ -24,7 +24,7 @@ return [
             [
                 'title' => '1. Who controls the data',
                 'paragraphs' => [
-                    'The data controller is the International Academy of Sciences and Arts in Bosnia and Herzegovina (IANUBIH), Paromlinska 53, 71000 Sarajevo, Bosnia and Herzegovina. The privacy contact address is info@ianubih.ba.',
+                    'The data controller is the International Academy of Sciences and Arts in Bosnia and Herzegovina (IASABIH), Paromlinska 53, 71000 Sarajevo, Bosnia and Herzegovina. The privacy contact address is info@iasabih.ba.',
                 ],
             ],
             [
@@ -45,14 +45,14 @@ return [
                     'Reviewing cooperation proposals and communicating with the sender, based on consent and steps taken at the sender’s request.',
                     'Creating and administering user accounts and protecting the administration area.',
                     'Publishing and administering news and other public content.',
-                    'Maintaining the security, reliability and functionality of the website on the basis of IANUBIH’s legitimate interests.',
+                    'Maintaining the security, reliability and functionality of the website on the basis of IASABIH’s legitimate interests.',
                     'Measuring website use through Google Analytics only after the visitor has given consent.',
                 ],
             ],
             [
                 'title' => '4. Recipients and external services',
                 'paragraphs' => [
-                    'Data is accessible only to authorised IANUBIH administrators and technical service providers where necessary for hosting, email, maintenance or website security.',
+                    'Data is accessible only to authorised IASABIH administrators and technical service providers where necessary for hosting, email, maintenance or website security.',
                     'If you accept analytics cookies, data is processed by Google as part of Google Analytics. Google may process data outside Bosnia and Herzegovina or the European Economic Area subject to its contractual and legal data-protection mechanisms.',
                     'We do not sell personal data or use it for automated decision-making.',
                 ],
@@ -68,7 +68,7 @@ return [
                 'title' => '6. Your rights',
                 'paragraphs' => [
                     'Subject to applicable data-protection law, you may request access, correction, completion, deletion, restriction or portability of your data and object to certain processing. You may withdraw consent at any time without affecting the lawfulness of processing carried out before withdrawal.',
-                    'To exercise your rights, email info@ianubih.ba. You also have the right to lodge a complaint with the Personal Data Protection Agency in Bosnia and Herzegovina and seek judicial protection.',
+                    'To exercise your rights, email info@iasabih.ba. You also have the right to lodge a complaint with the Personal Data Protection Agency in Bosnia and Herzegovina and seek judicial protection.',
                 ],
             ],
             [
@@ -87,11 +87,11 @@ return [
     ],
     'cookies' => [
         'meta' => [
-            'title' => 'Cookie Policy | IANUBIH',
-            'description' => 'An overview of essential and analytics cookies used on the IANUBIH website and how consent can be managed.',
+            'title' => 'Cookie Policy | IASABIH',
+            'description' => 'An overview of essential and analytics cookies used on the IASABIH website and how consent can be managed.',
         ],
         'title' => 'Cookie Policy',
-        'intro' => 'This policy explains which cookies and similar technologies the IANUBIH website uses and how you can accept, refuse or later change your choice.',
+        'intro' => 'This policy explains which cookies and similar technologies the IASABIH website uses and how you can accept, refuse or later change your choice.',
         'sections' => [
             [
                 'title' => '1. What cookies are',
@@ -104,9 +104,9 @@ return [
                 'table' => [
                     'headings' => ['Name', 'Provider', 'Purpose', 'Duration'],
                     'rows' => [
-                        ['Website session cookie', 'IANUBIH', 'Maintains user sign-in, session and security.', 'Up to 120 minutes of inactivity, according to session settings.'],
-                        ['XSRF-TOKEN', 'IANUBIH', 'Protects forms and requests against unauthorised submission.', 'For the duration of the session.'],
-                        ['ianubih_analytics_consent', 'IANUBIH – local storage', 'Remembers whether analytics was accepted or refused.', 'Until you change the choice or clear browser data.'],
+                        ['Website session cookie', 'IASABIH', 'Maintains user sign-in, session and security.', 'Up to 120 minutes of inactivity, according to session settings.'],
+                        ['XSRF-TOKEN', 'IASABIH', 'Protects forms and requests against unauthorised submission.', 'For the duration of the session.'],
+                        ['iasabih_analytics_consent', 'IASABIH – local storage', 'Remembers whether analytics was accepted or refused.', 'Until you change the choice or clear browser data.'],
                         ['_ga', 'Google Analytics', 'Distinguishes visitors for aggregated statistics.', 'Up to 2 years, only after consent.'],
                         ['_ga_<ID>', 'Google Analytics', 'Persists analytics session state.', 'Up to 2 years, only after consent.'],
                     ],
@@ -135,23 +135,23 @@ return [
             [
                 'title' => '6. Changes and contact',
                 'paragraphs' => [
-                    'We will update this policy when a new technology is introduced or the method of measurement changes. Questions may be sent to info@ianubih.ba.',
+                    'We will update this policy when a new technology is introduced or the method of measurement changes. Questions may be sent to info@iasabih.ba.',
                 ],
             ],
         ],
     ],
     'terms' => [
         'meta' => [
-            'title' => 'Terms of Use | IANUBIH',
-            'description' => 'Terms governing access to and use of the IANUBIH website, content, user accounts and forms.',
+            'title' => 'Terms of Use | IASABIH',
+            'description' => 'Terms governing access to and use of the IASABIH website, content, user accounts and forms.',
         ],
         'title' => 'Terms of Use',
-        'intro' => 'By using this website, you accept the rules that protect IANUBIH content, users and the secure operation of its digital services.',
+        'intro' => 'By using this website, you accept the rules that protect IASABIH content, users and the secure operation of its digital services.',
         'sections' => [
             [
                 'title' => '1. Purpose of the website',
                 'paragraphs' => [
-                    'The website publishes information about IANUBIH, its fields of activity, projects, events, publications, news and cooperation opportunities. Content is informational and does not constitute legal, medical, financial or other individual professional advice.',
+                    'The website publishes information about IASABIH, its fields of activity, projects, events, publications, news and cooperation opportunities. Content is informational and does not constitute legal, medical, financial or other individual professional advice.',
                 ],
             ],
             [
@@ -163,7 +163,7 @@ return [
             [
                 'title' => '3. Copyright and permitted use',
                 'paragraphs' => [
-                    'Texts, visual identity, photographs, publications and other materials belong to IANUBIH or are published under an appropriate right of use, unless stated otherwise.',
+                    'Texts, visual identity, photographs, publications and other materials belong to IASABIH or are published under an appropriate right of use, unless stated otherwise.',
                     'You may quote and share content for personal, educational and non-commercial purposes with clear attribution and without changing its meaning. Commercial use, complete reproduction or adaptation requires prior written permission.',
                 ],
             ],
@@ -178,25 +178,25 @@ return [
             [
                 'title' => '5. Cooperation proposals',
                 'paragraphs' => [
-                    'By submitting a proposal, you confirm that you are authorised to provide the entered data and that the content is lawful and does not infringe another person’s rights. Submitting a form does not create a contract, funding commitment, partnership or obligation for IANUBIH to accept the proposal.',
+                    'By submitting a proposal, you confirm that you are authorised to provide the entered data and that the content is lawful and does not infringe another person’s rights. Submitting a form does not create a contract, funding commitment, partnership or obligation for IASABIH to accept the proposal.',
                 ],
             ],
             [
                 'title' => '6. External links',
                 'paragraphs' => [
-                    'The website may link to external websites, publications and social networks. IANUBIH does not control those services and is not responsible for their content, availability or privacy practices.',
+                    'The website may link to external websites, publications and social networks. IASABIH does not control those services and is not responsible for their content, availability or privacy practices.',
                 ],
             ],
             [
                 'title' => '7. Limitation of liability',
                 'paragraphs' => [
-                    'To the extent permitted by applicable law, IANUBIH is not liable for damage caused solely by reliance on general website information, temporary unavailability or the conduct of external service providers. This does not exclude liability that cannot lawfully be excluded.',
+                    'To the extent permitted by applicable law, IASABIH is not liable for damage caused solely by reliance on general website information, temporary unavailability or the conduct of external service providers. This does not exclude liability that cannot lawfully be excluded.',
                 ],
             ],
             [
                 'title' => '8. Governing law and changes',
                 'paragraphs' => [
-                    'These terms are governed by the laws of Bosnia and Herzegovina. We may amend them to reflect website functions or legal requirements. Questions may be sent to info@ianubih.ba.',
+                    'These terms are governed by the laws of Bosnia and Herzegovina. We may amend them to reflect website functions or legal requirements. Questions may be sent to info@iasabih.ba.',
                 ],
             ],
         ],

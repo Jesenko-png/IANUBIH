@@ -2,7 +2,7 @@
     'use strict';
 
     var measurementId = 'G-2KJZQ71XQX';
-    var storageKey = 'ianubih_analytics_consent';
+    var storageKey = 'iasabih_analytics_consent';
     var isEnglish = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
     var copy = isEnglish
         ? {
@@ -37,11 +37,11 @@
     }
 
     function loadAnalytics() {
-        if (window.__ianubihAnalyticsLoaded) {
+        if (window.__iasabihAnalyticsLoaded) {
             return;
         }
 
-        window.__ianubihAnalyticsLoaded = true;
+        window.__iasabihAnalyticsLoaded = true;
         window.dataLayer = window.dataLayer || [];
         window.gtag = window.gtag || function () {
             window.dataLayer.push(arguments);
@@ -80,43 +80,43 @@
     function createInterface() {
         var style = document.createElement('style');
         style.textContent = [
-            '.ianubih-cookie-banner{position:fixed;z-index:99999;left:20px;right:20px;bottom:20px;max-width:760px;margin:0 auto;padding:20px;background:#10273f;color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 14px 40px rgba(0,0,0,.3);font-family:Inter,Arial,sans-serif}',
-            '.ianubih-cookie-banner[hidden],.ianubih-cookie-settings[hidden]{display:none!important}',
-            '.ianubih-cookie-banner strong{display:block;margin-bottom:7px;font-size:16px}',
-            '.ianubih-cookie-banner p{margin:0;color:rgba(255,255,255,.86);font-size:14px;line-height:1.55}',
-            '.ianubih-cookie-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}',
-            '.ianubih-cookie-actions button,.ianubih-cookie-settings{border:0;cursor:pointer;font:600 13px Inter,Arial,sans-serif}',
-            '.ianubih-cookie-accept{padding:10px 15px;background:#24b7b0;color:#071b2e}',
-            '.ianubih-cookie-reject{padding:10px 15px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)!important}',
-            '.ianubih-cookie-settings{position:fixed;z-index:99998;left:14px;bottom:14px;padding:8px 11px;background:#10273f;color:#fff;box-shadow:0 5px 18px rgba(0,0,0,.22)}',
-            '@media(max-width:600px){.ianubih-cookie-banner{left:10px;right:10px;bottom:10px;padding:17px}.ianubih-cookie-actions button{flex:1 1 140px}}'
+            '.iasabih-cookie-banner{position:fixed;z-index:99999;left:20px;right:20px;bottom:20px;max-width:760px;margin:0 auto;padding:20px;background:#10273f;color:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 14px 40px rgba(0,0,0,.3);font-family:Inter,Arial,sans-serif}',
+            '.iasabih-cookie-banner[hidden],.iasabih-cookie-settings[hidden]{display:none!important}',
+            '.iasabih-cookie-banner strong{display:block;margin-bottom:7px;font-size:16px}',
+            '.iasabih-cookie-banner p{margin:0;color:rgba(255,255,255,.86);font-size:14px;line-height:1.55}',
+            '.iasabih-cookie-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}',
+            '.iasabih-cookie-actions button,.iasabih-cookie-settings{border:0;cursor:pointer;font:600 13px Inter,Arial,sans-serif}',
+            '.iasabih-cookie-accept{padding:10px 15px;background:#24b7b0;color:#071b2e}',
+            '.iasabih-cookie-reject{padding:10px 15px;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5)!important}',
+            '.iasabih-cookie-settings{position:fixed;z-index:99998;left:14px;bottom:14px;padding:8px 11px;background:#10273f;color:#fff;box-shadow:0 5px 18px rgba(0,0,0,.22)}',
+            '@media(max-width:600px){.iasabih-cookie-banner{left:10px;right:10px;bottom:10px;padding:17px}.iasabih-cookie-actions button{flex:1 1 140px}}'
         ].join('');
         document.head.appendChild(style);
 
         var banner = document.createElement('section');
-        banner.className = 'ianubih-cookie-banner';
+        banner.className = 'iasabih-cookie-banner';
         banner.hidden = true;
         banner.setAttribute('role', 'dialog');
         banner.setAttribute('aria-label', copy.label);
         banner.innerHTML =
             '<strong>' + copy.label + '</strong>' +
             '<p>' + copy.message + '</p>' +
-            '<div class="ianubih-cookie-actions">' +
-                '<button type="button" class="ianubih-cookie-accept">' + copy.accept + '</button>' +
-                '<button type="button" class="ianubih-cookie-reject">' + copy.reject + '</button>' +
+            '<div class="iasabih-cookie-actions">' +
+                '<button type="button" class="iasabih-cookie-accept">' + copy.accept + '</button>' +
+                '<button type="button" class="iasabih-cookie-reject">' + copy.reject + '</button>' +
             '</div>';
 
         var settings = document.createElement('button');
         settings.type = 'button';
-        settings.className = 'ianubih-cookie-settings';
+        settings.className = 'iasabih-cookie-settings';
         settings.hidden = true;
         settings.textContent = copy.settings;
 
         document.body.appendChild(banner);
         document.body.appendChild(settings);
 
-        var acceptButton = banner.querySelector('.ianubih-cookie-accept');
-        var rejectButton = banner.querySelector('.ianubih-cookie-reject');
+        var acceptButton = banner.querySelector('.iasabih-cookie-accept');
+        var rejectButton = banner.querySelector('.iasabih-cookie-reject');
 
         function showSettings() {
             settings.hidden = false;

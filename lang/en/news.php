@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'News | IANUBIH',
+        'title' => 'News | IASABIH',
         'description' => 'Latest news, announcements, events and activities from the International Academy of Sciences and Arts in Bosnia and Herzegovina.',
     ],
     'hero' => [
@@ -14,7 +14,7 @@ return [
     ],
     'list' => [
         'eyebrow' => 'Latest stories',
-        'title' => 'Latest from IANUBIH',
+        'title' => 'Latest from IASABIH',
         'intro' => 'Announcements, stories and information about our members, projects, publications and public events.',
         'read_more' => 'Read more',
     ],

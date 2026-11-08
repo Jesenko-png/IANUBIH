@@ -21,7 +21,7 @@
     </div>
 </section>
 
-<section class="ianubih-section people-directory-section" aria-labelledby="directory-title">
+<section class="iasabih-section people-directory-section" aria-labelledby="directory-title">
     <div class="container">
         <div class="people-directory-header">
             <div>
@@ -32,7 +32,7 @@
                 <label for="member-query">{{ __('members.public.search_label') }}</label>
                 <div>
                     <input id="member-query" type="search" name="q" value="{{ $search }}" maxlength="100" placeholder="{{ __('members.public.search_placeholder') }}">
-                    <button type="submit" class="btn btn-ianubih-primary">{{ __('members.public.search_button') }}</button>
+                    <button type="submit" class="btn btn-iasabih-primary">{{ __('members.public.search_button') }}</button>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', __('pages.items.' . $page . '.title') . ' | IANUBIH')
+@section('title', __('pages.items.' . $page . '.title') . ' | IASABIH')
 @section('description', __('pages.items.' . $page . '.intro'))
 
 @section('content')
@@ -17,13 +17,13 @@
     </div>
 </section>
 
-<section class="ianubih-section placeholder-section">
+<section class="iasabih-section placeholder-section">
     <div class="container">
         <div class="placeholder-card">
             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
             <span class="section-eyebrow">{{ __('pages.status') }}</span>
             <p>{{ __('pages.notice') }}</p>
-            <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-primary">{{ __('pages.back_home') }}</a>
+            <a href="{{ route('home', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-primary">{{ __('pages.back_home') }}</a>
         </div>
     </div>
 </section>

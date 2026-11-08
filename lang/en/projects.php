@@ -2,13 +2,13 @@
 
 return [
     'meta' => [
-        'title' => 'Projects and initiatives | IANUBIH',
+        'title' => 'Projects and initiatives | IASABIH',
         'description' => 'Explore project directions, expert initiatives and cooperation opportunities of the International Academy of Sciences and Arts in Bosnia and Herzegovina.',
     ],
     'hero' => [
         'eyebrow' => 'Projects and initiatives',
         'title' => 'Ideas connecting knowledge and action',
-        'text' => 'IANUBIH brings together disciplines, generations and institutions to turn expert ideas into projects, public programmes, publications and partnerships of social importance.',
+        'text' => 'IASABIH brings together disciplines, generations and institutions to turn expert ideas into projects, public programmes, publications and partnerships of social importance.',
         'home' => 'Home',
         'current' => 'Projects and initiatives',
     ],
@@ -46,7 +46,7 @@ return [
                     ['label' => 'Duration', 'value' => 'Started in February 2024; duration: 36 months'],
                     ['label' => 'Scope', 'value' => '8 institutions from 5 countries'],
                     ['label' => 'Coordinator', 'value' => 'Faculty of Health Studies, University of Rijeka'],
-                    ['label' => 'IANUBIH representatives', 'value' => 'Academicians Mirza Žižak and Krešimir Pavelić'],
+                    ['label' => 'IASABIH representatives', 'value' => 'Academicians Mirza Žižak and Krešimir Pavelić'],
                 ],
             ],
             [
@@ -58,7 +58,7 @@ return [
                 'text' => 'The first scientific gathering on the future of Bosnian Posavina addressed the region’s prospects, socioeconomic revitalisation, demographic trends and emigration.',
                 'meta' => [
                     ['label' => 'Status', 'value' => 'The first scientific gathering was successfully completed'],
-                    ['label' => 'Organiser', 'value' => 'IANUBIH Department of Sustainable Development'],
+                    ['label' => 'Organiser', 'value' => 'IASABIH Department of Sustainable Development'],
                     ['label' => 'Lead', 'value' => 'Academician Dubravac'],
                     ['label' => 'Focus', 'value' => 'Revitalisation, demography and emigration'],
                 ],

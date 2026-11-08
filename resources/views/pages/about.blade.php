@@ -23,7 +23,7 @@
     </div>
 </section>
 
-<section class="ianubih-section about-identity" aria-labelledby="identity-title">
+<section class="iasabih-section about-identity" aria-labelledby="identity-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -39,7 +39,7 @@
     </div>
 </section>
 
-<section id="mission" class="ianubih-section mission-section" aria-labelledby="mission-title">
+<section id="mission" class="iasabih-section mission-section" aria-labelledby="mission-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('about.mission.eyebrow') }}</span>
@@ -64,7 +64,7 @@
     </div>
 </section>
 
-<section class="ianubih-section values-section" aria-labelledby="values-title">
+<section class="iasabih-section values-section" aria-labelledby="values-title">
     <div class="container">
         <div class="section-heading wow fadeInUp">
             <span class="section-eyebrow">{{ __('about.values.eyebrow') }}</span>
@@ -84,7 +84,7 @@
     </div>
 </section>
 
-<section class="ianubih-section president-section" aria-labelledby="president-title">
+<section class="iasabih-section president-section" aria-labelledby="president-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInLeft">
@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section class="ianubih-section governance-section" aria-labelledby="governance-title">
+<section class="iasabih-section governance-section" aria-labelledby="governance-title">
     <div class="container">
         <div class="section-heading section-heading-centered wow fadeInUp">
             <span class="section-eyebrow">{{ __('about.governance.eyebrow') }}</span>
@@ -121,7 +121,7 @@
     </div>
 </section>
 
-<section class="ianubih-section documents-section" aria-labelledby="documents-title">
+<section class="iasabih-section documents-section" aria-labelledby="documents-title">
     <div class="container">
         <div class="row">
             <div class="col-md-5 wow fadeInUp">
@@ -143,7 +143,7 @@
     </div>
 </section>
 
-<section class="ianubih-section faq-section" aria-labelledby="faq-title">
+<section class="iasabih-section faq-section" aria-labelledby="faq-title">
     <div class="container">
         <div class="row">
             <div class="col-md-4 wow fadeInUp">
@@ -162,7 +162,7 @@
     </div>
 </section>
 
-<section class="ianubih-section about-cta" aria-labelledby="about-cta-title">
+<section class="iasabih-section about-cta" aria-labelledby="about-cta-title">
     <div class="container">
         <div class="row">
             <div class="col-md-8 wow fadeInUp">
@@ -171,8 +171,8 @@
                 <p>{{ __('about.cta.text') }}</p>
             </div>
             <div class="col-md-4 about-cta-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-gold">{{ __('about.cta.primary') }}</a>
-                <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-ianubih-light-outline">{{ __('about.cta.secondary') }}</a>
+                <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('about.cta.primary') }}</a>
+                <a href="{{ route('fields', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('about.cta.secondary') }}</a>
             </div>
         </div>
     </div>

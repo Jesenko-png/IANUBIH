@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'Publikacije | IANUBIH',
+        'title' => 'Publikacije | IASABIH',
         'description' => 'Časopis Science, Art and Religion, zbornici i druga provjerena izdanja Internacionalne akademije nauka i umjetnosti u Bosni i Hercegovini.',
     ],
     'hero' => [
@@ -15,14 +15,14 @@ return [
     'intro' => [
         'eyebrow' => 'Izdavačka djelatnost',
         'title' => 'Od istraživanja do trajnog zapisa',
-        'text_first' => 'IANUBIH podstiče izdavačke projekte koji spajaju naučnu pouzdanost, interdisciplinarni dijalog i odgovornost prema javnosti.',
+        'text_first' => 'IASABIH podstiče izdavačke projekte koji spajaju naučnu pouzdanost, interdisciplinarni dijalog i odgovornost prema javnosti.',
         'text_second' => 'Na ovoj stranici objavljujemo samo izdanja koja je moguće potvrditi kroz službene izvore Akademije ili izdavača. Registar će se dopunjavati kako nova izdanja budu zvanično potvrđena.',
         'highlight' => 'Objavljena ideja postaje dio zajedničkog znanja — dostupna provjeri, raspravi i novim istraživanjima.',
     ],
     'journal' => [
         'eyebrow' => 'Službeni časopis Akademije',
         'title' => 'Science, Art and Religion',
-        'text' => 'Međunarodni interdisciplinarni časopis IANUBIH objavljuje radove na sjecištu nauke, umjetnosti i religije te razvija prostor za argumentovan dijalog među različitim područjima znanja.',
+        'text' => 'Međunarodni interdisciplinarni časopis IASABIH objavljuje radove na sjecištu nauke, umjetnosti i religije te razvija prostor za argumentovan dijalog među različitim područjima znanja.',
         'facts_label' => 'Osnovne karakteristike časopisa',
         'facts' => [
             'Recenzirani naučni časopis',
@@ -37,17 +37,17 @@ return [
             ['label' => 'Pokrenut', 'value' => '2022. godine'],
         ],
         'primary' => 'Posjetite časopis',
-        'secondary' => 'Pregled izdanja IANUBIH',
+        'secondary' => 'Pregled izdanja IASABIH',
     ],
     'issues' => [
         'eyebrow' => 'Odabrani brojevi',
         'title' => 'Novija izdanja časopisa SAR',
-        'intro' => 'Izdvojeni su najnoviji javno potvrđeni brojevi. Poveznice vode na službenu arhivu IANUBIH ili direktno na PDF izdanje.',
+        'intro' => 'Izdvojeni su najnoviji javno potvrđeni brojevi. Poveznice vode na službenu arhivu IASABIH ili direktno na PDF izdanje.',
         'items' => [
             [
                 'type' => 'Science, Art and Religion',
                 'title' => 'SAR 2026, Vol. 5, No. 1',
-                'text' => 'Broj za period januar–mart 2026. godine, evidentiran u službenoj arhivi IANUBIH.',
+                'text' => 'Broj za period januar–mart 2026. godine, evidentiran u službenoj arhivi IASABIH.',
                 'date' => 'Januar–mart 2026.',
                 'url' => 'https://www.sarjournal.org/toc/SAR/5/1',
                 'link' => 'Otvori broj',

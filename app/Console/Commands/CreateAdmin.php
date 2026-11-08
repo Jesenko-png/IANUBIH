@@ -13,7 +13,7 @@ class CreateAdmin extends Command
         {--email= : Email administratora}
         {--password= : Lozinka od najmanje 12 znakova}';
 
-    protected $description = 'Kreira administratora za IANUBIH CMS';
+    protected $description = 'Kreira administratora za IASABIH CMS';
 
     public function handle(): int
     {

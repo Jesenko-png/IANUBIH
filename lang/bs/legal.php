@@ -7,7 +7,7 @@ return [
         'document_information' => 'Informacije o dokumentu',
         'updated_label' => 'Posljednje ažuriranje',
         'updated_date' => '29. septembar 2026.',
-        'contact_note' => 'Za pitanja o privatnosti i korištenju stranice kontaktirajte IANUBIH.',
+        'contact_note' => 'Za pitanja o privatnosti i korištenju stranice kontaktirajte IASABIH.',
         'contact_eyebrow' => 'Kontakt',
         'contact_title' => 'Imate pitanje o ovim pravilima?',
         'contact_text' => 'Za zahtjeve u vezi s ličnim podacima, kolačićima ili korištenjem sadržaja obratite nam se e-mailom.',
@@ -15,8 +15,8 @@ return [
     ],
     'privacy' => [
         'meta' => [
-            'title' => 'Pravila privatnosti | IANUBIH',
-            'description' => 'Informacije o tome kako IANUBIH prikuplja, koristi, čuva i štiti lične podatke korisnika web stranice.',
+            'title' => 'Pravila privatnosti | IASABIH',
+            'description' => 'Informacije o tome kako IASABIH prikuplja, koristi, čuva i štiti lične podatke korisnika web stranice.',
         ],
         'title' => 'Pravila privatnosti',
         'intro' => 'Ova pravila objašnjavaju koje podatke prikupljamo putem web stranice, zašto ih obrađujemo i koja prava imate u vezi sa svojim podacima.',
@@ -24,7 +24,7 @@ return [
             [
                 'title' => '1. Ko upravlja podacima',
                 'paragraphs' => [
-                    'Kontrolor ličnih podataka je Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini (IANUBIH), Paromlinska 53, 71000 Sarajevo, Bosna i Hercegovina. Kontakt za pitanja o privatnosti je info@ianubih.ba.',
+                    'Kontrolor ličnih podataka je Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini (IASABIH), Paromlinska 53, 71000 Sarajevo, Bosna i Hercegovina. Kontakt za pitanja o privatnosti je info@iasabih.ba.',
                 ],
             ],
             [
@@ -45,14 +45,14 @@ return [
                     'Odgovaranje na prijedloge saradnje i komunikacija sa pošiljaocem, na osnovu saglasnosti i radnji preduzetih na njegov zahtjev.',
                     'Kreiranje i upravljanje korisničkim nalozima te zaštita administratorskog dijela stranice.',
                     'Objavljivanje i administriranje vijesti i drugog javnog sadržaja.',
-                    'Održavanje sigurnosti, pouzdanosti i funkcionalnosti stranice na osnovu legitimnog interesa IANUBIH-a.',
+                    'Održavanje sigurnosti, pouzdanosti i funkcionalnosti stranice na osnovu legitimnog interesa IASABIH-a.',
                     'Mjerenje korištenja stranice putem Google Analyticsa isključivo nakon saglasnosti posjetioca.',
                 ],
             ],
             [
                 'title' => '4. Primaoci podataka i vanjske usluge',
                 'paragraphs' => [
-                    'Podacima pristupaju samo ovlašteni administratori IANUBIH-a i pružaoci tehničkih usluga kada je to potrebno za hosting, e-mail, održavanje ili sigurnost stranice.',
+                    'Podacima pristupaju samo ovlašteni administratori IASABIH-a i pružaoci tehničkih usluga kada je to potrebno za hosting, e-mail, održavanje ili sigurnost stranice.',
                     'Ako prihvatite analitičke kolačiće, podatke obrađuje Google u okviru usluge Google Analytics. Google može obrađivati podatke i izvan Bosne i Hercegovine ili Evropskog ekonomskog prostora, u skladu sa svojim ugovornim i zakonskim mehanizmima zaštite podataka.',
                     'Lične podatke ne prodajemo i ne koristimo za automatizovano donošenje odluka.',
                 ],
@@ -68,7 +68,7 @@ return [
                 'title' => '6. Vaša prava',
                 'paragraphs' => [
                     'U skladu sa važećim propisima o zaštiti ličnih podataka možete zatražiti pristup, ispravku, dopunu, brisanje, ograničenje obrade ili prenosivost svojih podataka, kao i uložiti prigovor na određenu obradu. Saglasnost možete povući u svakom trenutku, bez uticaja na zakonitost ranije obrade.',
-                    'Za ostvarivanje prava pišite na info@ianubih.ba. Imate i pravo podnijeti prigovor Agenciji za zaštitu ličnih podataka u Bosni i Hercegovini te zatražiti sudsku zaštitu.',
+                    'Za ostvarivanje prava pišite na info@iasabih.ba. Imate i pravo podnijeti prigovor Agenciji za zaštitu ličnih podataka u Bosni i Hercegovini te zatražiti sudsku zaštitu.',
                 ],
             ],
             [
@@ -87,11 +87,11 @@ return [
     ],
     'cookies' => [
         'meta' => [
-            'title' => 'Politika kolačića | IANUBIH',
-            'description' => 'Pregled neophodnih i analitičkih kolačića koji se koriste na web stranici IANUBIH-a i način upravljanja saglasnošću.',
+            'title' => 'Politika kolačića | IASABIH',
+            'description' => 'Pregled neophodnih i analitičkih kolačića koji se koriste na web stranici IASABIH-a i način upravljanja saglasnošću.',
         ],
         'title' => 'Politika kolačića',
-        'intro' => 'Ova politika objašnjava koje kolačiće i slične tehnologije koristi web stranica IANUBIH-a te kako možete prihvatiti, odbiti ili naknadno promijeniti svoj izbor.',
+        'intro' => 'Ova politika objašnjava koje kolačiće i slične tehnologije koristi web stranica IASABIH-a te kako možete prihvatiti, odbiti ili naknadno promijeniti svoj izbor.',
         'sections' => [
             [
                 'title' => '1. Šta su kolačići',
@@ -104,9 +104,9 @@ return [
                 'table' => [
                     'headings' => ['Naziv', 'Pružalac', 'Svrha', 'Trajanje'],
                     'rows' => [
-                        ['Sesijski kolačić stranice', 'IANUBIH', 'Održavanje prijave, sesije i sigurnosti korisnika.', 'Do 120 minuta neaktivnosti, u skladu sa postavkama sesije.'],
-                        ['XSRF-TOKEN', 'IANUBIH', 'Zaštita obrazaca i zahtjeva od neovlaštenog slanja.', 'Trajanje sesije.'],
-                        ['ianubih_analytics_consent', 'IANUBIH – lokalna pohrana', 'Pamti da li ste prihvatili ili odbili analitiku.', 'Dok ne promijenite izbor ili ne obrišete podatke preglednika.'],
+                        ['Sesijski kolačić stranice', 'IASABIH', 'Održavanje prijave, sesije i sigurnosti korisnika.', 'Do 120 minuta neaktivnosti, u skladu sa postavkama sesije.'],
+                        ['XSRF-TOKEN', 'IASABIH', 'Zaštita obrazaca i zahtjeva od neovlaštenog slanja.', 'Trajanje sesije.'],
+                        ['iasabih_analytics_consent', 'IASABIH – lokalna pohrana', 'Pamti da li ste prihvatili ili odbili analitiku.', 'Dok ne promijenite izbor ili ne obrišete podatke preglednika.'],
                         ['_ga', 'Google Analytics', 'Razlikovanje posjetilaca radi zbirne statistike.', 'Do 2 godine, samo nakon saglasnosti.'],
                         ['_ga_<ID>', 'Google Analytics', 'Čuvanje stanja analitičke sesije.', 'Do 2 godine, samo nakon saglasnosti.'],
                     ],
@@ -135,23 +135,23 @@ return [
             [
                 'title' => '6. Izmjene i kontakt',
                 'paragraphs' => [
-                    'Politiku ćemo ažurirati kada uvedemo novu tehnologiju ili promijenimo način mjerenja. Pitanja možete poslati na info@ianubih.ba.',
+                    'Politiku ćemo ažurirati kada uvedemo novu tehnologiju ili promijenimo način mjerenja. Pitanja možete poslati na info@iasabih.ba.',
                 ],
             ],
         ],
     ],
     'terms' => [
         'meta' => [
-            'title' => 'Uslovi korištenja | IANUBIH',
-            'description' => 'Uslovi pristupa i korištenja web stranice, sadržaja, korisničkih naloga i obrazaca IANUBIH-a.',
+            'title' => 'Uslovi korištenja | IASABIH',
+            'description' => 'Uslovi pristupa i korištenja web stranice, sadržaja, korisničkih naloga i obrazaca IASABIH-a.',
         ],
         'title' => 'Uslovi korištenja',
-        'intro' => 'Korištenjem ove stranice prihvatate pravila koja štite sadržaj, korisnike i siguran rad digitalnih usluga IANUBIH-a.',
+        'intro' => 'Korištenjem ove stranice prihvatate pravila koja štite sadržaj, korisnike i siguran rad digitalnih usluga IASABIH-a.',
         'sections' => [
             [
                 'title' => '1. Svrha stranice',
                 'paragraphs' => [
-                    'Stranica objavljuje informacije o IANUBIH-u, njegovim oblastima djelovanja, projektima, događajima, publikacijama, aktuelnostima i mogućnostima saradnje. Sadržaj je informativan i ne predstavlja pravni, medicinski, finansijski ili drugi individualni stručni savjet.',
+                    'Stranica objavljuje informacije o IASABIH-u, njegovim oblastima djelovanja, projektima, događajima, publikacijama, aktuelnostima i mogućnostima saradnje. Sadržaj je informativan i ne predstavlja pravni, medicinski, finansijski ili drugi individualni stručni savjet.',
                 ],
             ],
             [
@@ -163,7 +163,7 @@ return [
             [
                 'title' => '3. Autorska prava i dozvoljena upotreba',
                 'paragraphs' => [
-                    'Tekstovi, vizuelni identitet, fotografije, publikacije i drugi materijali pripadaju IANUBIH-u ili su objavljeni uz odgovarajuće pravo korištenja, osim gdje je drugačije navedeno.',
+                    'Tekstovi, vizuelni identitet, fotografije, publikacije i drugi materijali pripadaju IASABIH-u ili su objavljeni uz odgovarajuće pravo korištenja, osim gdje je drugačije navedeno.',
                     'Sadržaj možete citirati i dijeliti za lične, obrazovne i nekomercijalne svrhe uz jasno navođenje izvora i bez izmjene značenja. Za komercijalnu upotrebu, cjelovito preuzimanje ili preradu zatražite prethodnu pisanu dozvolu.',
                 ],
             ],
@@ -178,25 +178,25 @@ return [
             [
                 'title' => '5. Prijedlozi saradnje',
                 'paragraphs' => [
-                    'Slanjem prijedloga potvrđujete da smijete dostaviti unesene podatke i da sadržaj nije nezakonit niti povređuje prava drugih osoba. Slanje obrasca ne stvara ugovor, obavezu finansiranja, partnerstvo niti obavezu IANUBIH-a da prihvati prijedlog.',
+                    'Slanjem prijedloga potvrđujete da smijete dostaviti unesene podatke i da sadržaj nije nezakonit niti povređuje prava drugih osoba. Slanje obrasca ne stvara ugovor, obavezu finansiranja, partnerstvo niti obavezu IASABIH-a da prihvati prijedlog.',
                 ],
             ],
             [
                 'title' => '6. Vanjske poveznice',
                 'paragraphs' => [
-                    'Stranica može sadržavati poveznice prema vanjskim web lokacijama, publikacijama i društvenim mrežama. IANUBIH ne upravlja tim lokacijama i nije odgovoran za njihov sadržaj, dostupnost ili pravila privatnosti.',
+                    'Stranica može sadržavati poveznice prema vanjskim web lokacijama, publikacijama i društvenim mrežama. IASABIH ne upravlja tim lokacijama i nije odgovoran za njihov sadržaj, dostupnost ili pravila privatnosti.',
                 ],
             ],
             [
                 'title' => '7. Ograničenje odgovornosti',
                 'paragraphs' => [
-                    'U mjeri dopuštenoj važećim pravom, IANUBIH ne odgovara za štetu nastalu isključivo oslanjanjem na opće informacije sa stranice, prekidom dostupnosti ili postupanjem vanjskih pružalaca usluga. Ovo ograničenje ne isključuje odgovornost koju nije dopušteno isključiti zakonom.',
+                    'U mjeri dopuštenoj važećim pravom, IASABIH ne odgovara za štetu nastalu isključivo oslanjanjem na opće informacije sa stranice, prekidom dostupnosti ili postupanjem vanjskih pružalaca usluga. Ovo ograničenje ne isključuje odgovornost koju nije dopušteno isključiti zakonom.',
                 ],
             ],
             [
                 'title' => '8. Mjerodavno pravo i izmjene',
                 'paragraphs' => [
-                    'Na ove uslove primjenjuju se propisi Bosne i Hercegovine. Uslove možemo izmijeniti radi usklađivanja sa funkcijama stranice ili pravnim zahtjevima. Za pitanja pišite na info@ianubih.ba.',
+                    'Na ove uslove primjenjuju se propisi Bosne i Hercegovine. Uslove možemo izmijeniti radi usklađivanja sa funkcijama stranice ili pravnim zahtjevima. Za pitanja pišite na info@iasabih.ba.',
                 ],
             ],
         ],

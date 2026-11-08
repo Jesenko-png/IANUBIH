@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', trim($member->academic_title.' '.$member->name).' | IANUBIH')
+@section('title', trim($member->academic_title.' '.$member->name).' | IASABIH')
 @section('description', \Illuminate\Support\Str::limit($member->localized('bio') ?: $member->localized('field'), 155))
 
 @section('content')
@@ -22,7 +22,7 @@
     </div>
 </section>
 
-<section class="ianubih-section member-profile-section">
+<section class="iasabih-section member-profile-section">
     <div class="container">
         <a href="{{ route('people', ['locale' => app()->getLocale()]) }}" class="text-link member-profile-back">← {{ __('members.public.back_to_members') }}</a>
         <div class="member-profile-layout">
