@@ -568,7 +568,7 @@ input:focus {
 
 /* Pillars */
 .pillars-section {
-    background: var(--white);
+    background: #edf4f7;
 }
 
 .pillar-grid {
