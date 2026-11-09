@@ -5,9 +5,10 @@
 @unless ($storageReady)
     <div class="admin-alert admin-alert-error">{{ __('academy_cms.setup') }}</div>
 @else
-    <section class="admin-panel">
+    <section class="admin-panel organization-cms-list">
         @foreach ($pages as $page)
-            <article class="admin-news-row">
+            <article class="admin-news-row organization-cms-row">
+                <div class="organization-cms-number">{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</div>
                 <div class="admin-news-copy"><h2>{{ $page === 'about' ? __('academy_cms.overview') : __('sections.pages.academy.'.$page.'.title') }}</h2></div>
                 <a class="admin-button admin-button-secondary" href="{{ route('admin.academy.edit', $page) }}">{{ __('academy_cms.edit') }}</a>
             </article>

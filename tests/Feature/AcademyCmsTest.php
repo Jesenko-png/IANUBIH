@@ -26,7 +26,11 @@ class AcademyCmsTest extends TestCase
     public function test_admin_can_edit_both_languages_without_changing_other_pages(): void
     {
         $this->actingAs(User::factory()->create(['role' => User::ROLE_ADMIN]));
-        $this->get('/admin/academy')->assertOk();
+        $this->get('/admin/academy')
+            ->assertOk()
+            ->assertSee('organization-cms-row', false)
+            ->assertSeeText('01')
+            ->assertSeeText('08');
         $this->get('/admin/academy/about/edit')
             ->assertOk()
             ->assertSeeText('Vizuelni editor stranice')
