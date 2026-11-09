@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AnalyticsController as AdminAnalyticsController;
 use App\Http\Controllers\Admin\CooperationInquiryController as AdminCooperationInquiryController;
 use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
+use App\Http\Controllers\Admin\OrganizationPageController as AdminOrganizationPageController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
@@ -45,6 +46,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/academy', [\App\Http\Controllers\Admin\AcademyPageController::class, 'index'])->name('academy.index');
         Route::get('/academy/{page}/edit', [\App\Http\Controllers\Admin\AcademyPageController::class, 'edit'])->name('academy.edit');
         Route::put('/academy/{page}', [\App\Http\Controllers\Admin\AcademyPageController::class, 'update'])->name('academy.update');
+        Route::get('/organization', [AdminOrganizationPageController::class, 'index'])->name('organization.index');
+        Route::get('/organization/{topic}/{item?}', [AdminOrganizationPageController::class, 'edit'])->name('organization.edit');
+        Route::put('/organization/{topic}/{item?}', [AdminOrganizationPageController::class, 'update'])->name('organization.update');
         Route::resource('news', AdminNewsController::class)
             ->parameters(['news' => 'newsPost'])
             ->except('show');

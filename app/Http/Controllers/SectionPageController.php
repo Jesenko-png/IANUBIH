@@ -56,13 +56,19 @@ class SectionPageController extends Controller
         $academyContent = $section === 'academy'
             ? app(\App\Services\AcademyContent::class)->content($topic, app()->getLocale())
             : null;
+        $organizationService = $section === 'organization'
+            ? app(\App\Services\OrganizationContent::class)
+            : null;
+        $organizationContent = $organizationService?->content($topic, $item, app()->getLocale());
 
         return view('pages.section', [
             'section' => $section,
             'topic' => $topic,
             'item' => $item,
-            'title' => $academyContent['title'] ?? __($titleKey),
+            'title' => $academyContent['title'] ?? $organizationContent['title'] ?? __($titleKey),
             'academyContent' => $academyContent,
+            'organizationContent' => $organizationContent,
+            'organizationLinks' => $organizationService?->links($topic, app()->getLocale()) ?? [],
         ]);
     }
 }

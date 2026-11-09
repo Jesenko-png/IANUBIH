@@ -5191,6 +5191,16 @@ input:focus {
     white-space: pre-line;
 }
 
+.organization-page-copy {
+    color: #374956;
+    font-size: 17px;
+    line-height: 1.85;
+    margin: 0 auto 48px;
+    max-width: 900px;
+    overflow-wrap: anywhere;
+    white-space: pre-line;
+}
+
 @media (max-width: 991px) {
     .people-directory-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));

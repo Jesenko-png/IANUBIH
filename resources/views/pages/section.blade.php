@@ -17,7 +17,6 @@
     $isOverview = $topic === 'overview' && $item === null;
     $isOrganizationOverview = $section === 'organization' && $isOverview;
     $isPresidency = $section === 'organization' && $topic === 'presidency' && $item === null;
-    $childPages = config('academy_pages.'.$section.'.'.$topic, []);
 @endphp
 
 <section @class(['inner-hero', 'academy-section-hero', 'has-video' => $isOrganizationOverview]) aria-labelledby="page-title">
@@ -49,22 +48,28 @@
         @if ($section === 'academy' && filled($academyContent['body'] ?? null))
             <div class="member-profile-biography" style="white-space: pre-line; overflow-wrap: anywhere">{{ $academyContent['body'] }}</div>
         @elseif ($isOrganizationOverview)
+            @if (filled($organizationContent['body'] ?? null))
+                <div class="organization-page-copy">{{ $organizationContent['body'] }}</div>
+            @endif
             <div class="academy-section-grid">
-                @foreach (config('academy_pages.organization') as $sectionTopic => $children)
-                    @continue($sectionTopic === 'overview')
-                    <a class="academy-section-card" href="{{ route('organization.topic', ['locale' => app()->getLocale(), 'topic' => $sectionTopic]) }}">
-                        <span>{{ str_pad($loop->iteration - 1, 2, '0', STR_PAD_LEFT) }}</span>
-                        <h2>{{ __('sections.pages.organization.'.$sectionTopic.'.title') }}</h2>
+                @foreach ($organizationLinks as $link)
+                    <a class="academy-section-card" href="{{ route('organization.topic', ['locale' => app()->getLocale(), 'topic' => $link['topic']]) }}">
+                        <span>{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <h2>{{ $link['title'] }}</h2>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 @endforeach
             </div>
         @elseif ($isPresidency)
-            @php($president = __('sections.pages.organization.presidency'))
+            @php($president = $organizationContent)
             <div class="member-profile-layout">
                 <aside class="member-profile-aside">
                     <div class="member-profile-image">
-                        <img src="{{ asset('uploads/news/almir-badnjevic-predsjednik-iasabih.jpeg') }}" alt="{{ $president['image_alt'] }}">
+                        @if (filled($president['image_path'] ?? null))
+                            <img src="{{ Storage::disk('public')->url($president['image_path']) }}" alt="{{ $president['image_alt'] }}">
+                        @else
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        @endif
                     </div>
                 </aside>
                 <div class="member-profile-main">
@@ -82,16 +87,21 @@
                     </div>
                 </div>
             </div>
-        @elseif ($section === 'organization' && $item === null && is_array($childPages))
+        @elseif ($section === 'organization' && $item === null && count($organizationLinks))
+            @if (filled($organizationContent['body'] ?? null))
+                <div class="organization-page-copy">{{ $organizationContent['body'] }}</div>
+            @endif
             <div class="academy-section-grid">
-                @foreach ($childPages as $childSlug => $enabled)
-                    <a class="academy-section-card" href="{{ route('organization.topic', ['locale' => app()->getLocale(), 'topic' => $topic, 'item' => $childSlug]) }}">
+                @foreach ($organizationLinks as $link)
+                    <a class="academy-section-card" href="{{ route('organization.topic', ['locale' => app()->getLocale(), 'topic' => $link['topic'], 'item' => $link['item']]) }}">
                         <span>{{ str_pad($loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-                        <h2>{{ __('sections.pages.organization.'.$topic.'.children.'.$childSlug) }}</h2>
+                        <h2>{{ $link['title'] }}</h2>
                         <i class="fa fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 @endforeach
             </div>
+        @elseif ($section === 'organization' && filled($organizationContent['body'] ?? null))
+            <div class="organization-page-copy">{{ $organizationContent['body'] }}</div>
         @else
             <div class="academy-section-pending">
                 <span class="section-eyebrow">{{ __('sections.status') }}</span>
