@@ -97,20 +97,6 @@
         <h2>{{ __('admin.analytics.load_error_title') }}</h2>
         <p>{{ __('admin.analytics.load_error_text') }}</p>
     </section>
-@else
-    <section class="admin-panel analytics-setup-panel" aria-labelledby="analytics-setup-title">
-        <span class="admin-eyebrow">{{ __('admin.analytics.setup_eyebrow') }}</span>
-        <h2 id="analytics-setup-title">{{ __('admin.analytics.setup_title') }}</h2>
-        <p>{{ __('admin.analytics.setup_intro') }}</p>
-        <div class="analytics-setup-status">{{ __('admin.analytics.setup_issue_'.$setupIssue) }}</div>
-        <ol>
-            <li>{{ __('admin.analytics.setup_step_property') }}</li>
-            <li>{{ __('admin.analytics.setup_step_api') }}</li>
-            <li>{{ __('admin.analytics.setup_step_access') }}</li>
-            <li>{{ __('admin.analytics.setup_step_credentials') }}</li>
-        </ol>
-        <p class="analytics-setup-note">{{ __('admin.analytics.setup_secret_note') }}</p>
-    </section>
 @endif
 
 <p class="analytics-consent-note">{{ __('admin.analytics.consent_text') }}</p>

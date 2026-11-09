@@ -12,7 +12,7 @@ class AnalyticsDashboardTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_only_administrators_can_open_analytics_and_missing_setup_is_explained(): void
+    public function test_only_administrators_can_open_analytics_and_missing_setup_stays_hidden(): void
     {
         config()->set('services.ga4.property_id', null);
         Http::fake();
@@ -26,8 +26,9 @@ class AnalyticsDashboardTest extends TestCase
         $this->actingAs($administrator)
             ->get(route('admin.analytics.index', ['locale' => 'bs']))
             ->assertOk()
-            ->assertSeeText('Povežite GA4 izvještaje')
-            ->assertSeeText('Nedostaje brojčani GA4 Property ID');
+            ->assertSeeText('Google Analytics')
+            ->assertDontSeeText('Povežite GA4 izvještaje')
+            ->assertDontSeeText('Nedostaje brojčani GA4 Property ID');
 
         Http::assertNothingSent();
     }

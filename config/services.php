@@ -36,7 +36,7 @@ return [
     ],
 
     'ga4' => [
-        'property_id' => env('GA4_PROPERTY_ID') ?: '556496626',
+        'property_id' => env('GA4_PROPERTY_ID') ?: '563394197',
         'credentials_path' => env('GA4_CREDENTIALS_PATH') ?: storage_path('app/private/ga4-service-account.json'),
     ],
 

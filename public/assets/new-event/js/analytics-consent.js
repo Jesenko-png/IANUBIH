@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var measurementId = 'G-2KJZQ71XQX';
+    var measurementId = 'G-9XD68RP6Z7';
     var storageKey = 'iasabih_analytics_consent';
     var isEnglish = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
     var copy = isEnglish

@@ -122,7 +122,7 @@ return [
             [
                 'title' => '4. Google Analytics',
                 'paragraphs' => [
-                    'Nakon prihvatanja učitava se Google Analytics 4 sa identifikatorom mjerenja G-2KJZQ71XQX. Usluga pomaže da razumijemo posjećenost, najčitanije stranice, približnu lokaciju i tehničke karakteristike uređaja. Ne šaljemo Google Analyticsu ime, e-mail ili sadržaj prijedloga saradnje.',
+                    'Nakon prihvatanja učitava se Google Analytics 4 sa identifikatorom mjerenja G-9XD68RP6Z7. Usluga pomaže da razumijemo posjećenost, najčitanije stranice, približnu lokaciju i tehničke karakteristike uređaja. Ne šaljemo Google Analyticsu ime, e-mail ili sadržaj prijedloga saradnje.',
                     'Ako analitiku odbijete, Google Analytics skripta se ne učitava i analitički kolačići se ne postavljaju.',
                 ],
             ],

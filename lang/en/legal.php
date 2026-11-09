@@ -122,7 +122,7 @@ return [
             [
                 'title' => '4. Google Analytics',
                 'paragraphs' => [
-                    'After consent, Google Analytics 4 loads with measurement ID G-2KJZQ71XQX. The service helps us understand traffic, popular pages, approximate location and technical device characteristics. We do not send names, email addresses or cooperation proposal content to Google Analytics.',
+                    'After consent, Google Analytics 4 loads with measurement ID G-9XD68RP6Z7. The service helps us understand traffic, popular pages, approximate location and technical device characteristics. We do not send names, email addresses or cooperation proposal content to Google Analytics.',
                     'If you refuse analytics, the Google Analytics script is not loaded and analytics cookies are not set.',
                 ],
             ],

@@ -133,7 +133,7 @@ class AdminLocalizationTest extends TestCase
             ->assertOk()
             ->assertSeeText('Google Analytics')
             ->assertSeeText('Mjerenje je ugrađeno u javnu stranicu')
-            ->assertDontSee('G-2KJZQ71XQX');
+            ->assertDontSee('G-9XD68RP6Z7');
 
         $this->actingAs($administrator)
             ->get(route('admin.analytics.index', ['locale' => 'en']))
