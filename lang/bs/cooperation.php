@@ -156,7 +156,7 @@ return [
         'consent' => 'Saglasan/na sam da IASABIH koristi unesene podatke isključivo radi razmatranja i odgovora na ovaj upit.',
         'submit' => 'Pošaljite prijedlog',
         'required_note' => '* Obavezno polje',
-        'success' => 'Hvala. Vaš prijedlog saradnje je uspješno zaprimljen.',
+        'success' => 'Hvala. Vaš prijedlog saradnje je poslan na info@iasabih.ba.',
         'error' => 'Prijedlog trenutno nije moguće zaprimiti putem obrasca. Pokušajte ponovo ili pišite direktno na',
         'validation_summary' => 'Provjerite označena polja:',
         'validation' => [

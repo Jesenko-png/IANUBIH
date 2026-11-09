@@ -156,7 +156,7 @@ return [
         'consent' => 'I agree that IASABIH may use the submitted data solely to review and respond to this enquiry.',
         'submit' => 'Send proposal',
         'required_note' => '* Required field',
-        'success' => 'Thank you. Your cooperation proposal has been received successfully.',
+        'success' => 'Thank you. Your cooperation proposal has been sent to info@iasabih.ba.',
         'error' => 'The form cannot receive your proposal at the moment. Please try again or email us directly at',
         'validation_summary' => 'Please check the highlighted fields:',
         'validation' => [

@@ -275,7 +275,7 @@
                 <p>{{ __('home.cooperation.text_second') }}</p>
             </div>
             <div class="col-md-3 cooperation-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="mailto:info@iasabih.ba" class="btn btn-iasabih-gold">{{ __('home.cooperation.primary') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]).'#cooperation-form' }}" class="btn btn-iasabih-gold">{{ __('home.cooperation.primary') }}</a>
                 <a href="{{ route('contact', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('home.cooperation.secondary') }}</a>
             </div>
         </div>

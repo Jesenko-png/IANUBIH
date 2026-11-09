@@ -115,4 +115,30 @@ return [
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Cooperation proposals
+    |--------------------------------------------------------------------------
+    |
+    | cPanel production hosting can deliver local-domain mail through sendmail
+    | without storing an SMTP password in the application. Local and test
+    | environments keep using their configured default mailer.
+    |
+    */
+
+    'cooperation' => [
+        'mailer' => env(
+            'COOPERATION_MAILER',
+            env('APP_ENV') === 'production' ? 'sendmail' : env('MAIL_MAILER', 'log'),
+        ),
+        'to' => [
+            'address' => env('COOPERATION_TO_ADDRESS', 'info@iasabih.ba'),
+            'name' => env('COOPERATION_TO_NAME', 'IASABIH'),
+        ],
+        'from' => [
+            'address' => env('COOPERATION_FROM_ADDRESS', 'info@iasabih.ba'),
+            'name' => env('COOPERATION_FROM_NAME', 'IASABIH web stranica'),
+        ],
+    ],
+
 ];

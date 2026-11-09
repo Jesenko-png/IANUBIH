@@ -109,7 +109,7 @@
                 <p>{{ __('fields.cta.text') }}</p>
             </div>
             <div class="col-md-4 fields-cta-actions wow fadeInUp" data-wow-delay="0.15s">
-                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-gold">{{ __('fields.cta.primary') }}</a>
+                <a href="{{ route('cooperation', ['locale' => app()->getLocale()]).'#cooperation-form' }}" class="btn btn-iasabih-gold">{{ __('fields.cta.primary') }}</a>
                 <a href="{{ route('projects', ['locale' => app()->getLocale()]) }}" class="btn btn-iasabih-light-outline">{{ __('fields.cta.secondary') }}</a>
             </div>
         </div>

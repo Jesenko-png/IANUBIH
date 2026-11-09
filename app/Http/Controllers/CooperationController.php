@@ -46,11 +46,18 @@ class CooperationController extends Controller
         unset($validated['consent']);
         $validated['organization'] ??= null;
 
+        $locale = app()->getLocale();
+
         try {
-            CooperationInquiry::create([
-                ...$validated,
-                'locale' => app()->getLocale(),
-            ]);
+            Mail::mailer(config(
+                'mail.cooperation.mailer',
+                app()->environment('production') ? 'sendmail' : config('mail.default'),
+            ))
+                ->to(
+                    config('mail.cooperation.to.address', 'info@iasabih.ba'),
+                    config('mail.cooperation.to.name', 'IASABIH'),
+                )
+                ->send(new CooperationInquiryMail($validated, $locale));
         } catch (Throwable $exception) {
             report($exception);
 
@@ -59,14 +66,15 @@ class CooperationController extends Controller
                 ->with('cooperation_error', __('cooperation.form.error'));
         }
 
-        if (config('mail.default') !== 'log') {
-            try {
-                Mail::to('info@iasabih.ba')->send(
-                    new CooperationInquiryMail($validated, app()->getLocale())
-                );
-            } catch (Throwable $exception) {
-                report($exception);
-            }
+        try {
+            CooperationInquiry::create([
+                ...$validated,
+                'locale' => $locale,
+            ]);
+        } catch (Throwable $exception) {
+            // E-mail je primarni kanal. Ne prikazuj grešku pošiljaocu ako je
+            // poruka uspješno poslana, ali zabilježi problem sa arhiviranjem.
+            report($exception);
         }
 
         return $this->successRedirect();

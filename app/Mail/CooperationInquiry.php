@@ -21,6 +21,10 @@ class CooperationInquiry extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: new Address(
+                config('mail.cooperation.from.address', 'info@iasabih.ba'),
+                config('mail.cooperation.from.name', 'IASABIH web stranica'),
+            ),
             replyTo: [new Address($this->inquiry['email'], $this->inquiry['name'])],
             subject: trans('cooperation.mail.subject', [
                 'title' => $this->inquiry['initiative_title'],
