@@ -46,7 +46,9 @@
 
 <section class="iasabih-section academy-section-body">
     <div class="container">
-        @if ($isOrganizationOverview)
+        @if ($section === 'academy' && filled($academyContent['body'] ?? null))
+            <div class="member-profile-biography" style="white-space: pre-line; overflow-wrap: anywhere">{{ $academyContent['body'] }}</div>
+        @elseif ($isOrganizationOverview)
             <div class="academy-section-grid">
                 @foreach (config('academy_pages.organization') as $sectionTopic => $children)
                     @continue($sectionTopic === 'overview')

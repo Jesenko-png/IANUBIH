@@ -42,6 +42,9 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('admin')->name('admin.')->middleware('admin')->group(function () {
         Route::redirect('/', '/admin/news')->name('home');
+        Route::get('/academy', [\App\Http\Controllers\Admin\AcademyPageController::class, 'index'])->name('academy.index');
+        Route::get('/academy/{page}/edit', [\App\Http\Controllers\Admin\AcademyPageController::class, 'edit'])->name('academy.edit');
+        Route::put('/academy/{page}', [\App\Http\Controllers\Admin\AcademyPageController::class, 'update'])->name('academy.update');
         Route::resource('news', AdminNewsController::class)
             ->parameters(['news' => 'newsPost'])
             ->except('show');

@@ -53,11 +53,16 @@ class SectionPageController extends Controller
         $titleKey = 'sections.pages.'.$section.'.'.$topic;
         $titleKey .= $item === null ? '.title' : '.children.'.$item;
 
+        $academyContent = $section === 'academy'
+            ? app(\App\Services\AcademyContent::class)->content($topic, app()->getLocale())
+            : null;
+
         return view('pages.section', [
             'section' => $section,
             'topic' => $topic,
             'item' => $item,
-            'title' => __($titleKey),
+            'title' => $academyContent['title'] ?? __($titleKey),
+            'academyContent' => $academyContent,
         ]);
     }
 }

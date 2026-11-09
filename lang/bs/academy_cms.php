@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'title' => 'O akademiji',
+    'overview' => 'O akademiji — glavna stranica',
+    'intro' => 'Uredite postojeće tekstove i dodajte sadržaj podstranica na bosanskom i engleskom jeziku.',
+    'setup' => 'CMS još nije pripremljen. Administrator servera treba pokrenuti migraciju academy_pages prije uređivanja. Postojeći sadržaj stranice ostaje dostupan.',
+    'edit' => 'Uredi sadržaj',
+    'back' => 'Nazad na stranice',
+    'help' => 'Sačuvane izmjene odmah su vidljive na stranici ovog okruženja. Unosite običan tekst; novi redovi su podržani u dodatnom sadržaju i tekstu podstranica. HTML se prikazuje kao tekst.',
+    'save' => 'Sačuvaj sadržaj',
+    'saved' => 'Sadržaj je sačuvan.',
+    'view' => 'Otvori stranicu',
+    'visual_editor' => 'Vizuelni editor stranice',
+    'visual_help' => 'Sekcije su poredane kao na javnoj stranici. Izaberite jezik, pronađite dio stranice i uredite tekst.',
+    'language_view' => 'Jezik sadržaja',
+    'page_structure' => 'Dijelovi stranice',
+    'section' => 'Dio stranice',
+    'item_number' => 'Stavka :number',
+    'ready_to_save' => 'Završili ste uređivanje?',
+    'save_hint' => 'Čuvaju se bosanska i engleska verzija zajedno.',
+    'fields' => [
+        'meta' => 'Podaci za pretraživače', 'title' => 'Naslov', 'description' => 'Opis',
+        'hero' => 'Uvod', 'eyebrow' => 'Nadnaslov', 'text' => 'Tekst', 'home' => 'Početna poveznica', 'current' => 'Naziv u putanji',
+        'identity' => 'Ko smo', 'text_first' => 'Prvi odlomak', 'text_second' => 'Drugi odlomak', 'highlight' => 'Istaknuti tekst',
+        'mission' => 'Misija i vizija', 'mission_title' => 'Naslov misije', 'mission_text' => 'Tekst misije', 'vision_title' => 'Naslov vizije', 'vision_text' => 'Tekst vizije',
+        'values' => 'Vrijednosti', 'items' => 'Stavka', 'president' => 'Predsjednik', 'status' => 'Oznaka statusa',
+        'governance' => 'Upravljanje', 'documents' => 'Dokumenti', 'faq' => 'Česta pitanja', 'question' => 'Pitanje', 'answer' => 'Odgovor',
+        'cta' => 'Završni poziv', 'primary' => 'Prvo dugme', 'secondary' => 'Drugo dugme',
+        'additional_title' => 'Dodatni sadržaj — naslov', 'additional_body' => 'Dodatni sadržaj — tekst', 'body' => 'Sadržaj stranice', 'content' => 'Sadržaj podstranice',
+    ],
+];

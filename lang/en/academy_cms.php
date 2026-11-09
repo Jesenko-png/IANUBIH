@@ -1,0 +1,32 @@
+<?php
+
+return [
+    'title' => 'About the Academy',
+    'overview' => 'About the Academy — main page',
+    'intro' => 'Edit existing text and add content to Academy pages in Bosnian and English.',
+    'setup' => 'The CMS is not ready yet. The server administrator must run the academy_pages migration before editing. Existing public content remains available.',
+    'edit' => 'Edit content',
+    'back' => 'Back to pages',
+    'help' => 'Saved changes become visible immediately on this environment’s website. Enter plain text; line breaks are supported in additional content and subpage text. HTML is displayed as text.',
+    'save' => 'Save content',
+    'saved' => 'Content saved.',
+    'view' => 'Open page',
+    'visual_editor' => 'Visual page editor',
+    'visual_help' => 'Sections follow the public page order. Select a language, find the page section and edit its text.',
+    'language_view' => 'Content language',
+    'page_structure' => 'Page sections',
+    'section' => 'Page section',
+    'item_number' => 'Item :number',
+    'ready_to_save' => 'Finished editing?',
+    'save_hint' => 'The Bosnian and English versions are saved together.',
+    'fields' => [
+        'meta' => 'Search metadata', 'title' => 'Title', 'description' => 'Description',
+        'hero' => 'Introduction', 'eyebrow' => 'Eyebrow', 'text' => 'Text', 'home' => 'Home link', 'current' => 'Breadcrumb label',
+        'identity' => 'Identity', 'text_first' => 'First paragraph', 'text_second' => 'Second paragraph', 'highlight' => 'Highlighted text',
+        'mission' => 'Mission and vision', 'mission_title' => 'Mission title', 'mission_text' => 'Mission text', 'vision_title' => 'Vision title', 'vision_text' => 'Vision text',
+        'values' => 'Values', 'items' => 'Item', 'president' => 'President', 'status' => 'Status label',
+        'governance' => 'Governance', 'documents' => 'Documents', 'faq' => 'FAQ', 'question' => 'Question', 'answer' => 'Answer',
+        'cta' => 'Call to action', 'primary' => 'Primary button', 'secondary' => 'Secondary button',
+        'additional_title' => 'Additional content — title', 'additional_body' => 'Additional content — text', 'body' => 'Page content', 'content' => 'Subpage content',
+    ],
+];

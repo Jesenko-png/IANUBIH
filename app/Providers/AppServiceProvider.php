@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        \Illuminate\Support\Facades\View::composer('pages.about', function ($view) {
+            $view->with('about', app(\App\Services\AcademyContent::class)->content('about', app()->getLocale()));
+        });
     }
 }
