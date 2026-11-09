@@ -70,7 +70,7 @@
         </div>
 
         <div class="project-register-grid">
-            @foreach(__('projects.register.items') as $item)
+            @foreach(collect(__('projects.register.items'))->concat($projects->map->publicData(app()->getLocale())) as $item)
                 <article class="project-record project-record-{{ $item['status_class'] }} wow fadeInUp" data-wow-delay="{{ $loop->index * 0.12 }}s">
                     <div class="project-record-topline">
                         <span class="project-status project-status-{{ $item['status_class'] }}">{{ $item['status'] }}</span>

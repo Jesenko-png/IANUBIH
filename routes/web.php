@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\CooperationInquiryController as AdminCooperationI
 use App\Http\Controllers\Admin\MemberController as AdminMemberController;
 use App\Http\Controllers\Admin\NewsController as AdminNewsController;
 use App\Http\Controllers\Admin\OrganizationPageController as AdminOrganizationPageController;
+use App\Http\Controllers\Admin\ProjectController as AdminProjectController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
@@ -49,6 +50,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/organization', [AdminOrganizationPageController::class, 'index'])->name('organization.index');
         Route::get('/organization/{topic}/{item?}', [AdminOrganizationPageController::class, 'edit'])->name('organization.edit');
         Route::put('/organization/{topic}/{item?}', [AdminOrganizationPageController::class, 'update'])->name('organization.update');
+        Route::resource('projects', AdminProjectController::class)->except('show');
         Route::resource('news', AdminNewsController::class)
             ->parameters(['news' => 'newsPost'])
             ->except('show');
@@ -63,6 +65,8 @@ Route::middleware('auth')->group(function () {
                 ->name('news.secondary-images.setup');
             Route::post('/members/setup', [AdminMemberController::class, 'setup'])
                 ->name('members.setup');
+            Route::post('/projects/setup', [AdminProjectController::class, 'setup'])
+                ->name('projects.setup');
             Route::post('/cooperation-inquiries/setup', [AdminCooperationInquiryController::class, 'setup'])
                 ->name('cooperation-inquiries.setup');
             Route::get('/users', [AdminUserController::class, 'index'])->name('users.index');

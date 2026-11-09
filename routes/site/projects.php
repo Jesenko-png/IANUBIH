@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/projects', 'pages.projects')->name('projects');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');

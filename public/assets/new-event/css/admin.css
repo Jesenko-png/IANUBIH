@@ -1349,6 +1349,23 @@ a {
     width: 220px;
 }
 
+.project-meta-heading {
+    color: var(--navy);
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 20px;
+    margin: 30px 0 4px;
+}
+
+.project-meta-editor {
+    margin-top: 22px;
+}
+
+.project-meta-row {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: minmax(150px, 0.7fr) minmax(0, 1.3fr);
+}
+
 .organization-photo-placeholder {
     align-items: center;
     color: var(--muted);
@@ -1763,6 +1780,10 @@ a {
         max-height: 420px;
         min-height: 220px;
         width: 100%;
+    }
+
+    .project-meta-row {
+        grid-template-columns: 1fr;
     }
 }
 
