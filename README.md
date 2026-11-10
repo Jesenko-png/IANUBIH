@@ -1,59 +1,134 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# IASABIH — Website and CMS
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A bilingual web application for the International Academy of Science and Arts in Bosnia and Herzegovina (IASABIH). The project combines a public website in Bosnian and English with an administration panel for managing content.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Bosnian and English public pages at `/bs` and `/en`.
+- Academy information, organizational structure, members, scientific fields, projects, publications, and events.
+- News management with images.
+- CMS modules for members, projects, academy information, and organizational content.
+- Cooperation inquiry form, email notifications, and an administrative inquiry overview.
+- User accounts, password recovery, and password changes.
+- `member`, `admin`, and `super_admin` roles, with role management available to the super administrator.
+- Google Analytics 4 dashboard when the integration is configured.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Some public content is maintained in translation files. The CMS modules cover specific sections rather than every page.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Technology
 
-## Learning Laravel
+- PHP 8.2+ and Laravel 12
+- Blade templates, Bootstrap, jQuery, and custom CSS for the public website
+- Vite 7 and Tailwind CSS 4 in the frontend build configuration
+- SQLite for the default local setup; database settings configured through Laravel's `.env`
+- PHPUnit 11
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Local setup
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Install PHP 8.2+ with Laravel's required extensions and the database driver you plan to use, Composer, and a Node.js/npm version compatible with Vite 7.
 
-## Laravel Sponsors
+### 1. Clone and install dependencies
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```sh
+git clone https://github.com/Jesenko-png/IANUBIH.git
+cd IANUBIH
+composer install
+npm ci
+```
 
-### Premium Partners
+### 2. Configure the environment
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Copy `.env.example` to `.env`. In PowerShell:
 
-## Contributing
+```powershell
+Copy-Item .env.example .env
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Set the application values:
 
-## Code of Conduct
+```dotenv
+APP_NAME=IASABIH
+APP_ENV=local
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+DB_CONNECTION=sqlite
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+For SQLite, create an empty `database/database.sqlite` file if it does not exist. In PowerShell:
 
-## Security Vulnerabilities
+```powershell
+if (!(Test-Path database/database.sqlite)) { New-Item database/database.sqlite -ItemType File }
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Prepare the application:
 
-## License
+```sh
+php artisan key:generate
+php artisan migrate
+php artisan storage:link
+npm run build
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 3. Create an administrator
+
+```sh
+php artisan admin:create
+```
+
+The command prompts for a name, email address, and a password of at least 12 characters. It creates a `super_admin` if no users exist; otherwise, it creates an `admin`. The default test seeder is not required for this setup.
+
+### 4. Start the server
+
+```sh
+php artisan serve
+```
+
+Open [the Bosnian website](http://localhost:8000/bs) or [the English website](http://localhost:8000/en). Sign in at `/login` and access the administration panel at `/admin`.
+
+When working on Vite-managed assets, run `npm run dev` in a separate terminal. Public templates also load static assets from `public/assets`.
+
+## Email and analytics
+
+- The example environment uses `MAIL_MAILER=log`, so local email messages are written to the application log.
+- Configure `MAIL_*` settings and the `COOPERATION_*` recipient and sender values to enable cooperation email delivery. Use `COOPERATION_MAILER` to select the form's mailer.
+- Configure `GA4_PROPERTY_ID` and `GA4_CREDENTIALS_PATH` for the analytics dashboard. The service account must have access to the corresponding GA4 property.
+- Keep `.env` and service account credentials out of Git and outside publicly accessible directories.
+
+## Validation
+
+Run the application tests and compile frontend assets:
+
+```sh
+composer test
+npm run build
+```
+
+The test suite covers CMS modules, account passwords, administration localization, navigation, cooperation email, and analytics. Test database settings are defined in `phpunit.xml`.
+
+## Project structure
+
+| Directory | Purpose |
+| --- | --- |
+| `app/` | Controllers, models, services, middleware, and Artisan commands |
+| `routes/` | Public, account, and administration routes |
+| `resources/views/` | Public website and administration Blade templates |
+| `lang/` | Bosnian and English translations and page content |
+| `public/assets/` | Static stylesheets, scripts, and media |
+| `database/migrations/` | Database schema migrations |
+| `tests/` | Automated tests |
+| `docs/` | CMS module documentation |
+| `deploy/` | SQL deployment scripts for specific CMS modules |
+
+## Module documentation
+
+The following guides are currently written in Bosnian:
+
+- [Academy CMS](docs/academy-cms.md)
+- [Organization CMS](docs/organization-cms.md)
+- [Projects CMS](docs/projects-cms.md)
+
+## Deployment notes
+
+Point the web server's document root to `public/`. Configure the production environment, database, and email delivery; set `APP_ENV=production` and `APP_DEBUG=false`. Ensure `storage/` and `bootstrap/cache/` are writable by the application.
+
+Build frontend assets with `npm ci` followed by `npm run build`. Back up an existing production database before applying migrations, and follow the relevant CMS module instructions in `docs/`.
