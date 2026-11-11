@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'IASABIH | Znanje koje povezuje',
+        'title' => 'IASABIH | Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini',
         'description' => 'Internacionalna akademija nauka i umjetnosti u Bosni i Hercegovini povezuje naučnike, umjetnike, istraživače i stručnjake radi doprinosa društvu.',
     ],
     'topbar' => [

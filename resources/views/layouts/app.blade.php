@@ -6,12 +6,14 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+    @include('partials.favicon')
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="@yield('description', __('home.meta.description'))">
 
     <title>@yield('title', 'IASABIH')</title>
+    @include('partials.seo')
 
     <link rel="canonical" href="{{ route($seoRouteName, $seoRouteParameters) }}">
     <link rel="alternate" hreflang="bs" href="{{ route($seoRouteName, array_merge($seoRouteParameters, ['locale' => 'bs'])) }}">

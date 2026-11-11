@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/bs');
 
+Route::get('/sitemap.xml', \App\Http\Controllers\SitemapController::class)->name('sitemap');
+
 Route::middleware('guest')->group(function () {
     Route::get('/login', [AdminAuthController::class, 'create'])->name('login');
     Route::post('/login', [AdminAuthController::class, 'store'])

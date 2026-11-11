@@ -2,7 +2,7 @@
 
 return [
     'meta' => [
-        'title' => 'IASABIH | Knowledge that connects',
+        'title' => 'IASABIH | International Academy of Sciences and Arts in Bosnia and Herzegovina',
         'description' => 'The International Academy of Sciences and Arts in Bosnia and Herzegovina connects scientists, artists, researchers and experts to contribute to society.',
     ],
     'topbar' => [
